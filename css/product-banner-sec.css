@@ -1,0 +1,609 @@
+/** Shopify CDN: Minification failed
+
+Line 272:1 Expected ")" to end URL token
+
+**/
+.st59 {
+  fill: #e2ffe6;
+}
+
+.pairs-great-with-sec {
+  display: none;
+}
+
+svg.bottom-curve {
+  position: relative;
+  bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .bottom-curve {
+    bottom: 0px;
+  }
+}
+
+/* Bundle Selector Styles MV */
+
+div.bundle-selector-v1 {
+  display: grid !important;
+}
+
+.image-group img {
+  background-color: rgb(300, 300, 300) !important;
+  border-radius: 15px;
+}
+
+.per-kid,
+.per-kid-bundle {
+  margin-right: 4%;
+}
+
+.multi-strike,
+.bundle-strike {
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+  span.better-together {
+    margin-top: -7px;
+  }
+  .bundle-title,
+  .multi-title {
+    padding-inline: 10px;
+  }
+}
+
+span.better-together {
+  position: absolute;
+  background: #2376b4;
+  color: #fff;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Filson Pro;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0.3rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+}
+
+.image-group {
+  position: relative;
+  padding: 10px;
+}
+
+.bundle-selector-v1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  text-align: center;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+section.bundle-selector-wrap {
+  margin: 1rem 0rem;
+}
+
+.price-box {
+  margin: 1rem 0rem;
+  text-align: center;
+}
+
+img.active-option {
+  border-radius: 15px;
+  border: 2px solid var(--BlueBird, #2376b4);
+}
+
+.bundle-title,
+.multi-title {
+  color: #2376b4;
+  font-family: "FilsonProBold";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+ letter-spacing: normal;
+}
+
+span.strike {
+  text-decoration: line-through;
+  color: #fe5904;
+}
+
+.multi-radio,
+.bundle-radio {
+  position: absolute;
+  top: 12%;
+  left: 13%;
+  transform: scale(1.8);
+}
+
+@media (min-width: 1050px) {
+  .multi-radio,
+  .bundle-radio {
+    position: absolute;
+    top: 8%;
+    left: 14%;
+    transform: scale(1.8);
+  }
+
+  .image-group img {
+    max-width: 190px;
+    height: 190px;
+    background-color: rgb(300, 300, 300);
+  }
+
+  label.image-group {
+    padding: 0px;
+  }
+
+  .bundle-selector-v1 {
+    display: grid;
+    grid-template-columns: 250px 250px;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .hide-desk {
+    display: none;
+  }
+}
+
+/* Bundle Selector Styles MV */
+
+.product-probiotic .product-banner-sec {
+  background-color: #e2ffe6;
+  margin-bottom: 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.hide-modal {
+  display: none !important;
+}
+
+@media (max-width: 450px) {
+  .show-modal {
+    display: block !important;
+  }
+}
+
+@media (min-width: 500px) {
+  div.hide-modal {
+    display: block !important;
+  }
+}
+
+.product-banner-sec .optionList {
+  margin-bottom: 20px;
+}
+
+.product-probiotic .product-banner-sec + svg {
+  background-color: #ffe3e1;
+}
+
+.product-multivitamin .product-banner-sec {
+  background-color: #fff8e6;
+  margin-bottom: 0;
+  padding-top: 52px;
+  padding-bottom: 52px;
+}
+
+@media (max-width: 500px) {
+  .product-multivitamin .product-banner-sec {
+    padding-top: 10px !important;
+  }
+  .product__slider-main {
+    margin-bottom: 0px !important;
+  }
+}
+
+.product-multivitamin .product-banner-sec + svg {
+  display: none;
+}
+
+.product-banner-sec {
+  margin-bottom: 60px;
+}
+
+.product-banner-sec .inner {
+  column-count: 2;
+}
+
+.product-banner-sec .inner .prod-body {
+  display: inline-block;
+}
+
+.product-banner-sec .inner .prod-body {
+  display: inline-block;
+  padding-left: 39px;
+}
+
+.product-banner-sec .inner .prod-body h2 {
+  text-align: left;
+  font-size: 29px !important;
+  font-family: "Filson Pro";
+  letter-spacing: 0 !important;
+  line-height: 1.1em !important;
+  padding-bottom: 2px !important;
+}
+
+.product-banner-sec .inner .prod-body .usp_bar span {
+  line-height: 1.7rem;
+}
+
+.product-banner-sec .inner .prod-body a#buy_now_new_button {
+  width: 100%;
+  height: 55px;
+  border-radius: 15px;
+  font-size: 23px;
+  color: rgb(255, 230, 75);
+  background-color: rgb(254, 89, 4);
+  font-weight: 600;
+}
+
+.product-banner-sec .inner .chewables b {
+  color: #3f7ab9;
+}
+
+.product-banner-sec .inner #product__slider .product__slider-thmb .slick-track .slick-slide {
+  margin-right: 28px;
+}
+
+.product-banner-sec .inner #product__slider .product__slider-thmb .slick-track .slick-slide:last-child {
+  margin-right: 0;
+}
+
+.product-banner-sec .prod-body .accordion-wrapper .accordion-panel {
+  display: none;
+}
+
+.product-banner-sec .prod-body .accordion-wrapper .accordion-header.active + .accordion-panel {
+  display: block;
+}
+
+.product-banner-sec .prod-body .rating-star-count span.star {
+  background-image: url(data:image/svg+xml;
+ charset=UTF-8, \ %3Csvg%20width%3D%2280%22%20height%3D%2214%22%20viewBox%3D%220%200%2080%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22%23FFB829%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M71.996%2011.368l-3.94%202.42c-.474.292-.756.096-.628-.443l1.074-4.53-3.507-3.022c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.78%204.3%204.602.37c.552.046.666.37.237.74l-3.507%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422zM55.996%2011.368l-3.94%202.42c-.474.292-.756.096-.628-.443l1.074-4.53-3.507-3.022c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.78%204.3%204.602.37c.552.046.666.37.237.74l-3.507%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422zM40.123%2011.368l-3.94%202.42c-.475.292-.756.096-.63-.443l1.076-4.53-3.508-3.022c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.778%204.3%204.603.37c.554.046.667.37.24.74l-3.508%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422zM24.076%2011.368l-3.94%202.42c-.475.292-.757.096-.63-.443l1.076-4.53-3.507-3.022c-.422-.363-.324-.693.238-.74l4.603-.37%201.78-4.3c.21-.51.55-.512.76%200l1.78%204.3%204.602.37c.554.046.667.37.24.74l-3.508%203.02%201.074%204.532c.127.536-.146.74-.628.444l-3.94-2.422zM8.123%2011.368l-3.94%202.42c-.475.292-.756.096-.63-.443l1.076-4.53L1.12%205.792c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.778%204.3%204.603.37c.554.046.667.37.24.74l-3.508%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E);
+  width: 90px;
+  height: 20px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.product-banner-sec .prod-body .rating-star-count {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 3px;
+  margin-bottom: 8px;
+}
+
+.product-banner-sec .prod-body .rating-star-count span.rating-count {
+  line-height: 1;
+}
+
+.product-banner-sec .optionList span {
+  padding: 3px 5px;
+}
+
+.product-banner-sec {
+  margin-bottom: 0;
+}
+
+.product-banner-sec .inner .prod-body .usp_bar span {
+  line-height: 1rem;
+}
+
+.product-banner-sec .product__slider-main button.slick-arrow {
+  display: none;
+}
+
+.product-probiotic .product-banner-sec {
+  background: #e2ffe6 !important;
+  padding-top: 49px;
+  padding-bottom: 60px;
+}
+
+.product-probiotic #shopify-section-product-banner-sec svg {
+  background: #ffe3e1;
+}
+
+.product-probiotic .product-banner-sec .inner .prod-body #buy_now_new_button {
+  color: #3f7ab9;
+  background-color: #ffe64b;
+  margin-bottom: 5px;
+  height: 60px;
+}
+
+.product-banner-sec .optionList {
+  margin-bottom: 17px;
+}
+
+.product-banner-sec .description {
+  line-height: 19.5px;
+}
+
+.product-banner-sec .description span {
+  letter-spacing: 0;
+}
+
+body:not(.multi3):not(.multi5) .product-banner-sec .inner .prod-body #buy_now_new_button {
+  width: 100%;
+  height: 55px;
+  border-radius: 15px;
+  font-size: 23px;
+  color: rgb(255, 230, 75);
+  background-color: rgb(254, 89, 4);
+  font-weight: 600;
+}
+
+div.optionList.hide {
+  display: none;
+}
+
+.form-default select.form-control {
+  padding: 10px 12px 10px 15px;
+  line-height: 1.5 !important;
+}
+
+.mobile-show {
+  display: block !important;
+}
+
+#shopify-section-product-banner-sec .price_area {
+  display: none;
+}
+
+.products-kids-nightly-essentials #shopify-section-product-banner-sec .price_area {
+  display: block;
+  white-space: nowrap;
+}
+
+.slick-track {
+  background-color: #fff8e6 !important;
+}
+
+#shopify-section-product-banner-sec > div > div > div > div.prod-body > div.accordion-wrapper > div > ul,
+#shopify-section-product-banner-sec > div > div > div > div.prod-body > div.accordion-wrapper > div > ul ul,
+#shopify-section-product-banner-sec-barbie > div > div > div > div.prod-body > div.accordion-wrapper > div > ul,
+#shopify-section-product-banner-sec-barbie > div > div > div > div.prod-body > div.accordion-wrapper > div > ul ul {
+  list-style-type: initial;
+  margin-left: 20px;
+  padding-top: 15px;
+  letter-spacing: 0;
+}
+
+#shopify-section-product-banner-sec > div > div > div > div.prod-body > div.accordion-wrapper > div > ul ul,
+#shopify-section-product-banner-sec-barbie > div > div > div > div.prod-body > div.accordion-wrapper > div > ul ul {
+  list-style-type: circle;
+}
+
+.supplements-modal .supplement-overlay {
+  display: none;
+}
+
+.supplements-modal.active .supplement-overlay {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: scroll;
+}
+
+.supplements-modal.active .supplement-overlay img {
+  width: 35%;
+  display: flex;
+  margin-inline: auto;
+  min-width: 90%;
+  margin-top: 7%;
+}
+
+@media (min-width: 1024px) {
+  .product-banner-sec {
+    background: #fff8e6 !important;
+    padding: 38px 0 0;
+  }
+
+  .product-banner-sec .inner .prod-body h2 {
+    text-align: left;
+    font-size: 29px !important;
+    line-height: 1.1em !important;
+    font-family: "Filson Pro" !important;
+    font-weight: 800 !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1365px) {
+  .product-banner-sec .inner .prod-body {
+    display: inline-block;
+    padding-left: 40px;
+  }
+
+  .product-multivitamin .usp_bar span {
+    margin-left: 8px;
+  }
+
+  .product-multivitamin .supplements-modal p {
+    font-weight: 500;
+  }
+
+  .product-multivitamin .product-banner-sec .inner .prod-body {
+    display: inline-block;
+    padding-left: 43px;
+  }
+  
+  .bundle-title, .multi-title {
+    min-height: 40px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .product-banner-sec .container {
+    max-width: 100%;
+  }
+  .image-group img{
+    height: 170px;
+  }
+  .product-banner-sec {
+    background: #fff8e6 !important; 
+    padding-top: 35px;
+  }
+
+  .product-banner-sec .inner .prod-body h2 {
+    font-family: "Filson Pro" !important;
+    font-size: 29px !important;
+    text-align: left;
+    padding-bottom: 0 !important;
+  }
+
+  .product-banner-sec .inner #product__slider .product__slider-thmb .slick-track .slick-slide {
+    margin-right: 15px;
+  }
+  .product__slider-thmb .slick-list {
+    margin: 0 -15px!important;
+    padding-left: 15px!important;
+  }
+  .product-banner-sec .product__slider-thmb {
+    overflow: hidden;
+  }
+  .product-banner-sec .inner .prod-body {
+    padding-left: 0px;
+    /* position: relative; */
+  }
+
+  .product-banner-sec .container {
+    max-width: 100%;
+    padding-inline: 15px !important;
+  }
+
+  .product-probiotic .product-banner-sec {
+    padding-top: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .supplements-modal.active .supplement-overlay img {
+    min-width: 736px;
+  }
+
+  p.mobile-show {
+    display: none !important;
+  }
+
+  #shopify-section-product-banner-sec .price_area {
+    display: flex;
+  }
+  .product-banner-sec .description {
+    line-height: inherit;
+  }
+
+  div.optionList.hide {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .product-banner-sec .inner {
+    column-count: 1;
+  }
+
+  .product-banner-sec {
+    background: #fff8e6 !important;
+    padding: 60px 0 40px;
+    padding-top: 10px;
+  }
+
+  .product-banner-sec .product__slider-thmb {
+    display: none;
+  }
+
+  .product-banner-sec .inner div.prod-body h2 {
+    font-size: 28px !important;
+    font-family: "Filson Pro" !important;
+    padding-bottom: 0 !important;
+  }
+
+  .product-banner-sec .inner .prod-body {
+    padding-left: 0;
+    margin-top: 15px;
+  }
+
+  .product-banner-sec .inner .prod-body .usp_bar span {
+    line-height: 1rem;
+  }
+
+  .product-banner-sec .inner .prod-body .k_text {
+    display: none;
+  }
+
+  .affiliate .product-banner-sec .inner .prod-body .k_text {
+    margin-bottom: 10px !important;
+    font-size: 14px;
+  }
+
+  .product-banner-sec .product__slider-main button.slick-arrow {
+    display: block;
+  }
+
+  .product-banner-sec .product__slider-main button.slick-prev:before {
+    position: relative;
+    left: 1px;
+    content: "\e90d";
+    font-family: "wokiee_icons";
+    font-size: 36px;
+    font-weight: 800;
+    color: #3f7ab9;
+    opacity: 1 !important;
+  }
+
+  .product-banner-sec .product__slider-main button.slick-next:before {
+    position: relative;
+    left: 1px;
+    content: "\e90e";
+    font-family: "wokiee_icons";
+    font-size: 36px;
+    font-weight: 800;
+    color: #3f7ab9;
+    opacity: 1 !important;
+  }
+
+  .product-banner-sec .product__slider-main button.slick-next {
+    right: 7px;
+  }
+
+  .product-banner-sec .product__slider-main button.slick-prev.slick-arrow {
+    left: -11px;
+    z-index: 1;
+  }
+
+  .product-multivitamin .supplements-modal {
+    margin-bottom: 10px;
+  }
+
+  .product-multivitamin .product-banner-sec {
+    padding-bottom: 35px;
+  }
+
+  .ingredients-pros-sec .box-wrapper {
+    flex-direction: column;
+  }
+}
+@media (max-width: 350px) {
+  .product-banner-sec .inner div.prod-body h2 {
+    font-size: 23px !important;
+  }
+}

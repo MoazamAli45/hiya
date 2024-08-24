@@ -1,0 +1,2732 @@
+<!DOCTYPE html><html class="js" lang="en"><head>
+
+<!-- Start of Shoplift scripts -->
+<!-- 2024-07-12T17:16:43.1486054Z -->
+<style>.shoplift-hide { opacity: 0 !important; }</style>
+<script type="text/javascript" async="" src="js/pixel.js"></script><script type="text/javascript" async="" src="js/rebuy.js"></script><script type="text/javascript" async="" src="js/loader.min.js"></script><script type="text/javascript" async="" src="js/widget.min.js"></script><script type="text/javascript" async="" src="js/reviewsWidget.min.js"></script><script type="text/javascript" async="" src="js/pixel.js"></script><script type="text/javascript" async="" src="js/rebuy.js"></script><script type="text/javascript" async="" src="js/loader.min.js"></script><script type="text/javascript" async="" src="js/widget.min.js"></script><script type="text/javascript" async="" src="js/reviewsWidget.min.js"></script><script type="text/javascript" async="" src="js/trekkie.storefront.f9102b76c4156d18a2f9ad80e236ecd6fdcc057c.min.js"></script><script type="text/javascript" async="" src="js/trekkie.storefront.f9102b76c4156d18a2f9ad80e236ecd6fdcc057c.min.js"></script><script async="" src="js/gtm.js"></script><script type="text/javascript">(function(rootPath, template, themeRole, themeId, isThemePreview){ /* Generated on 2024-08-24T18:18:55.1218790Z */var I=Object.defineProperty;var x=(p,l,c)=>l in p?I(p,l,{enumerable:!0,configurable:!0,writable:!0,value:c}):p[l]=c;var m=(p,l,c)=>x(p,typeof l!="symbol"?l+"":l,c);(function(){"use strict";var p=" daum[ /]| deusu/| yadirectfetcher|(?:^|[^g])news(?!sapphire)|(?<! (?:channel/|google/))google(?!(app|/google| pixel))|(?<! cu)bots?(?:\\b|_)|(?<!(?: ya| yandex|^job|inapp;) ?)search|(?<!(?:lib))http|(?<![hg]m)score|@[a-z][\\w-]+\\.|\\(\\)|\\.com|\\b\\d{13}\\b|^<|^[\\w \\.\\-\\(?:\\):]+(?:/v?\\d+(?:\\.\\d+)?(?:\\.\\d{1,10})*?)?(?:,|$)|^[^ ]{50,}$|^\\d+\\b|^\\w+/[\\w\\(\\)]*$|^active|^ad muncher|^amaya|^avsdevicesdk/|^biglotron|^bot|^bw/|^clamav[ /]|^client/|^cobweb/|^custom|^ddg[_-]android|^discourse|^dispatch/\\d|^downcast/|^duckduckgo|^facebook|^getright/|^gozilla/|^hobbit|^hotzonu|^hwcdn/|^jeode/|^jetty/|^jigsaw|^microsoft bits|^movabletype|^mozilla/\\d\\.\\d \\(compatible;?\\)$|^mozilla/\\d\\.\\d \\w*$|^navermailapp|^netsurf|^offline|^owler|^postman|^python|^rank|^read|^reed|^rest|^rss|^snapchat|^space bison|^svn|^swcd |^taringa|^thumbor/|^track|^valid|^w3c|^webbandit/|^webcopier|^wget|^whatsapp|^wordpress|^xenu link sleuth|^yahoo|^yandex|^zdm/\\d|^zoom marketplace/|^{{.*}}$|admin|analyzer|archive|ask jeeves/teoma|bit\\.ly/|bluecoat drtr|browsex|burpcollaborator|capture|catch|check|chrome-lighthouse|chromeframe|classifier|clean|cloud|crawl|cypress/|dareboost|datanyze|dejaclick|detect|dmbrowser|download|evc-batch/|feed|firephp|gomezagent|headless|httrack|hubspot marketing grader|hydra|ibisbrowser|images|insight|inspect|iplabel|ips-agent|java(?!;)|library|mail\\.ru/|manager|measure|neustar wpm|node|nutch|offbyone|optimize|pageburst|pagespeed|parser|perl|phantomjs|pingdom|powermarks|preview|proxy|ptst[ /]\\d|reputation|resolver|retriever|rexx;|rigor|rss\\b|scan|scrape|server|sogou|sparkler/|speedcurve|spider|splash|statuscake|synapse|synthetic|tools|torrent|trace|transcoder|url|virtuoso|wappalyzer|watch|webglance|webkit2png|whatcms/|zgrab",l=/bot|spider|crawl|http|lighthouse/i,c;function V(){if(c instanceof RegExp)return c;try{c=new RegExp(p,"i")}catch{c=l}return c}function P(w){return!!w&&V().test(w)}class b extends Error{constructor(){super();m(this,"isBot");this.isBot=!0}}class C{constructor(e,t,s,i,o){m(this,"shop");m(this,"storageSessionKey");m(this,"host");m(this,"cssHideClass");m(this,"testConfigs");m(this,"sendPageView",!1);this.shop=e,this.storageSessionKey=`SHOPLIFT_SESSION_${this.shop}`,this.host=t,this.cssHideClass=s,this.testConfigs=i,this.sendPageView=!!o}testsForUrl(e){const t=new URL(window.location.href),s=this.typeFromTemplate();return e.filter(i=>i.hypotheses.some(o=>o.isControl&&o.type===s&&o.affix===template.suffix||o.type==="theme")&&(!t.searchParams.has("view")||i.hypotheses.filter(o=>!o.isControl).map(o=>o.affix).includes(t.searchParams.get("view")??"")))}typeFromTemplate(){switch(template.type){case"collection-list":return"collectionList";case"page":return"landing";case"article":case"blog":case"cart":case"collection":case"index":case"product":case"search":return template.type;default:return null}}flagProcessing(e){const t=this.getLocalVisitor();t&&(t.isProcessing=e,this.updateLocalVisitor(t))}async getRemoteVisitor(e){return(await this.makeRequest({method:"get",url:`${this.host}/api/v0/visitors/${e}`})).data}getUTMValue(e){const s=decodeURIComponent(window.location.search.substring(1)).split("&");for(let i=0;i<s.length;i++){const o=s[i].split("=");if(o[0]===e)return o[1]||null}return null}hidePage(){this.cssHideClass&&!window.document.documentElement.classList.contains(this.cssHideClass)&&(window.document.documentElement.classList.add(this.cssHideClass),setTimeout(this.removeAsyncHide(this.cssHideClass),2e3))}showPage(){this.cssHideClass&&this.removeAsyncHide(this.cssHideClass)()}getDeviceType(){function e(){let s=!1;return function(i){(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(i)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(i.substr(0,4)))&&(s=!0)}(navigator.userAgent||navigator.vendor),s}function t(){let s=!1;return function(i){(/android|ipad|playbook|silk/i.test(i)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(i.substr(0,4)))&&(s=!0)}(navigator.userAgent||navigator.vendor),s}return e()?"mobile":t()?"tablet":"desktop"}removeAsyncHide(e){return()=>{e&&window.document.documentElement.classList.remove(e)}}async sendCartEvent(e){let t=await this.makeRequest({method:"get",url:`${window.location.origin}/cart.js`});t.data.note===null&&(t=await this.makeRequest({method:"post",url:`${window.location.origin}/cart/update.js`,data:JSON.stringify({note:""})}));const s={session_id:e,...t.data};await this.makeRequest({method:"post",url:`${this.host}/api/events/cart`,data:JSON.stringify(s)})}async makeRequest(e){const{url:t,method:s,headers:i}=e;return await new Promise((o,r)=>{const a=new XMLHttpRequest;if(a.open(s.toUpperCase(),t,!0),(!i||!i.Accept)&&a.setRequestHeader("Accept","application/json"),(!i||!i["Content-Type"])&&a.setRequestHeader("Content-Type","application/json"),i)for(const n in i)a.setRequestHeader(n,i[n]);(this.host.includes("ngrok.io")||this.host.includes("ngrok-free.app"))&&a.setRequestHeader("ngrok-skip-browser-warning","1234"),a.send(e.data),a.onreadystatechange=function(){if(this.readyState===XMLHttpRequest.DONE)if(this.status>=200&&this.status<400){const n={text:a.responseText,data:{}};try{n.data=JSON.parse(a.responseText)}catch{}o(n)}else if(this.status==422){const n=JSON.parse(a.responseText);typeof n<"u"&&n.isBot?r(new b):r()}else r()}})}getLocalVisitor(){const e=this.getLocalStorageVisitor(),t=this.getCookieVisitor();return t!==null&&e!==null&&t.storedAt===e.storedAt?t:t!==null&&(e===null||e.storedAt<t.storedAt)?(this.updateLocalStorageVisitor(t),t):e!==null&&(t===null||t.storedAt<e.storedAt)?(this.setCookieVisitor(e),e):null}getLocalStorageVisitor(){const e=window.localStorage.getItem(this.storageSessionKey);if(e)try{return JSON.parse(e)}catch{}return null}updateLocalVisitor(e){e.storedAt=new Date,this.updateLocalStorageVisitor(e),this.setCookieVisitor(e)}updateLocalStorageVisitor(e){const t=window.localStorage.getItem(this.storageSessionKey),s=t===null?null:JSON.parse(t);for(const i of(s==null?void 0:s.visitorTests)??[])e.visitorTests.find(r=>r.hypothesisId==i.hypothesisId)===void 0&&i.needsPersistence&&!e.visitorTests.some(r=>r.testId==i.testId)&&e.visitorTests.push(i);window.localStorage.setItem(this.storageSessionKey,JSON.stringify(e))}getChannel(e){var s;return((s=[{"name":"cross-network","test":(v) => new RegExp(".*cross-network.*", "i").test(v.utmCampaign)},{"name":"direct","test":(v) => v.utmSource === "" && v.utmMedium === ""},{"name":"paid-shopping","test":(v) => (new RegExp("^(?:Google|IGShopping|aax-us-east\.amazon-adsystem\.com|aax\.amazon-adsystem\.com|alibaba|alibaba\.com|amazon|amazon\.co\.uk|amazon\.com|apps\.shopify\.com|checkout\.shopify\.com|checkout\.stripe\.com|cr\.shopping\.naver\.com|cr2\.shopping\.naver\.com|ebay|ebay\.co\.uk|ebay\.com|ebay\.com\.au|ebay\.de|etsy|etsy\.com|m\.alibaba\.com|m\.shopping\.naver\.com|mercadolibre|mercadolibre\.com|mercadolibre\.com\.ar|mercadolibre\.com\.mx|message\.alibaba\.com|msearch\.shopping\.naver\.com|nl\.shopping\.net|no\.shopping\.net|offer\.alibaba\.com|one\.walmart\.com|order\.shopping\.yahoo\.co\.jp|partners\.shopify\.com|s3\.amazonaws\.com|se\.shopping\.net|shop\.app|shopify|shopify\.com|shopping\.naver\.com|shopping\.yahoo\.co\.jp|shopping\.yahoo\.com|shopzilla|shopzilla\.com|simplycodes\.com|store\.shopping\.yahoo\.co\.jp|stripe|stripe\.com|uk\.shopping\.net|walmart|walmart\.com)$", "i").test(v.utmSource) || new RegExp("^(.*(([^a-df-z]|^)shop|shopping).*)$", "i").test(v.utmCampaign)) && new RegExp("^(.*cp.*|ppc|retargeting|paid.*)$", "i").test(v.utmMedium)},{"name":"paid-search","test":(v) => new RegExp("^(?:360\.cn|alice|aol|ar\.search\.yahoo\.com|ask|at\.search\.yahoo\.com|au\.search\.yahoo\.com|auone|avg|babylon|baidu|biglobe|biglobe\.co\.jp|biglobe\.ne\.jp|bing|br\.search\.yahoo\.com|ca\.search\.yahoo\.com|centrum\.cz|ch\.search\.yahoo\.com|cl\.search\.yahoo\.com|cn\.bing\.com|cnn|co\.search\.yahoo\.com|comcast|conduit|daum|daum\.net|de\.search\.yahoo\.com|dk\.search\.yahoo\.com|dogpile|dogpile\.com|duckduckgo|ecosia\.org|email\.seznam\.cz|eniro|es\.search\.yahoo\.com|espanol\.search\.yahoo\.com|exalead\.com|excite\.com|fi\.search\.yahoo\.com|firmy\.cz|fr\.search\.yahoo\.com|globo|go\.mail\.ru|google|google-play|hk\.search\.yahoo\.com|id\.search\.yahoo\.com|in\.search\.yahoo\.com|incredimail|it\.search\.yahoo\.com|kvasir|lens\.google\.com|lite\.qwant\.com|lycos|m\.baidu\.com|m\.naver\.com|m\.search\.naver\.com|m\.sogou\.com|mail\.rambler\.ru|mail\.yandex\.ru|malaysia\.search\.yahoo\.com|msn|msn\.com|mx\.search\.yahoo\.com|najdi|naver|naver\.com|news\.google\.com|nl\.search\.yahoo\.com|no\.search\.yahoo\.com|ntp\.msn\.com|nz\.search\.yahoo\.com|onet|onet\.pl|pe\.search\.yahoo\.com|ph\.search\.yahoo\.com|pl\.search\.yahoo\.com|play\.google\.com|qwant|qwant\.com|rakuten|rakuten\.co\.jp|rambler|rambler\.ru|se\.search\.yahoo\.com|search-results|search\.aol\.co\.uk|search\.aol\.com|search\.google\.com|search\.smt\.docomo\.ne\.jp|search\.ukr\.net|secureurl\.ukr\.net|seznam|seznam\.cz|sg\.search\.yahoo\.com|so\.com|sogou|sogou\.com|sp-web\.search\.auone\.jp|startsiden|startsiden\.no|suche\.aol\.de|terra|th\.search\.yahoo\.com|tr\.search\.yahoo\.com|tut\.by|tw\.search\.yahoo\.com|uk\.search\.yahoo\.com|ukr|us\.search\.yahoo\.com|virgilio|vn\.search\.yahoo\.com|wap\.sogou\.com|webmaster\.yandex\.ru|websearch\.rakuten\.co\.jp|yahoo|yahoo\.co\.jp|yahoo\.com|yandex|yandex\.by|yandex\.com|yandex\.com\.tr|yandex\.fr|yandex\.kz|yandex\.ru|yandex\.ua|yandex\.uz|zen\.yandex\.ru)$", "i").test(v.utmSource) && new RegExp("^(.*cp.*|ppc|retargeting|paid.*)$", "i").test(v.utmMedium)},{"name":"paid-social","test":(v) => new RegExp("^(?:43things|43things\.com|51\.com|5ch\.net|Hatena|ImageShack|academia\.edu|activerain|activerain\.com|activeworlds|activeworlds\.com|addthis|addthis\.com|airg\.ca|allnurses\.com|allrecipes\.com|alumniclass|alumniclass\.com|ameba\.jp|ameblo\.jp|americantowns|americantowns\.com|amp\.reddit\.com|ancestry\.com|anobii|anobii\.com|answerbag|answerbag\.com|answers\.yahoo\.com|aolanswers|aolanswers\.com|apps\.facebook\.com|ar\.pinterest\.com|artstation\.com|askubuntu|askubuntu\.com|asmallworld\.com|athlinks|athlinks\.com|away\.vk\.com|awe\.sm|b\.hatena\.ne\.jp|baby-gaga|baby-gaga\.com|babyblog\.ru|badoo|badoo\.com|bebo|bebo\.com|beforeitsnews|beforeitsnews\.com|bharatstudent|bharatstudent\.com|biip\.no|biswap\.org|bit\.ly|blackcareernetwork\.com|blackplanet|blackplanet\.com|blip\.fm|blog\.com|blog\.feedspot\.com|blog\.goo\.ne\.jp|blog\.naver\.com|blog\.yahoo\.co\.jp|blogg\.no|bloggang\.com|blogger|blogger\.com|blogher|blogher\.com|bloglines|bloglines\.com|blogs\.com|blogsome|blogsome\.com|blogspot|blogspot\.com|blogster|blogster\.com|blurtit|blurtit\.com|bookmarks\.yahoo\.co\.jp|bookmarks\.yahoo\.com|br\.pinterest\.com|brightkite|brightkite\.com|brizzly|brizzly\.com|business\.facebook\.com|buzzfeed|buzzfeed\.com|buzznet|buzznet\.com|cafe\.naver\.com|cafemom|cafemom\.com|camospace|camospace\.com|canalblog\.com|care\.com|care2|care2\.com|caringbridge\.org|catster|catster\.com|cbnt\.io|cellufun|cellufun\.com|centerblog\.net|chat\.zalo\.me|chegg\.com|chicagonow|chicagonow\.com|chiebukuro\.yahoo\.co\.jp|classmates|classmates\.com|classquest|classquest\.com|co\.pinterest\.com|cocolog-nifty|cocolog-nifty\.com|copainsdavant\.linternaute\.com|couchsurfing\.org|cozycot|cozycot\.com|cross\.tv|crunchyroll|crunchyroll\.com|cyworld|cyworld\.com|cz\.pinterest\.com|d\.hatena\.ne\.jp|dailystrength\.org|deluxe\.com|deviantart|deviantart\.com|dianping|dianping\.com|digg|digg\.com|diigo|diigo\.com|discover\.hubpages\.com|disqus|disqus\.com|dogster|dogster\.com|dol2day|dol2day\.com|doostang|doostang\.com|dopplr|dopplr\.com|douban|douban\.com|draft\.blogger\.com|draugiem\.lv|drugs-forum|drugs-forum\.com|dzone|dzone\.com|edublogs\.org|elftown|elftown\.com|epicurious\.com|everforo\.com|exblog\.jp|extole|extole\.com|facebook|facebook\.com|faceparty|faceparty\.com|fandom\.com|fanpop|fanpop\.com|fark|fark\.com|fb|fb\.me|fc2|fc2\.com|feedspot|feministing|feministing\.com|filmaffinity|filmaffinity\.com|flickr|flickr\.com|flipboard|flipboard\.com|folkdirect|folkdirect\.com|foodservice|foodservice\.com|forums\.androidcentral\.com|forums\.crackberry\.com|forums\.imore\.com|forums\.nexopia\.com|forums\.webosnation\.com|forums\.wpcentral\.com|fotki|fotki\.com|fotolog|fotolog\.com|foursquare|foursquare\.com|free\.facebook\.com|friendfeed|friendfeed\.com|fruehstueckstreff\.org|fubar|fubar\.com|gaiaonline|gaiaonline\.com|gamerdna|gamerdna\.com|gather\.com|geni\.com|getpocket\.com|glassboard|glassboard\.com|glassdoor|glassdoor\.com|godtube|godtube\.com|goldenline\.pl|goldstar|goldstar\.com|goo\.gl|gooblog|goodreads|goodreads\.com|google\+|googlegroups\.com|googleplus|govloop|govloop\.com|gowalla|gowalla\.com|gree\.jp|groups\.google\.com|gulli\.com|gutefrage\.net|habbo|habbo\.com|hi5|hi5\.com|hootsuite|hootsuite\.com|houzz|houzz\.com|hoverspot|hoverspot\.com|hr\.com|hu\.pinterest\.com|hubculture|hubculture\.com|hubpages\.com|hyves\.net|hyves\.nl|ibibo|ibibo\.com|id\.pinterest\.com|identi\.ca|ig|imageshack\.com|imageshack\.us|imvu|imvu\.com|in\.pinterest\.com|insanejournal|insanejournal\.com|instagram|instagram\.com|instapaper|instapaper\.com|internations\.org|interpals\.net|intherooms|intherooms\.com|irc-galleria\.net|is\.gd|italki|italki\.com|jammerdirect|jammerdirect\.com|jappy\.com|jappy\.de|kaboodle\.com|kakao|kakao\.com|kakaocorp\.com|kaneva|kaneva\.com|kin\.naver\.com|l\.facebook\.com|l\.instagram\.com|l\.messenger\.com|last\.fm|librarything|librarything\.com|lifestream\.aol\.com|line|line\.me|linkedin|linkedin\.com|listal|listal\.com|listography|listography\.com|livedoor\.com|livedoorblog|livejournal|livejournal\.com|lm\.facebook\.com|lnkd\.in|m\.blog\.naver\.com|m\.cafe\.naver\.com|m\.facebook\.com|m\.kin\.naver\.com|m\.vk\.com|m\.yelp\.com|mbga\.jp|medium\.com|meetin\.org|meetup|meetup\.com|meinvz\.net|meneame\.net|menuism\.com|messages\.google\.com|messages\.yahoo\.co\.jp|messenger|messenger\.com|mix\.com|mixi\.jp|mobile\.facebook\.com|mocospace|mocospace\.com|mouthshut|mouthshut\.com|movabletype|movabletype\.com|mubi|mubi\.com|my\.opera\.com|myanimelist\.net|myheritage|myheritage\.com|mylife|mylife\.com|mymodernmet|mymodernmet\.com|myspace|myspace\.com|netvibes|netvibes\.com|news\.ycombinator\.com|newsshowcase|nexopia|ngopost\.org|niconico|nicovideo\.jp|nightlifelink|nightlifelink\.com|ning|ning\.com|nl\.pinterest\.com|odnoklassniki\.ru|odnoklassniki\.ua|okwave\.jp|old\.reddit\.com|oneworldgroup\.org|onstartups|onstartups\.com|opendiary|opendiary\.com|oshiete\.goo\.ne\.jp|out\.reddit\.com|over-blog\.com|overblog\.com|paper\.li|partyflock\.nl|photobucket|photobucket\.com|pinboard|pinboard\.in|pingsta|pingsta\.com|pinterest|pinterest\.at|pinterest\.ca|pinterest\.ch|pinterest\.cl|pinterest\.co\.kr|pinterest\.co\.uk|pinterest\.com|pinterest\.com\.au|pinterest\.com\.mx|pinterest\.de|pinterest\.es|pinterest\.fr|pinterest\.it|pinterest\.jp|pinterest\.nz|pinterest\.ph|pinterest\.pt|pinterest\.ru|pinterest\.se|pixiv\.net|pl\.pinterest\.com|playahead\.se|plurk|plurk\.com|plus\.google\.com|plus\.url\.google\.com|pocket\.co|posterous|posterous\.com|pro\.homeadvisor\.com|pulse\.yahoo\.com|qapacity|qapacity\.com|quechup|quechup\.com|quora|quora\.com|qzone\.qq\.com|ravelry|ravelry\.com|reddit|reddit\.com|redux|redux\.com|renren|renren\.com|researchgate\.net|reunion|reunion\.com|reverbnation|reverbnation\.com|rtl\.de|ryze|ryze\.com|salespider|salespider\.com|scoop\.it|screenrant|screenrant\.com|scribd|scribd\.com|scvngr|scvngr\.com|secondlife|secondlife\.com|serverfault|serverfault\.com|shareit|sharethis|sharethis\.com|shvoong\.com|sites\.google\.com|skype|skyrock|skyrock\.com|slashdot\.org|slideshare\.net|smartnews\.com|snapchat|snapchat\.com|social|sociallife\.com\.br|socialvibe|socialvibe\.com|spaces\.live\.com|spoke|spoke\.com|spruz|spruz\.com|ssense\.com|stackapps|stackapps\.com|stackexchange|stackexchange\.com|stackoverflow|stackoverflow\.com|stardoll\.com|stickam|stickam\.com|studivz\.net|suomi24\.fi|superuser|superuser\.com|sweeva|sweeva\.com|t\.co|t\.me|tagged|tagged\.com|taggedmail|taggedmail\.com|talkbiznow|talkbiznow\.com|taringa\.net|techmeme|techmeme\.com|tencent|tencent\.com|tiktok|tiktok\.com|tinyurl|tinyurl\.com|toolbox|toolbox\.com|touch\.facebook\.com|tr\.pinterest\.com|travellerspoint|travellerspoint\.com|tripadvisor|tripadvisor\.com|trombi|trombi\.com|trustpilot|tudou|tudou\.com|tuenti|tuenti\.com|tumblr|tumblr\.com|tweetdeck|tweetdeck\.com|twitter|twitter\.com|twoo\.com|typepad|typepad\.com|unblog\.fr|urbanspoon\.com|ushareit\.com|ushi\.cn|vampirefreaks|vampirefreaks\.com|vampirerave|vampirerave\.com|vg\.no|video\.ibm\.com|vk\.com|vkontakte\.ru|wakoopa|wakoopa\.com|wattpad|wattpad\.com|web\.facebook\.com|web\.skype\.com|webshots|webshots\.com|wechat|wechat\.com|weebly|weebly\.com|weibo|weibo\.com|wer-weiss-was\.de|weread|weread\.com|whatsapp|whatsapp\.com|wiki\.answers\.com|wikihow\.com|wikitravel\.org|woot\.com|wordpress|wordpress\.com|wordpress\.org|xanga|xanga\.com|xing|xing\.com|yahoo-mbga\.jp|yammer|yammer\.com|yelp|yelp\.co\.uk|yelp\.com|youroom\.in|za\.pinterest\.com|zalo|zoo\.gr|zooppa|zooppa\.com)$", "i").test(v.utmSource) && new RegExp("^(.*cp.*|ppc|retargeting|paid.*)$", "i").test(v.utmMedium)},{"name":"paid-video","test":(v) => new RegExp("^(?:blog\.twitch\.tv|crackle|crackle\.com|curiositystream|curiositystream\.com|d\.tube|dailymotion|dailymotion\.com|dashboard\.twitch\.tv|disneyplus|disneyplus\.com|fast\.wistia\.net|help\.hulu\.com|help\.netflix\.com|hulu|hulu\.com|id\.twitch\.tv|iq\.com|iqiyi|iqiyi\.com|jobs\.netflix\.com|justin\.tv|m\.twitch\.tv|m\.youtube\.com|music\.youtube\.com|netflix|netflix\.com|player\.twitch\.tv|player\.vimeo\.com|ted|ted\.com|twitch|twitch\.tv|utreon|utreon\.com|veoh|veoh\.com|viadeo\.journaldunet\.com|vimeo|vimeo\.com|wistia|wistia\.com|youku|youku\.com|youtube|youtube\.com)$", "i").test(v.utmSource) && new RegExp("^(.*cp.*|ppc|retargeting|paid.*)$", "i").test(v.utmMedium)},{"name":"display","test":(v) => new RegExp("^(?:display|banner|expandable|interstitial|cpm)$", "i").test(v.utmMedium)},{"name":"paid-other","test":(v) => new RegExp("^(.*cp.*|ppc|retargeting|paid.*)$", "i").test(v.utmMedium)},{"name":"organic-shopping","test":(v) => new RegExp("^(?:360\.cn|alice|aol|ar\.search\.yahoo\.com|ask|at\.search\.yahoo\.com|au\.search\.yahoo\.com|auone|avg|babylon|baidu|biglobe|biglobe\.co\.jp|biglobe\.ne\.jp|bing|br\.search\.yahoo\.com|ca\.search\.yahoo\.com|centrum\.cz|ch\.search\.yahoo\.com|cl\.search\.yahoo\.com|cn\.bing\.com|cnn|co\.search\.yahoo\.com|comcast|conduit|daum|daum\.net|de\.search\.yahoo\.com|dk\.search\.yahoo\.com|dogpile|dogpile\.com|duckduckgo|ecosia\.org|email\.seznam\.cz|eniro|es\.search\.yahoo\.com|espanol\.search\.yahoo\.com|exalead\.com|excite\.com|fi\.search\.yahoo\.com|firmy\.cz|fr\.search\.yahoo\.com|globo|go\.mail\.ru|google|google-play|hk\.search\.yahoo\.com|id\.search\.yahoo\.com|in\.search\.yahoo\.com|incredimail|it\.search\.yahoo\.com|kvasir|lens\.google\.com|lite\.qwant\.com|lycos|m\.baidu\.com|m\.naver\.com|m\.search\.naver\.com|m\.sogou\.com|mail\.rambler\.ru|mail\.yandex\.ru|malaysia\.search\.yahoo\.com|msn|msn\.com|mx\.search\.yahoo\.com|najdi|naver|naver\.com|news\.google\.com|nl\.search\.yahoo\.com|no\.search\.yahoo\.com|ntp\.msn\.com|nz\.search\.yahoo\.com|onet|onet\.pl|pe\.search\.yahoo\.com|ph\.search\.yahoo\.com|pl\.search\.yahoo\.com|play\.google\.com|qwant|qwant\.com|rakuten|rakuten\.co\.jp|rambler|rambler\.ru|se\.search\.yahoo\.com|search-results|search\.aol\.co\.uk|search\.aol\.com|search\.google\.com|search\.smt\.docomo\.ne\.jp|search\.ukr\.net|secureurl\.ukr\.net|seznam|seznam\.cz|sg\.search\.yahoo\.com|so\.com|sogou|sogou\.com|sp-web\.search\.auone\.jp|startsiden|startsiden\.no|suche\.aol\.de|terra|th\.search\.yahoo\.com|tr\.search\.yahoo\.com|tut\.by|tw\.search\.yahoo\.com|uk\.search\.yahoo\.com|ukr|us\.search\.yahoo\.com|virgilio|vn\.search\.yahoo\.com|wap\.sogou\.com|webmaster\.yandex\.ru|websearch\.rakuten\.co\.jp|yahoo|yahoo\.co\.jp|yahoo\.com|yandex|yandex\.by|yandex\.com|yandex\.com\.tr|yandex\.fr|yandex\.kz|yandex\.ru|yandex\.ua|yandex\.uz|zen\.yandex\.ru)$", "i").test(v.utmSource) || new RegExp("^(.*(([^a-df-z]|^)shop|shopping).*)$", "i").test(v.utmCampaign)},{"name":"organic-social","test":(v) => new RegExp("^(?:43things|43things\.com|51\.com|5ch\.net|Hatena|ImageShack|academia\.edu|activerain|activerain\.com|activeworlds|activeworlds\.com|addthis|addthis\.com|airg\.ca|allnurses\.com|allrecipes\.com|alumniclass|alumniclass\.com|ameba\.jp|ameblo\.jp|americantowns|americantowns\.com|amp\.reddit\.com|ancestry\.com|anobii|anobii\.com|answerbag|answerbag\.com|answers\.yahoo\.com|aolanswers|aolanswers\.com|apps\.facebook\.com|ar\.pinterest\.com|artstation\.com|askubuntu|askubuntu\.com|asmallworld\.com|athlinks|athlinks\.com|away\.vk\.com|awe\.sm|b\.hatena\.ne\.jp|baby-gaga|baby-gaga\.com|babyblog\.ru|badoo|badoo\.com|bebo|bebo\.com|beforeitsnews|beforeitsnews\.com|bharatstudent|bharatstudent\.com|biip\.no|biswap\.org|bit\.ly|blackcareernetwork\.com|blackplanet|blackplanet\.com|blip\.fm|blog\.com|blog\.feedspot\.com|blog\.goo\.ne\.jp|blog\.naver\.com|blog\.yahoo\.co\.jp|blogg\.no|bloggang\.com|blogger|blogger\.com|blogher|blogher\.com|bloglines|bloglines\.com|blogs\.com|blogsome|blogsome\.com|blogspot|blogspot\.com|blogster|blogster\.com|blurtit|blurtit\.com|bookmarks\.yahoo\.co\.jp|bookmarks\.yahoo\.com|br\.pinterest\.com|brightkite|brightkite\.com|brizzly|brizzly\.com|business\.facebook\.com|buzzfeed|buzzfeed\.com|buzznet|buzznet\.com|cafe\.naver\.com|cafemom|cafemom\.com|camospace|camospace\.com|canalblog\.com|care\.com|care2|care2\.com|caringbridge\.org|catster|catster\.com|cbnt\.io|cellufun|cellufun\.com|centerblog\.net|chat\.zalo\.me|chegg\.com|chicagonow|chicagonow\.com|chiebukuro\.yahoo\.co\.jp|classmates|classmates\.com|classquest|classquest\.com|co\.pinterest\.com|cocolog-nifty|cocolog-nifty\.com|copainsdavant\.linternaute\.com|couchsurfing\.org|cozycot|cozycot\.com|cross\.tv|crunchyroll|crunchyroll\.com|cyworld|cyworld\.com|cz\.pinterest\.com|d\.hatena\.ne\.jp|dailystrength\.org|deluxe\.com|deviantart|deviantart\.com|dianping|dianping\.com|digg|digg\.com|diigo|diigo\.com|discover\.hubpages\.com|disqus|disqus\.com|dogster|dogster\.com|dol2day|dol2day\.com|doostang|doostang\.com|dopplr|dopplr\.com|douban|douban\.com|draft\.blogger\.com|draugiem\.lv|drugs-forum|drugs-forum\.com|dzone|dzone\.com|edublogs\.org|elftown|elftown\.com|epicurious\.com|everforo\.com|exblog\.jp|extole|extole\.com|facebook|facebook\.com|faceparty|faceparty\.com|fandom\.com|fanpop|fanpop\.com|fark|fark\.com|fb|fb\.me|fc2|fc2\.com|feedspot|feministing|feministing\.com|filmaffinity|filmaffinity\.com|flickr|flickr\.com|flipboard|flipboard\.com|folkdirect|folkdirect\.com|foodservice|foodservice\.com|forums\.androidcentral\.com|forums\.crackberry\.com|forums\.imore\.com|forums\.nexopia\.com|forums\.webosnation\.com|forums\.wpcentral\.com|fotki|fotki\.com|fotolog|fotolog\.com|foursquare|foursquare\.com|free\.facebook\.com|friendfeed|friendfeed\.com|fruehstueckstreff\.org|fubar|fubar\.com|gaiaonline|gaiaonline\.com|gamerdna|gamerdna\.com|gather\.com|geni\.com|getpocket\.com|glassboard|glassboard\.com|glassdoor|glassdoor\.com|godtube|godtube\.com|goldenline\.pl|goldstar|goldstar\.com|goo\.gl|gooblog|goodreads|goodreads\.com|google\+|googlegroups\.com|googleplus|govloop|govloop\.com|gowalla|gowalla\.com|gree\.jp|groups\.google\.com|gulli\.com|gutefrage\.net|habbo|habbo\.com|hi5|hi5\.com|hootsuite|hootsuite\.com|houzz|houzz\.com|hoverspot|hoverspot\.com|hr\.com|hu\.pinterest\.com|hubculture|hubculture\.com|hubpages\.com|hyves\.net|hyves\.nl|ibibo|ibibo\.com|id\.pinterest\.com|identi\.ca|ig|imageshack\.com|imageshack\.us|imvu|imvu\.com|in\.pinterest\.com|insanejournal|insanejournal\.com|instagram|instagram\.com|instapaper|instapaper\.com|internations\.org|interpals\.net|intherooms|intherooms\.com|irc-galleria\.net|is\.gd|italki|italki\.com|jammerdirect|jammerdirect\.com|jappy\.com|jappy\.de|kaboodle\.com|kakao|kakao\.com|kakaocorp\.com|kaneva|kaneva\.com|kin\.naver\.com|l\.facebook\.com|l\.instagram\.com|l\.messenger\.com|last\.fm|librarything|librarything\.com|lifestream\.aol\.com|line|line\.me|linkedin|linkedin\.com|listal|listal\.com|listography|listography\.com|livedoor\.com|livedoorblog|livejournal|livejournal\.com|lm\.facebook\.com|lnkd\.in|m\.blog\.naver\.com|m\.cafe\.naver\.com|m\.facebook\.com|m\.kin\.naver\.com|m\.vk\.com|m\.yelp\.com|mbga\.jp|medium\.com|meetin\.org|meetup|meetup\.com|meinvz\.net|meneame\.net|menuism\.com|messages\.google\.com|messages\.yahoo\.co\.jp|messenger|messenger\.com|mix\.com|mixi\.jp|mobile\.facebook\.com|mocospace|mocospace\.com|mouthshut|mouthshut\.com|movabletype|movabletype\.com|mubi|mubi\.com|my\.opera\.com|myanimelist\.net|myheritage|myheritage\.com|mylife|mylife\.com|mymodernmet|mymodernmet\.com|myspace|myspace\.com|netvibes|netvibes\.com|news\.ycombinator\.com|newsshowcase|nexopia|ngopost\.org|niconico|nicovideo\.jp|nightlifelink|nightlifelink\.com|ning|ning\.com|nl\.pinterest\.com|odnoklassniki\.ru|odnoklassniki\.ua|okwave\.jp|old\.reddit\.com|oneworldgroup\.org|onstartups|onstartups\.com|opendiary|opendiary\.com|oshiete\.goo\.ne\.jp|out\.reddit\.com|over-blog\.com|overblog\.com|paper\.li|partyflock\.nl|photobucket|photobucket\.com|pinboard|pinboard\.in|pingsta|pingsta\.com|pinterest|pinterest\.at|pinterest\.ca|pinterest\.ch|pinterest\.cl|pinterest\.co\.kr|pinterest\.co\.uk|pinterest\.com|pinterest\.com\.au|pinterest\.com\.mx|pinterest\.de|pinterest\.es|pinterest\.fr|pinterest\.it|pinterest\.jp|pinterest\.nz|pinterest\.ph|pinterest\.pt|pinterest\.ru|pinterest\.se|pixiv\.net|pl\.pinterest\.com|playahead\.se|plurk|plurk\.com|plus\.google\.com|plus\.url\.google\.com|pocket\.co|posterous|posterous\.com|pro\.homeadvisor\.com|pulse\.yahoo\.com|qapacity|qapacity\.com|quechup|quechup\.com|quora|quora\.com|qzone\.qq\.com|ravelry|ravelry\.com|reddit|reddit\.com|redux|redux\.com|renren|renren\.com|researchgate\.net|reunion|reunion\.com|reverbnation|reverbnation\.com|rtl\.de|ryze|ryze\.com|salespider|salespider\.com|scoop\.it|screenrant|screenrant\.com|scribd|scribd\.com|scvngr|scvngr\.com|secondlife|secondlife\.com|serverfault|serverfault\.com|shareit|sharethis|sharethis\.com|shvoong\.com|sites\.google\.com|skype|skyrock|skyrock\.com|slashdot\.org|slideshare\.net|smartnews\.com|snapchat|snapchat\.com|social|sociallife\.com\.br|socialvibe|socialvibe\.com|spaces\.live\.com|spoke|spoke\.com|spruz|spruz\.com|ssense\.com|stackapps|stackapps\.com|stackexchange|stackexchange\.com|stackoverflow|stackoverflow\.com|stardoll\.com|stickam|stickam\.com|studivz\.net|suomi24\.fi|superuser|superuser\.com|sweeva|sweeva\.com|t\.co|t\.me|tagged|tagged\.com|taggedmail|taggedmail\.com|talkbiznow|talkbiznow\.com|taringa\.net|techmeme|techmeme\.com|tencent|tencent\.com|tiktok|tiktok\.com|tinyurl|tinyurl\.com|toolbox|toolbox\.com|touch\.facebook\.com|tr\.pinterest\.com|travellerspoint|travellerspoint\.com|tripadvisor|tripadvisor\.com|trombi|trombi\.com|trustpilot|tudou|tudou\.com|tuenti|tuenti\.com|tumblr|tumblr\.com|tweetdeck|tweetdeck\.com|twitter|twitter\.com|twoo\.com|typepad|typepad\.com|unblog\.fr|urbanspoon\.com|ushareit\.com|ushi\.cn|vampirefreaks|vampirefreaks\.com|vampirerave|vampirerave\.com|vg\.no|video\.ibm\.com|vk\.com|vkontakte\.ru|wakoopa|wakoopa\.com|wattpad|wattpad\.com|web\.facebook\.com|web\.skype\.com|webshots|webshots\.com|wechat|wechat\.com|weebly|weebly\.com|weibo|weibo\.com|wer-weiss-was\.de|weread|weread\.com|whatsapp|whatsapp\.com|wiki\.answers\.com|wikihow\.com|wikitravel\.org|woot\.com|wordpress|wordpress\.com|wordpress\.org|xanga|xanga\.com|xing|xing\.com|yahoo-mbga\.jp|yammer|yammer\.com|yelp|yelp\.co\.uk|yelp\.com|youroom\.in|za\.pinterest\.com|zalo|zoo\.gr|zooppa|zooppa\.com)$", "i").test(v.utmSource) || new RegExp("^(?:social|social-network|social-media|sm|social network|social media)$", "i").test(v.utmMedium)},{"name":"organic-video","test":(v) => new RegExp("^(?:blog\.twitch\.tv|crackle|crackle\.com|curiositystream|curiositystream\.com|d\.tube|dailymotion|dailymotion\.com|dashboard\.twitch\.tv|disneyplus|disneyplus\.com|fast\.wistia\.net|help\.hulu\.com|help\.netflix\.com|hulu|hulu\.com|id\.twitch\.tv|iq\.com|iqiyi|iqiyi\.com|jobs\.netflix\.com|justin\.tv|m\.twitch\.tv|m\.youtube\.com|music\.youtube\.com|netflix|netflix\.com|player\.twitch\.tv|player\.vimeo\.com|ted|ted\.com|twitch|twitch\.tv|utreon|utreon\.com|veoh|veoh\.com|viadeo\.journaldunet\.com|vimeo|vimeo\.com|wistia|wistia\.com|youku|youku\.com|youtube|youtube\.com)$", "i").test(v.utmSource) || new RegExp("^(.*video.*)$", "i").test(v.utmMedium)},{"name":"organic-search","test":(v) => new RegExp("^(?:360\.cn|alice|aol|ar\.search\.yahoo\.com|ask|at\.search\.yahoo\.com|au\.search\.yahoo\.com|auone|avg|babylon|baidu|biglobe|biglobe\.co\.jp|biglobe\.ne\.jp|bing|br\.search\.yahoo\.com|ca\.search\.yahoo\.com|centrum\.cz|ch\.search\.yahoo\.com|cl\.search\.yahoo\.com|cn\.bing\.com|cnn|co\.search\.yahoo\.com|comcast|conduit|daum|daum\.net|de\.search\.yahoo\.com|dk\.search\.yahoo\.com|dogpile|dogpile\.com|duckduckgo|ecosia\.org|email\.seznam\.cz|eniro|es\.search\.yahoo\.com|espanol\.search\.yahoo\.com|exalead\.com|excite\.com|fi\.search\.yahoo\.com|firmy\.cz|fr\.search\.yahoo\.com|globo|go\.mail\.ru|google|google-play|hk\.search\.yahoo\.com|id\.search\.yahoo\.com|in\.search\.yahoo\.com|incredimail|it\.search\.yahoo\.com|kvasir|lens\.google\.com|lite\.qwant\.com|lycos|m\.baidu\.com|m\.naver\.com|m\.search\.naver\.com|m\.sogou\.com|mail\.rambler\.ru|mail\.yandex\.ru|malaysia\.search\.yahoo\.com|msn|msn\.com|mx\.search\.yahoo\.com|najdi|naver|naver\.com|news\.google\.com|nl\.search\.yahoo\.com|no\.search\.yahoo\.com|ntp\.msn\.com|nz\.search\.yahoo\.com|onet|onet\.pl|pe\.search\.yahoo\.com|ph\.search\.yahoo\.com|pl\.search\.yahoo\.com|play\.google\.com|qwant|qwant\.com|rakuten|rakuten\.co\.jp|rambler|rambler\.ru|se\.search\.yahoo\.com|search-results|search\.aol\.co\.uk|search\.aol\.com|search\.google\.com|search\.smt\.docomo\.ne\.jp|search\.ukr\.net|secureurl\.ukr\.net|seznam|seznam\.cz|sg\.search\.yahoo\.com|so\.com|sogou|sogou\.com|sp-web\.search\.auone\.jp|startsiden|startsiden\.no|suche\.aol\.de|terra|th\.search\.yahoo\.com|tr\.search\.yahoo\.com|tut\.by|tw\.search\.yahoo\.com|uk\.search\.yahoo\.com|ukr|us\.search\.yahoo\.com|virgilio|vn\.search\.yahoo\.com|wap\.sogou\.com|webmaster\.yandex\.ru|websearch\.rakuten\.co\.jp|yahoo|yahoo\.co\.jp|yahoo\.com|yandex|yandex\.by|yandex\.com|yandex\.com\.tr|yandex\.fr|yandex\.kz|yandex\.ru|yandex\.ua|yandex\.uz|zen\.yandex\.ru)$", "i").test(v.utmSource) || v.utmMedium.toLowerCase() === "organic"},{"name":"referral","test":(v) => new RegExp("^(?:referral|app|link)$", "i").test(v.utmMedium)},{"name":"email","test":(v) => new RegExp("^(?:email|e-mail|e_mail|e mail)$", "i").test(v.utmMedium) || new RegExp("^(?:email|e-mail|e_mail|e mail)$", "i").test(v.utmSource)},{"name":"affiliate","test":(v) => v.utmMedium.toLowerCase() === "affiliate"},{"name":"audio","test":(v) => v.utmMedium.toLowerCase() === "audio"},{"name":"sms","test":(v) => v.utmSource.toLowerCase() === "sms" || v.utmMedium.toLowerCase() === "sms"},{"name":"mobile-push-notification","test":(v) => v.utmSource.toLowerCase() === "firebase" || new RegExp("(?:.*mobile.*|.*notification.*|push$)", "i").test(v.utmMedium)}].find(i=>i.test(e)))==null?void 0:s.name)??"other"}setCookieVisitor(e){const t=JSON.stringify(e),s=new Date(new Date().getTime()+864e5*365).toUTCString();document.cookie=`SHOPLIFT=${t};domain=.${window.location.hostname};path=/;expires=${s};`}getCookieVisitor(){const e=document.cookie.split("; ").filter(t=>t.split("=").at(0)==="SHOPLIFT").at(0);return e===void 0?null:JSON.parse(e.split("=").slice(1).join("="))}debug(){const e={storage:this.getLocalStorageVisitor(),params:{shop:this.shop,host:this.host,cssHideClass:this.cssHideClass,testConfigs:this.testConfigs,sendPageView:this.sendPageView}};console.log(JSON.stringify(e))}}class S extends C{constructor(e,t,s,i,o){super(e,t,s?"shoplift-hide":"",o,i),this.testConfigs=o}async init(){if(window.Shopify&&window.Shopify.designMode||window.location.href.includes("slScreenshot=true")||window.location.hostname.endsWith(".shopifypreview.com")||P(navigator.userAgent))return;const e=this.getDeviceType(),t=this.getUTMValue("utm_source")??"",s=this.getUTMValue("utm_medium")??"",i=this.getUTMValue("utm_campaign")??"",o=this.getUTMValue("utm_content")??"",r=window.document.referrer;this.flagProcessing(!0);try{const a=this.syncWithServer();let n=this.getVisitor();if(this.checkForThemePreview(n)||await this.handleVisitorTest(n,e,t,s,i,o,r))return;this.showPage(),await a,await this.syncWithServer(),n=this.getVisitor(),this.flagProcessing(!1),console.log("SHOPLIFT SCRIPT INITIALIZED!"),n&&(this.sendPageView&&await this.createPageView(n),await this.sendCartEvent(n.id))}catch(a){if(a instanceof b)return;throw a}finally{this.flagProcessing(!1),window.shoplift=!0}}async handleVisitorTest(e,t,s,i,o,r,a){const n={device:t!=="tablet"?t:"mobile",utmSource:s,utmMedium:i,utmCampaign:o,utmContent:r,referrer:a},g=await this.filterTestsByAudience(this.testConfigs,e,n);let d=this.testsForUrl(g);const k=d.length>0;if(k&&e){const f=this.getVisitorHypothesis(e,d);if(f){const u=this.considerRedirect(f);return u&&this.redirect(f),u}}if(k){if(this.hasThemeAndTemplateTests(g)){const y=e?this.visitorActiveTestType(e):null;let v;switch(y){case"template":v=h=>h!=="theme";break;case"theme":v=h=>h==="theme";break;case null:v=Math.random()>.5?h=>h==="theme":h=>h!=="theme";break}d=d.filter(h=>h.hypotheses.some(T=>T.isControl&&v(T.type)))}if(d.length===0)return e??(e=this.createLocalVisitor(n)),!1;const f=d[Math.floor(Math.random()*d.length)],u=this.pickHypothesis(f);if(u){e===null?e=this.createLocalVisitorInTest(n,f.id,u):e=this.addLocalVisitorToTest(e,f.id,u);const y=this.considerRedirect(u);return y&&this.redirect(u),y}}return e===null&&(e=this.createLocalVisitor(n)),!1}getVisitorHypothesis(e,t){return t.reduce((s,i)=>s.concat(i.hypotheses),[]).find(s=>e.visitorTests.some(i=>i.hypothesisId===s.id))}async createVisitor(e,t){const s={shop:e,...t};return(await this.makeRequest({method:"post",url:`${this.host}/api/v0/visitors`,data:JSON.stringify(s)})).data}async createPageView(e){const t={path:window.location.href,visitorId:e.id,cart:null,customer:null};return(await this.makeRequest({method:"post",url:`${this.host}/api/events/page-view`,headers:{"Content-Type":"text/plain"},data:JSON.stringify(t)})).data}async createVisitorInTest(e,t,s,i){const o={shop:e,testId:t,referrer:s.referrer,device:s.device,utmSource:s.utmSource,utmMedium:s.utmMedium,utmContent:s.utmContent,utmCampaign:s.utmCampaign,isControl:i};return(await this.makeRequest({method:"post",url:`${this.host}/api/v0/visitors/create-in-test`,data:JSON.stringify(o)})).data}async includeInTest(e,t,s){return(await this.makeRequest({method:"post",url:`${this.host}/api/v0/visitors/${e.id}/add-to-test`,data:JSON.stringify({testId:t,isControl:s})})).data}createLocalVisitor(e){const t={...e,id:"",createdAt:new Date,storedAt:new Date,needsPersistence:!0,isProcessing:!0,visitorTests:[]};return this.updateLocalVisitor(t),t}createLocalVisitorInTest(e,t,s){const i={...e,id:"",createdAt:new Date,storedAt:new Date,needsPersistence:!0,isProcessing:!0,visitorTests:[{testId:t,hypothesisId:s.id,isThemeTest:s.type==="theme",themeId:s.themeId,needsPersistence:!0}]};return this.updateLocalVisitor(i),i}addLocalVisitorToTest(e,t,s){return e.visitorTests.push({testId:t,hypothesisId:s.id,isThemeTest:s.type==="theme",themeId:s.themeId,needsPersistence:!0}),this.updateLocalVisitor(e),e}getVisitorHypotheses(e){return e.visitorTests.map(t=>{var s;return(s=this.testConfigs.find(i=>i.hypotheses.some(o=>o.id===t.hypothesisId)))==null?void 0:s.hypotheses.find(i=>i.id==t.hypothesisId)}).filter(t=>!!t)}getHypothesis(e){return this.testConfigs.filter(t=>t.hypotheses.some(s=>s.id===e)).map(t=>t.hypotheses.find(s=>s.id===e))[0]}visitorCreatedDuringTestActive(e,t){let s="";for(const i of e){if(t.createdAt<i.createdAt)break;s=i.status}return s==="active"}async filterTestsByAudience(e,t,s){const i=[];for(const o of e)((t==null?void 0:t.visitorTests.some(a=>a.testId===o.id))||await this.isTargetAudience(o,t||s,t===null||this.visitorCreatedDuringTestActive(o.statusHistory,t)))&&i.push(o);return i}async isTargetAudience(e,t,s){let i=null;e.requiresCountry&&(this.hidePage(),i=(await this.makeRequest({method:"get",url:`${this.host}/api/v0/visitors/get-country`})).data);const o=this.getChannel(t);return(e.device==="all"||e.device===t.device)&&(e.visitorOption==="all"||e.visitorOption==="new"&&s||e.visitorOption==="returning"&&!s)&&(e.targetAudiences.length===0||e.targetAudiences.reduce((r,a)=>r||a.reduce((n,g)=>n&&g(t,s,o,i),!0),!1))}pickHypothesis(e){let t=Math.random();const s=e.hypotheses.reduce((o,r)=>o+r.visitorCount,0);return e.hypotheses.sort((o,r)=>o.isControl?r.isControl?0:-1:r.isControl?1:0).reduce((o,r)=>{if(o!==null)return o;const n=e.hypotheses.reduce((g,d)=>g&&d.visitorCount>20,!0)?r.visitorCount/s-r.trafficPercentage:0;return t<=r.trafficPercentage-n?r:(t-=r.trafficPercentage,null)},null)}checkForThemePreview(e){if(this.isThemePreview()){if(e!=null&&e.visitorTests.some(t=>{var s;return t.isThemeTest&&((s=this.getHypothesis(t.hypothesisId))==null?void 0:s.themeId)===themeId}))return this.clearThemeBar(),!1;if(!e||e.visitorTests.some(t=>t.isThemeTest&&!this.getHypothesis(t.hypothesisId)&&(t.themeId==null||t.themeId===themeId))){this.hidePage();const t=new URL(window.location.toString());return t.searchParams.set("preview_theme_id",""),window.location.assign(t),!0}if(!e.visitorTests.some(t=>t.themeId===themeId))return!0;this.clearThemeBar()}return!1}considerRedirect(e){if(e!==null){let t;try{t=e.themeId===themeId}catch(i){if(i instanceof ReferenceError)t=!1;else throw i}const s=new URL(window.location.toString());if(!e.isControl&&(e.type!=="theme"&&e.affix!==s.searchParams.get("view")||e.type!=="theme"&&e.redirectPath&&!s.pathname.endsWith(e.redirectPath)||e.type==="theme"&&!this.isThemePreview()&&!t))return this.hidePage(),!0}return!1}redirect(e){if(e.isControl)return;const t=new URL(window.location.toString());if(e.redirectPath){const s=RegExp("^(/w{2}-w{2})/").exec(t.pathname);if(s&&s.length>1){const i=s[1];t.pathname=`${i}${e.redirectPath}`}else t.pathname=e.redirectPath}else e.type==="theme"?(t.searchParams.set("_ab","0"),t.searchParams.set("_fd","0"),t.searchParams.set("_sc","1"),t.searchParams.set("preview_theme_id",e.themeId.toString())):t.searchParams.set("view",e.affix);window.location.assign(t)}clearThemeBar(){this.waitForElement("#preview-bar-iframe").then(e=>e.remove()).catch(e=>console.error(e))}waitForElement(e){return new Promise(t=>{const s=document.querySelector(e);if(s){t(s);return}const i=new MutationObserver(o=>{const r=document.querySelector(e);if(r){i.disconnect(),t(r);return}});i.observe(document.documentElement,{childList:!0,subtree:!0})})}async syncWithServer(){try{const e=this.getLocalVisitor();if(e===null)return;const t=typeof e.visitorTests<"u"?e.visitorTests.filter(i=>i.needsPersistence):[];let s=null;for(const i of t){const o=this.getHypothesis(i.hypothesisId);o&&(e.needsPersistence?(s=await this.createVisitorInTest(this.shop,i.testId,e,o.isControl),e.needsPersistence=!1):s=await this.includeInTest(e,i.testId,o.isControl))}if(e.needsPersistence&&s===null&&(s=await this.createVisitor(this.shop,e)),s!==null){this.updateLocalVisitor(s);return}if(typeof e.visitorTests<"u")return;s=await this.getRemoteVisitor(e.id),s&&this.updateLocalVisitor(s)}catch(e){if(e instanceof b)throw e}}getVisitor(){const e=this.getLocalVisitor();if(e===null)return null;if(typeof e.device>"u"){const t=this.getDeviceType();e.device=t=="tablet"?"mobile":t}return typeof e.utmSource>"u"&&(e.utmSource=this.getUTMValue("utm_source")??""),typeof e.utmMedium>"u"&&(e.utmMedium=this.getUTMValue("utm_medium")??""),typeof e.utmCampaign>"u"&&(e.utmCampaign=this.getUTMValue("utm_campaign")??""),typeof e.utmContent>"u"&&(e.utmContent=this.getUTMValue("utm_content")??""),typeof e.visitorTests>"u"&&(e.visitorTests=[]),e}isThemePreview(){try{return isThemePreview}catch(e){if(e instanceof ReferenceError)try{return themeRole!=="main"}catch(t){if(t instanceof ReferenceError)return window.document.cookie.includes("preview_theme=1");throw t}else throw e}}hasThemeAndTemplateTests(e){return e.some(t=>t.hypotheses.some(s=>s.type==="theme"))&&e.some(t=>t.hypotheses.some(s=>s.type!=="theme"))}visitorActiveTestType(e){const t=e.visitorTests.filter(s=>this.testConfigs.some(i=>i.hypotheses.some(o=>o.id==s.hypothesisId)));return t.length===0?null:t.some(s=>s.isThemeTest)?"theme":"template"}}(async function(){window.shopliftInstance||(window.shopliftInstance=new S("hiya-kids.myshopify.com","https://app.shoplift.ai",true,false,[{"id":"1fe8d171-e092-427c-8cfb-e441137ee419","path":null,"startAt":"2024-07-23T18:13:19.210691Z","requiresCountry":false,"device":"all","visitorOption":"all","statusHistory":[{"status":"active","createdAt":"2024-07-23T18:13:19.211129Z"}],"hypotheses":[{"id":"3f4061fe-cd74-49c6-994f-d2c59cc973e8","type":"product","themeId":132381212753,"isControl":true,"visitorCount":110358,"trafficPercentage":0.5,"affix":"barbie","redirectPath":null},{"id":"f56da57a-21fb-4aa8-b145-c527b66d9d55","type":"product","themeId":132381212753,"isControl":false,"visitorCount":108685,"trafficPercentage":0.5,"affix":"sl-35773E31","redirectPath":null}],"targetAudiences":[]}]),await window.shopliftInstance.init())})()})(); })("/", { suffix: "kids-daily-essential", type: "product" }, "main", 132381212753, false)</script>
+<!-- End of Shoplift scripts -->
+
+<!-- START DEV-146 Block all PLP from being indexed by search engines -->
+
+<!-- END DEV-146 -->
+<!-- TSA Google Ads Conversion Tracking - DO NOT DELETE -->
+<!-- Global site tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-662638956"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-662638956');
+</script>
+    <!-- End Global site tag (gtag.js)  -->
+<!-- END TSA Google Ads Conversion Tracking - DO NOT DELETE -->
+
+    
+    
+    
+    
+    
+      
+      
+    
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="theme-color" content="">
+    <link rel="canonical" href="https://hiyahealth.com/products/kids-daily-essential">
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin="">
+
+    
+
+    
+<link rel="icon" type="image/png" href="images/favicon.png"><title>
+      Kids Multivitamin
+ – Hiya Health | Essential Super Nutrients for Kids</title>
+
+    
+      <meta name="description" content="Includes 15 essential vitamins and minerals. Sweetened with monk fruit, not sugar. Formulated by pediatricians and parents. Eco-friendly. Made in the USA.">
+    
+
+    
+
+<meta property="og:site_name" content="Hiya Health | Essential Super Nutrients for Kids">
+<meta property="og:url" content="https://hiyahealth.com/products/kids-daily-essential">
+<meta property="og:title" content="Kids Multivitamin">
+<meta property="og:type" content="product">
+<meta property="og:description" content="Includes 15 essential vitamins and minerals. Sweetened with monk fruit, not sugar. Formulated by pediatricians and parents. Eco-friendly. Made in the USA."><meta property="og:image" content="images/Hiya_Bottle-clear_desktop_v2_4.png">
+  <meta property="og:image:secure_url" content="images/Hiya_Bottle-clear_desktop_v2_4.png">
+  <meta property="og:image:width" content="1000">
+  <meta property="og:image:height" content="1000"><meta property="og:price:amount" content="30.00">
+  <!-- Calculate the sale price as 50% of the original price and include it in the meta tag. dev-87 -->
+  
+  
+  
+    <meta property="og:price:sale_amount" content="15.00"><meta property="og:price:currency" content="USD"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kids Multivitamin">
+<meta name="twitter:description" content="Includes 15 essential vitamins and minerals. Sweetened with monk fruit, not sugar. Formulated by pediatricians and parents. Eco-friendly. Made in the USA.">
+
+
+    <script src="js/constants.js" defer="defer"></script>
+    <script src="js/pubsub.js" defer="defer"></script>
+    <script src="js/global.js" defer="defer"></script>
+    <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta name="google-site-verification" content="cuXZ37_gm7ZF-TBlansS-zZzA9cRYsc3KcrAs1gFQwE">
+<meta name="facebook-domain-verification" content="mdl3jagefmo8juj6f0j0t4877x4lh8">
+<meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/25532498001/digital_wallets/dialog">
+<meta name="shopify-checkout-api-token" content="82e8979497d68b2dc53a756d594eb4d2">
+<meta id="in-context-paypal-metadata" data-shop-id="25532498001" data-venmo-supported="true" data-environment="production" data-locale="en_US" data-paypal-v4="true" data-currency="USD">
+<link rel="alternate" type="application/json+oembed" href="https://hiyahealth.com/products/kids-daily-essential.oembed">
+<script async="async" src="js/preloads.js"></script>
+<script async="async" src="js/preloads_1.js" crossorigin="anonymous"></script>
+<script id="apple-pay-shop-capabilities" type="application/json">{"shopId":25532498001,"countryCode":"US","currencyCode":"USD","merchantCapabilities":["supports3DS"],"merchantId":"gid:\/\/shopify\/Shop\/25532498001","merchantName":"Hiya Health | Essential Super Nutrients for Kids","requiredBillingContactFields":["postalAddress","email","phone"],"requiredShippingContactFields":["postalAddress","email","phone"],"shippingType":"shipping","supportedNetworks":["visa","masterCard","amex","discover","elo","jcb"],"total":{"type":"pending","label":"Hiya Health | Essential Super Nutrients for Kids","amount":"1.00"},"shopifyPaymentsEnabled":true,"supportsSubscriptions":true}</script>
+<script id="shopify-features" type="application/json">{"accessToken":"82e8979497d68b2dc53a756d594eb4d2","betas":["rich-media-storefront-analytics"],"domain":"hiyahealth.com","predictiveSearch":true,"shopId":25532498001,"smart_payment_buttons_url":"https:\/\/hiyahealth.com\/cdn\/shopifycloud\/payment-sheet\/assets\/latest\/spb.en.js","dynamic_checkout_cart_url":"https:\/\/hiyahealth.com\/cdn\/shopifycloud\/payment-sheet\/assets\/latest\/dynamic-checkout-cart.en.js","locale":"en"}</script>
+<script>var Shopify = Shopify || {};
+Shopify.shop = "hiya-kids.myshopify.com";
+Shopify.locale = "en";
+Shopify.currency = {"active":"USD","rate":"1.0"};
+Shopify.country = "US";
+Shopify.theme = {"name":"storefront\/production-15","id":132381212753,"theme_store_id":null,"role":"main"};
+Shopify.theme.handle = "null";
+Shopify.theme.style = {"id":null,"handle":null};
+Shopify.cdnHost = "hiyahealth.com/cdn";
+Shopify.routes = Shopify.routes || {};
+Shopify.routes.root = "/";</script>
+<script type="module">!function(o){(o.Shopify=o.Shopify||{}).modules=!0}(window);</script>
+<script>!function(o){function n(){var o=[];function n(){o.push(Array.prototype.slice.apply(arguments))}return n.q=o,n}var t=o.Shopify=o.Shopify||{};t.loadFeatures=n(),t.autoloadFeatures=n()}(window);</script>
+<script>window.ShopifyPay = window.ShopifyPay || {};
+window.ShopifyPay.apiHost = "shop.app\/pay";</script>
+<script id="shop-js-features" type="application/json">{"compact":true}</script>
+<script id="shop-js-analytics" type="application/json">{"pageType":"product"}</script>
+<script>
+  window.Shopify = window.Shopify || {};
+  if (!window.Shopify.featureAssets) window.Shopify.featureAssets = {};
+  window.Shopify.featureAssets['shop-js'] = {"pay-button":["modules/client.pay-button_BAI4kkYY.en.esm.js","modules/chunk.common_D0Skd79g.esm.js"],"init-shop-email-lookup-coordinator":["modules/client.init-shop-email-lookup-coordinator_BpgygVJg.en.esm.js","modules/chunk.common_D0Skd79g.esm.js"],"avatar":["modules/client.avatar_BTnouDA3.en.esm.js"],"init-customer-accounts-sign-up":["modules/client.init-customer-accounts-sign-up_3P3khnl4.en.esm.js","modules/chunk.common_D0Skd79g.esm.js","modules/client.login-button_D5kT6IGS.en.esm.js"],"init-customer-accounts":["modules/client.init-customer-accounts_CaVrEb-p.en.esm.js","modules/chunk.common_D0Skd79g.esm.js","modules/client.login-button_D5kT6IGS.en.esm.js"],"shop-pay-checkout-sheet":["modules/client.shop-pay-checkout-sheet_BiB_faD7.en.esm.js","modules/chunk.common_D0Skd79g.esm.js","modules/client.login-button_D5kT6IGS.en.esm.js"],"init-shop-for-new-customer-accounts":["modules/client.init-shop-for-new-customer-accounts_BPNoEWN9.en.esm.js","modules/chunk.common_D0Skd79g.esm.js","modules/client.login-button_D5kT6IGS.en.esm.js"],"shop-pay-payment-request":["modules/client.shop-pay-payment-request_5hKXRXQ9.en.esm.js","modules/chunk.common_D0Skd79g.esm.js","modules/client.login-button_D5kT6IGS.en.esm.js","modules/chunk.shop-pay_D5Uy0ssn.esm.js"],"discount-app":["modules/client.discount-app_C29P5sdk.en.esm.js","modules/chunk.common_D0Skd79g.esm.js"],"login-button":["modules/client.login-button_D5kT6IGS.en.esm.js","modules/chunk.common_D0Skd79g.esm.js"],"payment-terms":["modules/client.payment-terms_DV051YWn.en.esm.js","modules/chunk.common_D0Skd79g.esm.js","modules/client.login-button_D5kT6IGS.en.esm.js"]};
+</script>
+<script>(function() {
+  function asyncLoad() {
+    var urls = ["https:\/\/d3hw6dc1ow8pp2.cloudfront.net\/reviewsWidget.min.js?shop=hiya-kids.myshopify.com","https:\/\/static.rechargecdn.com\/assets\/js\/widget.min.js?shop=hiya-kids.myshopify.com","https:\/\/schemaplusfiles.s3.amazonaws.com\/loader.min.js?shop=hiya-kids.myshopify.com","https:\/\/cdn.rebuyengine.com\/onsite\/js\/rebuy.js?shop=hiya-kids.myshopify.com","https:\/\/cdn.refersion.com\/pixel.js?shop=hiya-kids.myshopify.com\u0026client_id=45630\u0026pk=pub_a9679377e86e90411777\u0026shop=hiya-kids.myshopify.com"];
+    for (var i = 0; i < urls.length; i++) {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = urls[i];
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    }
+  };
+  if(window.attachEvent) {
+    window.attachEvent('onload', asyncLoad);
+  } else {
+    window.addEventListener('load', asyncLoad, false);
+  }
+})();</script>
+<script id="__st">var __st={"a":25532498001,"offset":-14400,"reqid":"a1a10437-e0d9-4913-a6f2-a6ee39a6ae95-1724527740","pageurl":"hiyahealth.com\/products\/kids-daily-essential","u":"d2c4dba8bf5a","p":"product","rtyp":"product","rid":4528169320529};</script>
+<script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
+<script id="captcha-bootstrap">!function(){'use strict';const t='contact',e='account',n='new_comment',o=[[t,t],['blogs',n],['comments',n],[t,'customer']],c=[[e,'customer_login'],[e,'guest_login'],[e,'recover_customer_password'],[e,'create_customer']],r=t=>t.map((([t,e])=>`form[action*='/${t}']:not([data-nocaptcha='true']) input[name='form_type'][value='${e}']`)).join(',');function s(t,e,n=!1){try{const o=window.sessionStorage;for(const[n,c]of Object.entries(JSON.parse(o.getItem(e))))t.elements[n]&&(t.elements[n].value=c);n&&o.removeItem(e)}catch{}}const a='form_key',i=['recaptcha-v3-token','g-recaptcha-response','h-captcha-response','password'],u=()=>{try{return window.sessionStorage}catch{return}},m=t=>t.elements[a],f='form_type',d='cptcha';function p(t){t.dataset[d]=!0}const l=window,h=l.document,_='Shopify',y='ce_forms',E='captcha';let v=!1;((t,e)=>{const n=(g='f06e6c50-85a8-45c8-87d0-21a2b65856fe','https://cdn.shopify.com/shopifycloud/storefront-forms-hcaptcha/ce_storefront_forms_captcha_hcaptcha.v1.4.0.iife.js',T={infoText:'Protected by hCaptcha',privacyText:'Privacy',termsText:'Terms'},(t,e,n)=>{const o=l[_][y],c=o.bindForm;if(c)return c(t,g,e,T).then(n);o.q.push([[t,g,e,T],n]),v||(h.body.append(Object.assign(h.createElement('script'),{id:'captcha-provider',async:!0,src:'https://cdn.shopify.com/shopifycloud/storefront-forms-hcaptcha/ce_storefront_forms_captcha_hcaptcha.v1.4.0.iife.js'})),v=!0)});var g,T;l[_]=l[_]||{},l[_][y]=l[_][y]||{},l[_][y].q=[],l[_][E]=l[_][E]||{},l[_][E].protect=function(t,e){n(t,void 0,e),p(t)},Object.freeze(l[_][E]),function(t,e,n,l,h,_){const[y,E,v,g]=function(t,e,n){const s=e?o:[],a=t?c:[],i=[...s,...a],u=[...o],m=r(i),f=r(s),d=n&&r(i.filter((([t,e])=>n.includes(e)))),p=r(u),l=t=>()=>t?[...document.querySelectorAll(t)].map((t=>t.form)):[];return[l(m),l(f),l(d),l(p)]}(l,h,_),T=t=>{const e=t.target;return e instanceof HTMLFormElement?e:e&&e.form},S=t=>y().includes(t);t.addEventListener('submit',(t=>{const e=T(t);if(!e)return;const n=S(e)&&!e.dataset.hcaptchaBound&&!e.dataset.recaptchaBound,o=m(e),c=g().includes(e)&&(!o||!o.value);(n||c)&&t.preventDefault(),c&&!n&&(function(t){try{if(!u())return;!function(t){const e=u();if(!e)return;const n=m(t);if(!n)return;const o=n.value;o&&e.removeItem(o)}(t);const e=Array.from(Array(32),(()=>Math.random().toString(36)[2])).join('');!function(t,e){m(t)||t.append(Object.assign(document.createElement('input'),{type:'hidden',name:a})),t.elements[a].value=e}(t,e),function(t,e){const n=u();if(!n)return;const o=[...t.querySelectorAll('input[type="password"]')].map((({name:t})=>t)),c=[...i,...o],r={};for(const[s,a]of new FormData(t).entries())c.includes(s)||(r[s]=a);n.setItem(e,JSON.stringify(r))}(t,e)}catch(e){console.error('failed to persist form',e)}}(e),e.submit())}));const w=(t,e)=>{t&&!t.dataset[d]&&(n(t,e.some((e=>e===t))),p(t))};for(const o of['focusin','change'])t.addEventListener(o,(t=>{const e=T(t);S(e)&&w(e,E())}));const A=e.get('form_key'),b=e.get(f),I=A&&b;t.addEventListener('DOMContentLoaded',(()=>{const t=E();if(I)for(const e of t)e.elements[f].value===b&&s(e,A);[...new Set([...v(),...y().filter((t=>'true'===t.dataset.shopifyCaptcha))])].forEach((e=>w(e,t)))}))}(h,new URLSearchParams(l.location.search),n,!0,!0,['guest_login'])})()}();</script>
+<script id="captcha-terms">!function(){'use strict';const e=/recaptcha|reCATPCHA|google|Googl/gi,t=o=>{let c=o.firstChild;for(;c;)c.nodeType===Node.TEXT_NODE?c.textContent=c.textContent.replace(e,'hCaptcha'):c.nodeType===Node.ELEMENT_NODE&&t(c),c=c.nextSibling};document.addEventListener('DOMContentLoaded',(()=>{(e=>{const o=document.querySelector('p[data-spam-detection-disclaimer]');if(o){for(const e of['terms','privacy']){const t=o.querySelector(`a[href*='https://policies.google.com/${e}']`);t&&(t.href=`https://hcaptcha.com/${e}`)}t(o)}})()}))}();</script>
+<script data-source-attribution="shopify.loadfeatures" defer="defer" src="js/load_feature-9f951eb7d8d53973c719de211f807d63af81c644e5b9a6ae72661ac408d472f6.js" crossorigin="anonymous"></script>
+<script crossorigin="anonymous" defer="defer" src="js/storefront-80e528be853eac23af2454534897ca9536b1d3d04aa043b042f34879a3c111c8.js"></script>
+<script data-source-attribution="shopify.dynamic-checkout" defer="defer" src="js/features-1c0b396bd4d054b94abae1eb6a1bd6ba47beb35525c57a217c77a862ff06d83f.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" media="screen" href="css/styles.css">
+<script id="sections-script" data-sections="product-banner-sec,pairs-great-bedtime,our-vitamin-sec-updated,video-frame-sec,review-boxes-sec,makes_hiya_different,image_with_content_sec,faq,header" defer="defer" src="js/scripts.js"></script>
+
+<style id="shopify-dynamic-checkout-cart">@media screen and (min-width: 750px) {
+  #dynamic-checkout-cart {
+    min-height: 50px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #dynamic-checkout-cart {
+    min-height: 240px;
+  }
+}
+</style><script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
+
+    <!-- [START] GTM Data Layer -->
+<script>
+  !function(){
+    var data = {};
+    data.page_type = "product.kids-daily-essential";
+    data.currency = "USD" || 'USD';data.event = "view_item";
+    data.products = [{
+      id: "4528169320529",
+      name: "Kids Daily Multivitamin",
+      vendor: "Hiya Kids",
+      type: "",
+      collection_id: "",
+      collection_name: null,
+      price: 30.0,
+      quantity: 1
+    }];
+    
+    data.ecommerce = {
+      currency: data.currency,
+      value: data.products[0].price,
+      items: [{
+        item_id: data.products[0].id,
+        item_name: data.products[0].name,
+        item_brand: data.products[0].vendor,
+        item_category: data.products[0].type,
+        item_list_id: data.products[0].collection_id,
+        item_list_name: data.products[0].collection_name,
+        price: data.products[0].price,
+        quantity: data.products[0].quantity
+      }]
+    };window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(data);
+  }();
+</script>
+<!-- [END] GTM Data Layer -->
+
+<!-- [START] GTM Script -->
+<script>
+  (function (w, d, s, l, i, t) {
+    w[l] = w[l] || [];
+    t = new Date().getTime();
+    w[l].push({ "gtm.start": t, event: "gtm.js" });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != "dataLayer" ? "&l=" + l : "";
+    j.async = true;
+    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl + "&cb=" + Math.floor(t/1000/60/60/24);
+    f.parentNode.insertBefore(j, f);
+  })(window, document, "script", "dataLayer", "GTM-M8JGZR3");
+</script>
+<!-- [END] GTM Script -->
+
+
+    
+    <style data-shopify="">
+      
+      
+      
+      
+      
+
+      :root {
+        --font-body-family: 'Filson Pro', BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+        --font-body-style: normal;
+        --font-body-weight: 400;
+        --font-body-weight-bold: 700;
+
+        --font-heading-family: 'Filson Pro', BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+        --font-heading-style: normal;
+        --font-heading-weight: 400;
+
+        --font-body-scale: 1.0;
+        --font-heading-scale: 1.4;
+
+        --color-base-text: 35, 118, 180;
+        --color-shadow: 35, 118, 180;
+        --color-base-background-1: 255, 255, 255;
+        --color-base-background-2: 255, 222, 39;
+        --color-base-solid-button-labels: 31, 31, 33;
+        --color-base-outline-button-labels: 237, 118, 95;
+        --color-base-accent-1: 237, 118, 95;
+        --color-base-accent-2: 255, 255, 255;
+        --payment-terms-background-color: #fff;
+
+        --gradient-base-background-1: #fff;
+        --gradient-base-background-2: #ffde27;
+        --gradient-base-accent-1: #ed765f;
+        --gradient-base-accent-2: #ffffff;
+
+        --media-padding: px;
+        --media-border-opacity: 0.1;
+        --media-border-width: 0px;
+        --media-radius: 0px;
+        --media-shadow-opacity: 0.0;
+        --media-shadow-horizontal-offset: 0px;
+        --media-shadow-vertical-offset: 4px;
+        --media-shadow-blur-radius: 5px;
+        --media-shadow-visible: 0;
+
+        --page-width: 160rem;
+        --page-width-margin: 0rem;
+
+        --product-card-image-padding: 0.0rem;
+        --product-card-corner-radius: 0.0rem;
+        --product-card-text-alignment: left;
+        --product-card-border-width: 0.0rem;
+        --product-card-border-opacity: 0.1;
+        --product-card-shadow-opacity: 0.0;
+        --product-card-shadow-visible: 0;
+        --product-card-shadow-horizontal-offset: 0.0rem;
+        --product-card-shadow-vertical-offset: 0.4rem;
+        --product-card-shadow-blur-radius: 0.5rem;
+
+        --collection-card-image-padding: 0.0rem;
+        --collection-card-corner-radius: 0.0rem;
+        --collection-card-text-alignment: left;
+        --collection-card-border-width: 0.0rem;
+        --collection-card-border-opacity: 0.1;
+        --collection-card-shadow-opacity: 0.0;
+        --collection-card-shadow-visible: 0;
+        --collection-card-shadow-horizontal-offset: 0.0rem;
+        --collection-card-shadow-vertical-offset: 0.4rem;
+        --collection-card-shadow-blur-radius: 0.5rem;
+
+        --blog-card-image-padding: 0.0rem;
+        --blog-card-corner-radius: 0.0rem;
+        --blog-card-text-alignment: left;
+        --blog-card-border-width: 0.0rem;
+        --blog-card-border-opacity: 0.1;
+        --blog-card-shadow-opacity: 0.0;
+        --blog-card-shadow-visible: 0;
+        --blog-card-shadow-horizontal-offset: 0.0rem;
+        --blog-card-shadow-vertical-offset: 0.4rem;
+        --blog-card-shadow-blur-radius: 0.5rem;
+
+        --badge-corner-radius: 4.0rem;
+
+        --popup-border-width: 1px;
+        --popup-border-opacity: 0.1;
+        --popup-corner-radius: 0px;
+        --popup-shadow-opacity: 0.0;
+        --popup-shadow-horizontal-offset: 0px;
+        --popup-shadow-vertical-offset: 4px;
+        --popup-shadow-blur-radius: 5px;
+
+        --drawer-border-width: 0px;
+        --drawer-border-opacity: 0.1;
+        --drawer-shadow-opacity: 0.0;
+        --drawer-shadow-horizontal-offset: 0px;
+        --drawer-shadow-vertical-offset: 4px;
+        --drawer-shadow-blur-radius: 5px;
+
+        --spacing-sections-desktop: 52px;
+        --spacing-sections-mobile: 36px;
+
+        --grid-desktop-vertical-spacing: 40px;
+        --grid-desktop-horizontal-spacing: 40px;
+        --grid-mobile-vertical-spacing: 20px;
+        --grid-mobile-horizontal-spacing: 20px;
+
+        --text-boxes-border-opacity: 0.1;
+        --text-boxes-border-width: 0px;
+        --text-boxes-radius: 0px;
+        --text-boxes-shadow-opacity: 0.0;
+        --text-boxes-shadow-visible: 0;
+        --text-boxes-shadow-horizontal-offset: 0px;
+        --text-boxes-shadow-vertical-offset: 4px;
+        --text-boxes-shadow-blur-radius: 5px;
+
+        --buttons-radius: 0px;
+        --buttons-radius-outset: 0px;
+        --buttons-border-width: 1px;
+        --buttons-border-opacity: 1.0;
+        --buttons-shadow-opacity: 0.0;
+        --buttons-shadow-visible: 0;
+        --buttons-shadow-horizontal-offset: 0px;
+        --buttons-shadow-vertical-offset: 4px;
+        --buttons-shadow-blur-radius: 5px;
+        --buttons-border-offset: 0px;
+
+        --inputs-radius: 0px;
+        --inputs-border-width: 1px;
+        --inputs-border-opacity: 0.55;
+        --inputs-shadow-opacity: 0.0;
+        --inputs-shadow-horizontal-offset: 0px;
+        --inputs-margin-offset: 0px;
+        --inputs-shadow-vertical-offset: 4px;
+        --inputs-shadow-blur-radius: 5px;
+        --inputs-radius-outset: 0px;
+
+        --variant-pills-radius: 40px;
+        --variant-pills-border-width: 1px;
+        --variant-pills-border-opacity: 0.55;
+        --variant-pills-shadow-opacity: 0.0;
+        --variant-pills-shadow-horizontal-offset: 0px;
+        --variant-pills-shadow-vertical-offset: 4px;
+        --variant-pills-shadow-blur-radius: 5px;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-columns: 100%;
+        min-height: 100%;
+        margin: 0;
+        letter-spacing: 0.06rem;
+        line-height: calc(1 + 0.8 / var(--font-body-scale));
+        font-family: var(--font-body-family);
+        font-style: var(--font-body-style);
+        font-weight: var(--font-body-weight);
+        font-family: 'Filson Pro', sans-serif;
+        color:#3f7ab9;
+        background:#e9edf2;
+        margin: 0;
+      }
+    </style>
+
+    <script src="js/jquery.min.js"></script>
+
+  <script src="js/jquery.min_1.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/slick.min.js"></script>
+    <link rel="stylesheet" href="css/slick-theme.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/slick.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <link href="css/base.css" rel="stylesheet" type="text/css" media="all">   
+    
+    <link href="css/navbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/okendo-custom.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="css/component-predictive-search.css" media="print" onload="this.media='all'"><script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    if (Shopify.designMode) {
+      document.documentElement.classList.add('shopify-design-mode');
+    }
+    </script>
+    
+    <style>
+  @font-face {
+    font-family: "FilsonProBold";
+    src: url("fonts/FilsonProBold.woff2") format("woff2"),
+      url("fonts/FilsonProBold.woff") format("woff"),
+      url("fonts/FilsonProBold.eot") format("embedded-opentype"),
+      url("fonts/FilsonProBold.ttf") format("truetype"),
+      url("images/FilsonProBold.svg") format("svg");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Filson Pro";
+    src: url("fonts/FilsonProBook.woff2") format("woff2"),
+      url("fonts/FilsonProBook.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'wokiee_icons';
+    src: url("fonts/wokiee_icons.woff") format("woff"),
+      url("fonts/wokiee_icons.woff") format("woff"),
+      url("images/wokiee_icons.svg") format('svg'), 
+      url("fonts/wokiee_icons.ttf") format('truetype');
+    font-display: swap;
+  }
+
+  @font-face {
+      font-family: "fp";
+      src: url("fonts/FilsonProMedium.woff") format("woff");
+      font-display: swap;
+  }
+</style>
+
+  <!-- Header hook for plugins ================================================== -->
+  <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta name="google-site-verification" content="cuXZ37_gm7ZF-TBlansS-zZzA9cRYsc3KcrAs1gFQwE">
+<meta name="facebook-domain-verification" content="mdl3jagefmo8juj6f0j0t4877x4lh8">
+<meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/25532498001/digital_wallets/dialog">
+<meta name="shopify-checkout-api-token" content="82e8979497d68b2dc53a756d594eb4d2">
+<meta id="in-context-paypal-metadata" data-shop-id="25532498001" data-venmo-supported="true" data-environment="production" data-locale="en_US" data-paypal-v4="true" data-currency="USD">
+<link rel="alternate" type="application/json+oembed" href="https://hiyahealth.com/products/kids-daily-essential.oembed">
+<script async="async" src="js/preloads.js"></script>
+<script async="async" src="js/preloads_1.js" crossorigin="anonymous"></script>
+<script id="apple-pay-shop-capabilities" type="application/json">{"shopId":25532498001,"countryCode":"US","currencyCode":"USD","merchantCapabilities":["supports3DS"],"merchantId":"gid:\/\/shopify\/Shop\/25532498001","merchantName":"Hiya Health | Essential Super Nutrients for Kids","requiredBillingContactFields":["postalAddress","email","phone"],"requiredShippingContactFields":["postalAddress","email","phone"],"shippingType":"shipping","supportedNetworks":["visa","masterCard","amex","discover","elo","jcb"],"total":{"type":"pending","label":"Hiya Health | Essential Super Nutrients for Kids","amount":"1.00"},"shopifyPaymentsEnabled":true,"supportsSubscriptions":true}</script>
+<script id="shopify-features" type="application/json">{"accessToken":"82e8979497d68b2dc53a756d594eb4d2","betas":["rich-media-storefront-analytics"],"domain":"hiyahealth.com","predictiveSearch":true,"shopId":25532498001,"smart_payment_buttons_url":"https:\/\/hiyahealth.com\/cdn\/shopifycloud\/payment-sheet\/assets\/latest\/spb.en.js","dynamic_checkout_cart_url":"https:\/\/hiyahealth.com\/cdn\/shopifycloud\/payment-sheet\/assets\/latest\/dynamic-checkout-cart.en.js","locale":"en"}</script>
+<script>var Shopify = Shopify || {};
+Shopify.shop = "hiya-kids.myshopify.com";
+Shopify.locale = "en";
+Shopify.currency = {"active":"USD","rate":"1.0"};
+Shopify.country = "US";
+Shopify.theme = {"name":"storefront\/production-15","id":132381212753,"theme_store_id":null,"role":"main"};
+Shopify.theme.handle = "null";
+Shopify.theme.style = {"id":null,"handle":null};
+Shopify.cdnHost = "hiyahealth.com/cdn";
+Shopify.routes = Shopify.routes || {};
+Shopify.routes.root = "/";</script>
+<script type="module">!function(o){(o.Shopify=o.Shopify||{}).modules=!0}(window);</script>
+<script>!function(o){function n(){var o=[];function n(){o.push(Array.prototype.slice.apply(arguments))}return n.q=o,n}var t=o.Shopify=o.Shopify||{};t.loadFeatures=n(),t.autoloadFeatures=n()}(window);</script>
+<script>window.ShopifyPay = window.ShopifyPay || {};
+window.ShopifyPay.apiHost = "shop.app\/pay";</script>
+<script id="shop-js-features" type="application/json">{"compact":true}</script>
+<script id="shop-js-analytics" type="application/json">{"pageType":"product"}</script>
+<script>
+  window.Shopify = window.Shopify || {};
+  if (!window.Shopify.featureAssets) window.Shopify.featureAssets = {};
+  window.Shopify.featureAssets['shop-js'] = {"pay-button":["modules/client.pay-button_BAI4kkYY.en.esm.js","modules/chunk.common_D0Skd79g.esm.js"],"init-shop-email-lookup-coordinator":["modules/client.init-shop-email-lookup-coordinator_BpgygVJg.en.esm.js","modules/chunk.common_D0Skd79g.esm.js"],"avatar":["modules/client.avatar_BTnouDA3.en.esm.js"],"init-customer-accounts-sign-up":["modules/client.init-customer-accounts-sign-up_3P3khnl4.en.esm.js","modules/chunk.common_D0Skd79g.esm.js","modules/client.login-button_D5kT6IGS.en.esm.js"],"init-customer-accounts":["modules/client.init-customer-accounts_CaVrEb-p.en.esm.js","modules/chunk.common_D0Skd79g.esm.js","modules/client.login-button_D5kT6IGS.en.esm.js"],"shop-pay-checkout-sheet":["modules/client.shop-pay-checkout-sheet_BiB_faD7.en.esm.js","modules/chunk.common_D0Skd79g.esm.js","modules/client.login-button_D5kT6IGS.en.esm.js"],"init-shop-for-new-customer-accounts":["modules/client.init-shop-for-new-customer-accounts_BPNoEWN9.en.esm.js","modules/chunk.common_D0Skd79g.esm.js","modules/client.login-button_D5kT6IGS.en.esm.js"],"shop-pay-payment-request":["modules/client.shop-pay-payment-request_5hKXRXQ9.en.esm.js","modules/chunk.common_D0Skd79g.esm.js","modules/client.login-button_D5kT6IGS.en.esm.js","modules/chunk.shop-pay_D5Uy0ssn.esm.js"],"discount-app":["modules/client.discount-app_C29P5sdk.en.esm.js","modules/chunk.common_D0Skd79g.esm.js"],"login-button":["modules/client.login-button_D5kT6IGS.en.esm.js","modules/chunk.common_D0Skd79g.esm.js"],"payment-terms":["modules/client.payment-terms_DV051YWn.en.esm.js","modules/chunk.common_D0Skd79g.esm.js","modules/client.login-button_D5kT6IGS.en.esm.js"]};
+</script>
+<script>(function() {
+  function asyncLoad() {
+    var urls = ["https:\/\/d3hw6dc1ow8pp2.cloudfront.net\/reviewsWidget.min.js?shop=hiya-kids.myshopify.com","https:\/\/static.rechargecdn.com\/assets\/js\/widget.min.js?shop=hiya-kids.myshopify.com","https:\/\/schemaplusfiles.s3.amazonaws.com\/loader.min.js?shop=hiya-kids.myshopify.com","https:\/\/cdn.rebuyengine.com\/onsite\/js\/rebuy.js?shop=hiya-kids.myshopify.com","https:\/\/cdn.refersion.com\/pixel.js?shop=hiya-kids.myshopify.com\u0026client_id=45630\u0026pk=pub_a9679377e86e90411777\u0026shop=hiya-kids.myshopify.com"];
+    for (var i = 0; i < urls.length; i++) {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = urls[i];
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    }
+  };
+  if(window.attachEvent) {
+    window.attachEvent('onload', asyncLoad);
+  } else {
+    window.addEventListener('load', asyncLoad, false);
+  }
+})();</script>
+<script id="__st">var __st={"a":25532498001,"offset":-14400,"reqid":"a1a10437-e0d9-4913-a6f2-a6ee39a6ae95-1724527740","pageurl":"hiyahealth.com\/products\/kids-daily-essential","u":"d2c4dba8bf5a","p":"product","rtyp":"product","rid":4528169320529};</script>
+<script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
+<script id="captcha-bootstrap">!function(){'use strict';const t='contact',e='account',n='new_comment',o=[[t,t],['blogs',n],['comments',n],[t,'customer']],c=[[e,'customer_login'],[e,'guest_login'],[e,'recover_customer_password'],[e,'create_customer']],r=t=>t.map((([t,e])=>`form[action*='/${t}']:not([data-nocaptcha='true']) input[name='form_type'][value='${e}']`)).join(',');function s(t,e,n=!1){try{const o=window.sessionStorage;for(const[n,c]of Object.entries(JSON.parse(o.getItem(e))))t.elements[n]&&(t.elements[n].value=c);n&&o.removeItem(e)}catch{}}const a='form_key',i=['recaptcha-v3-token','g-recaptcha-response','h-captcha-response','password'],u=()=>{try{return window.sessionStorage}catch{return}},m=t=>t.elements[a],f='form_type',d='cptcha';function p(t){t.dataset[d]=!0}const l=window,h=l.document,_='Shopify',y='ce_forms',E='captcha';let v=!1;((t,e)=>{const n=(g='f06e6c50-85a8-45c8-87d0-21a2b65856fe','https://cdn.shopify.com/shopifycloud/storefront-forms-hcaptcha/ce_storefront_forms_captcha_hcaptcha.v1.4.0.iife.js',T={infoText:'Protected by hCaptcha',privacyText:'Privacy',termsText:'Terms'},(t,e,n)=>{const o=l[_][y],c=o.bindForm;if(c)return c(t,g,e,T).then(n);o.q.push([[t,g,e,T],n]),v||(h.body.append(Object.assign(h.createElement('script'),{id:'captcha-provider',async:!0,src:'https://cdn.shopify.com/shopifycloud/storefront-forms-hcaptcha/ce_storefront_forms_captcha_hcaptcha.v1.4.0.iife.js'})),v=!0)});var g,T;l[_]=l[_]||{},l[_][y]=l[_][y]||{},l[_][y].q=[],l[_][E]=l[_][E]||{},l[_][E].protect=function(t,e){n(t,void 0,e),p(t)},Object.freeze(l[_][E]),function(t,e,n,l,h,_){const[y,E,v,g]=function(t,e,n){const s=e?o:[],a=t?c:[],i=[...s,...a],u=[...o],m=r(i),f=r(s),d=n&&r(i.filter((([t,e])=>n.includes(e)))),p=r(u),l=t=>()=>t?[...document.querySelectorAll(t)].map((t=>t.form)):[];return[l(m),l(f),l(d),l(p)]}(l,h,_),T=t=>{const e=t.target;return e instanceof HTMLFormElement?e:e&&e.form},S=t=>y().includes(t);t.addEventListener('submit',(t=>{const e=T(t);if(!e)return;const n=S(e)&&!e.dataset.hcaptchaBound&&!e.dataset.recaptchaBound,o=m(e),c=g().includes(e)&&(!o||!o.value);(n||c)&&t.preventDefault(),c&&!n&&(function(t){try{if(!u())return;!function(t){const e=u();if(!e)return;const n=m(t);if(!n)return;const o=n.value;o&&e.removeItem(o)}(t);const e=Array.from(Array(32),(()=>Math.random().toString(36)[2])).join('');!function(t,e){m(t)||t.append(Object.assign(document.createElement('input'),{type:'hidden',name:a})),t.elements[a].value=e}(t,e),function(t,e){const n=u();if(!n)return;const o=[...t.querySelectorAll('input[type="password"]')].map((({name:t})=>t)),c=[...i,...o],r={};for(const[s,a]of new FormData(t).entries())c.includes(s)||(r[s]=a);n.setItem(e,JSON.stringify(r))}(t,e)}catch(e){console.error('failed to persist form',e)}}(e),e.submit())}));const w=(t,e)=>{t&&!t.dataset[d]&&(n(t,e.some((e=>e===t))),p(t))};for(const o of['focusin','change'])t.addEventListener(o,(t=>{const e=T(t);S(e)&&w(e,E())}));const A=e.get('form_key'),b=e.get(f),I=A&&b;t.addEventListener('DOMContentLoaded',(()=>{const t=E();if(I)for(const e of t)e.elements[f].value===b&&s(e,A);[...new Set([...v(),...y().filter((t=>'true'===t.dataset.shopifyCaptcha))])].forEach((e=>w(e,t)))}))}(h,new URLSearchParams(l.location.search),n,!0,!0,['guest_login'])})()}();</script>
+<script id="captcha-terms">!function(){'use strict';const e=/recaptcha|reCATPCHA|google|Googl/gi,t=o=>{let c=o.firstChild;for(;c;)c.nodeType===Node.TEXT_NODE?c.textContent=c.textContent.replace(e,'hCaptcha'):c.nodeType===Node.ELEMENT_NODE&&t(c),c=c.nextSibling};document.addEventListener('DOMContentLoaded',(()=>{(e=>{const o=document.querySelector('p[data-spam-detection-disclaimer]');if(o){for(const e of['terms','privacy']){const t=o.querySelector(`a[href*='https://policies.google.com/${e}']`);t&&(t.href=`https://hcaptcha.com/${e}`)}t(o)}})()}))}();</script>
+<script data-source-attribution="shopify.loadfeatures" defer="defer" src="js/load_feature-9f951eb7d8d53973c719de211f807d63af81c644e5b9a6ae72661ac408d472f6.js" crossorigin="anonymous"></script>
+<script crossorigin="anonymous" defer="defer" src="js/storefront-80e528be853eac23af2454534897ca9536b1d3d04aa043b042f34879a3c111c8.js"></script>
+<script data-source-attribution="shopify.dynamic-checkout" defer="defer" src="js/features-1c0b396bd4d054b94abae1eb6a1bd6ba47beb35525c57a217c77a862ff06d83f.js" crossorigin="anonymous"></script>
+<!-- placeholder 40db0c8b826cb243 --><script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
+  <!-- /Header hook for plugins ================================================== -->
+    <link href="css/main.min_1.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/new-theme-css.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/part1-theme-css.css" rel="stylesheet" type="text/css" media="all">
+
+    <script src="js/part1-theme-script.js"></script>
+
+    <!-- Begin: Northbeam pixel -->
+    <script>var r;(n=r=r||{}).A="identify",n.B="trackPageView",n.C="fireEmailCaptureEvent",n.D="fireCustomGoal",n.E="firePurchaseEvent";var n="//j.northbeam.io/ota-sp/bf0c0154-cfd6-4602-8c77-bb3d19ae006c.js";function t(n){for(var e=[],r=1;r<arguments.length;r++)e[r-1]=arguments[r];a.push({fnName:n,args:e})}var a=[],e=((e={_q:a})[r.A]=function(n,e){return t(r.A,n,e)},e[r.B]=function(){return t(r.B)},e[r.C]=function(n,e){return t(r.C,n,e)},e[r.D]=function(n,e){return t(r.D,n,e)},e[r.E]=function(n){return t(r.E,n)},window.Northbeam=e,document.createElement("script"));e.async=!0,e.src=n,document.head.appendChild(e);</script><script async="" src="js/bf0c0154-cfd6-4602-8c77-bb3d19ae006c.js"></script>
+    <!-- End: Northbeam pixel -->
+
+    <!-- Start of Superfiliate -->
+    <script async="" src="js/storefront.js"></script>
+    <!-- End of Superfiliate -->
+
+
+  
+<!-- BEGIN app block: shopify://apps/okendo/blocks/theme-settings/bb689e69-ea70-4661-8fb7-ad24a2e23c29 --><!-- BEGIN app snippet: header-metafields -->
+
+
+
+
+
+
+
+
+
+    <link href="css/main.min.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.okeReviews .okeReviews-reviewsWidget-header-controls-writeReview {
+        display: inline-block;
+    }
+    .okeReviews .okeReviews-reviewsWidget.is-okeReviews-empty {
+        display: block;
+    }
+</style>
+<script type="application/json" id="oke-reviews-settings">
+{"analyticsSettings":{"isWidgetOnScreenTrackingEnabled":false,"provider":"ua"},"disableInitialReviewsFetchOnProducts":false,"filtersEnabled":false,"initialReviewDisplayCount":5,"locale":"en","localeAndVariant":{"code":"en"},"omitMicrodata":true,"reviewSortOrder":"rating","subscriberId":"a3209d82-597c-4bca-a0fe-e4b669d8d110","widgetTemplateId":"default","starRatingColor":"#FFCF2A","recorderPlus":true,"recorderQandaPlus":true}
+</script>
+
+    <link rel="stylesheet" type="text/css" href="css/widget-style-customisations.css">
+
+<!-- END app app block --><link href="https://monorail-edge.shopifysvc.com" rel="dns-prefetch">
+<script>(function(){if ("sendBeacon" in navigator && "performance" in window) {var session_token = document.cookie.match(/_shopify_s=([^;]*)/);function handle_abandonment_event(e) {var entries = performance.getEntries().filter(function(entry) {return /monorail-edge.shopifysvc.com/.test(entry.name);});if (!window.abandonment_tracked && entries.length === 0) {window.abandonment_tracked = true;var currentMs = Date.now();var navigation_start = performance.timing.navigationStart;var payload = {shop_id: 25532498001,url: window.location.href,navigation_start,duration: currentMs - navigation_start,session_token: session_token && session_token.length === 2 ? session_token[1] : "",page_type: "product"};window.navigator.sendBeacon("https://monorail-edge.shopifysvc.com/v1/produce", JSON.stringify({schema_id: "online_store_buyer_site_abandonment/1.1",payload: payload,metadata: {event_created_at_ms: currentMs,event_sent_at_ms: currentMs}}));}}window.addEventListener('pagehide', handle_abandonment_event);}}());</script>
+<script id="web-pixels-manager-setup">(function e(e,n,a,t,r){var o="function"==typeof BigInt&&-1!==BigInt.toString().indexOf("[native code]")?"modern":"legacy";window.Shopify=window.Shopify||{};var i=window.Shopify;i.analytics=i.analytics||{};var s=i.analytics;s.replayQueue=[],s.publish=function(e,n,a){return s.replayQueue.push([e,n,a]),!0};try{self.performance.mark("wpm:start")}catch(e){}var l=[a,"/wpm","/b",r,o.substring(0,1),".js"].join("");!function(e){var n=e.src,a=e.async,t=void 0===a||a,r=e.onload,o=e.onerror,i=document.createElement("script"),s=document.head,l=document.body;i.async=t,i.src=n,r&&i.addEventListener("load",r),o&&i.addEventListener("error",o),s?s.appendChild(i):l?l.appendChild(i):console.error("Did not find a head or body element to append the script")}({src:l,async:!0,onload:function(){var a=window.webPixelsManager.init(e);n(a);var t=window.Shopify.analytics;t.replayQueue.forEach((function(e){var n=e[0],t=e[1],r=e[2];a.publishCustomEvent(n,t,r)})),t.replayQueue=[],t.publish=a.publishCustomEvent,t.visitor=a.visitor},onerror:function(){var n=e.storefrontBaseUrl.replace(/\/$/,""),a="".concat(n,"/.well-known/shopify/monorail/unstable/produce_batch"),r=JSON.stringify({metadata:{event_sent_at_ms:(new Date).getTime()},events:[{schema_id:"web_pixels_manager_load/3.1",payload:{version:t||"latest",bundle_target:o,page_url:self.location.href,status:"failed",surface:e.surface,error_msg:"".concat(l," has failed to load")},metadata:{event_created_at_ms:(new Date).getTime()}}]});try{if(self.navigator.sendBeacon.bind(self.navigator)(a,r))return!0}catch(e){}var i=new XMLHttpRequest;try{return i.open("POST",a,!0),i.setRequestHeader("Content-Type","text/plain"),i.send(r),!0}catch(e){console&&console.warn&&console.warn("[Web Pixels Manager] Got an unhandled error while logging a load error.")}return!1}})})({shopId: 25532498001,storefrontBaseUrl: "https://hiyahealth.com",extensionsBaseUrl: "https://extensions.shopifycdn.com/cdn/shopifycloud/web-pixels-manager",surface: "storefront-renderer",enabledBetaFlags: ["5de24938","d04dc9f4","4735909c"],webPixelsConfigList: [{"id":"206045265","configuration":"{\"shop\":\"hiya-kids.myshopify.com\", \"shopliftUrl\":\"https:\/\/app.shoplift.ai\/api\/events\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"558fff4640e7b8c1bdb659f13a59d575","type":"APP","apiClientId":7521861633,"privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"]},{"id":"171147345","configuration":"{\"url\":\"https:\/\/vchhr.hiyahealth.com\",\"consent\":\"DISABLED\",\"skipVariantName\":\"0\"}","eventPayloadVersion":"v1","runtimeContext":"LAX","scriptVersion":"f5509effd3f37404343b9b9dfc5525f4","type":"APP","apiClientId":6861761,"privacyPurposes":[]},{"id":"81920081","configuration":"{\"partnerId\": \"102198\", \"environment\": \"prod\", \"countryCode\": \"US\", \"logLevel\": \"debug\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"a68dc8d29b27a79495b11c2640f977a5","type":"APP","apiClientId":5829751,"privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"]},{"id":"67633233","configuration":"{\"tagID\":\"2614015555412\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"4fd0680eed907adaf3f85849c393d688","type":"APP","apiClientId":3009811,"privacyPurposes":["ANALYTICS","MARKETING"]},{"id":"32833617","configuration":"{\"advertiser\":\"hiyahealth\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"5d6ff697f8f0c56694e43434919810e4","type":"APP","apiClientId":39871250433,"privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"]},{"id":"24674385","configuration":"{\"workspaceId\":\"ws-hiya-health-essential-super-nutrients-for-kids-02d_bwll-\",\"accessToken\":\"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDQ0NDc2NzY0MjQsImV4cCI6MjAxOTgwNzY3NjQyNCwic3ViIjoid3MtaGl5YS1oZWFsdGgtZXNzZW50aWFsLXN1cGVyLW51dHJpZW50cy1mb3Ita2lkcy0wMmRfYndsbC0iLCJzY29wZXMiOiJDTElFTlRfRVZFTlRTIiwiaXNzIjoiZjBlZGEzZTMtZDBkMS00OTFkLTg5ZDktZjgxY2U5OTI3YTNmIiwianRpIjoiQXo1NEdMc1c4UmlOcjE5bG80SExVIn0.Xc0igBGdBdcrEyisI-bRNMmIfdfJOghrh4xhvnn71HVR71NAK9PGSd8c5pc-aElh4qClxLCuYHzGFhA5pYPQ0IWUwylcTQue_1r_C_mhB8-xN3c35IeWE9wKovvInihtyEdgFswUezXo8ermwc-Ho0XOl-A2FoTRkzE6e9LCEjtd6KfI8oi-SDptxn50Tp44THUjhgdx2KyNkTdoVuZZXik7BkLzyw58YeZHZQiJxmYz5ODMlcHCsMo-32bO1J1-8OTN672cxGDsvGMv6QhZV3XvO2odCb8ysZePAh0AC_yVG41sY0AzjygdE1he4eCriHdULy3_U7TyfxOboXCxug\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"c6bd0d2db318f4f83cee65edc44915c2","type":"APP","apiClientId":15688597505,"privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"]},{"id":"13992017","configuration":"{\"campaignID\":\"20098\",\"externalExecutionURL\":\"https:\/\/engine.saasler.com\/api\/v1\/webhook_executions\/7890c3bd85510d401ed20a429f627804\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"4812567a964f5eb72a82915451f4da75","type":"APP","apiClientId":3546795,"privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"]},{"id":"5079121","configuration":"{\"northbeamId\": \"bf0c0154-cfd6-4602-8c77-bb3d19ae006c\", \"collectorDomain\": \"i.hiyahealth.com\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"e46c2d6352a678fc6581f4bd0bc772e1","type":"APP","apiClientId":3188721,"privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"]},{"id":"8126545","eventPayloadVersion":"1","runtimeContext":"LAX","scriptVersion":"3","type":"CUSTOM","privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"],"name":"Monetate"},{"id":"13795409","eventPayloadVersion":"1","runtimeContext":"LAX","scriptVersion":"8","type":"CUSTOM","privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"],"name":"GTM Data Layer"},{"id":"23330897","eventPayloadVersion":"1","runtimeContext":"LAX","scriptVersion":"1","type":"CUSTOM","privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"],"name":"AppLovin"},{"id":"shopify-app-pixel","configuration":"{}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"0142","apiClientId":"shopify-pixel","type":"APP","privacyPurposes":["ANALYTICS","MARKETING"]},{"id":"shopify-custom-pixel","eventPayloadVersion":"v1","runtimeContext":"LAX","scriptVersion":"0142","apiClientId":"shopify-pixel","type":"CUSTOM","privacyPurposes":["ANALYTICS","MARKETING"]}],initData: {"shop":{"name":"Hiya Health | Essential Super Nutrients for Kids","paymentSettings":{"currencyCode":"USD"},"myshopifyDomain":"hiya-kids.myshopify.com","countryCode":"US","storefrontUrl":"https:\/\/hiyahealth.com"},"customer":null,"cart":null,"checkout":null,"productVariants":[{"price":{"amount":30.0,"currencyCode":"USD"},"product":{"title":"Kids Daily Multivitamin","vendor":"Hiya Kids","id":"4528169320529","untranslatedTitle":"Kids Daily Multivitamin","url":"\/products\/kids-daily-essential","type":""},"id":"31972279418961","image":{"src":"\/\/hiyahealth.com\/cdn\/shop\/products\/Hiya_Bottle-clear_desktop_v2.png?v=1594964504"},"sku":"sub1","title":"1 Kid - $15\/bottle (Reg: $30)","untranslatedTitle":"1 Kid - $15\/bottle (Reg: $30)"},{"price":{"amount":56.0,"currencyCode":"USD"},"product":{"title":"Kids Daily Multivitamin","vendor":"Hiya Kids","id":"4528169320529","untranslatedTitle":"Kids Daily Multivitamin","url":"\/products\/kids-daily-essential","type":""},"id":"31972890280017","image":{"src":"\/\/hiyahealth.com\/cdn\/shop\/products\/Hiya_Bottle-clear_desktop_v2.png?v=1594964504"},"sku":"sub2","title":"2 Kids - $14\/bottle (Reg: $28)","untranslatedTitle":"2 Kids - $14\/bottle (Reg: $28)"},{"price":{"amount":75.0,"currencyCode":"USD"},"product":{"title":"Kids Daily Multivitamin","vendor":"Hiya Kids","id":"4528169320529","untranslatedTitle":"Kids Daily Multivitamin","url":"\/products\/kids-daily-essential","type":""},"id":"31972890771537","image":{"src":"\/\/hiyahealth.com\/cdn\/shop\/products\/Hiya_Bottle-clear_desktop_v2.png?v=1594964504"},"sku":"sub3","title":"3 Kids - $12.50\/bottle (Reg: $25)","untranslatedTitle":"3 Kids - $12.50\/bottle (Reg: $25)"},{"price":{"amount":96.0,"currencyCode":"USD"},"product":{"title":"Kids Daily Multivitamin","vendor":"Hiya Kids","id":"4528169320529","untranslatedTitle":"Kids Daily Multivitamin","url":"\/products\/kids-daily-essential","type":""},"id":"32022027173969","image":{"src":"\/\/hiyahealth.com\/cdn\/shop\/products\/Hiya_Bottle-clear_desktop_v2.png?v=1594964504"},"sku":"sub4","title":"4 Kids - $12\/bottle (Reg: $24)","untranslatedTitle":"4 Kids - $12\/bottle (Reg: $24)"},{"price":{"amount":115.0,"currencyCode":"USD"},"product":{"title":"Kids Daily Multivitamin","vendor":"Hiya Kids","id":"4528169320529","untranslatedTitle":"Kids Daily Multivitamin","url":"\/products\/kids-daily-essential","type":""},"id":"32022028714065","image":{"src":"\/\/hiyahealth.com\/cdn\/shop\/products\/Hiya_Bottle-clear_desktop_v2.png?v=1594964504"},"sku":"sub5","title":"5 Kids - $11.50\/bottle (Reg: $23)","untranslatedTitle":"5 Kids - $11.50\/bottle (Reg: $23)"}]},},function pageEvents(webPixelsManagerAPI) {webPixelsManagerAPI.publish("page_viewed", {});webPixelsManagerAPI.publish("product_viewed", {"productVariant":{"price":{"amount":30.0,"currencyCode":"USD"},"product":{"title":"Kids Daily Multivitamin","vendor":"Hiya Kids","id":"4528169320529","untranslatedTitle":"Kids Daily Multivitamin","url":"\/products\/kids-daily-essential","type":""},"id":"31972279418961","image":{"src":"\/\/hiyahealth.com\/cdn\/shop\/products\/Hiya_Bottle-clear_desktop_v2.png?v=1594964504"},"sku":"sub1","title":"1 Kid - $15\/bottle (Reg: $30)","untranslatedTitle":"1 Kid - $15\/bottle (Reg: $30)"}});},"https://hiyahealth.com/cdn","e245c016c278bd960efd5d6f260d3b33a74efb13","5d08cde3w4f259957pd2db89ecm09d01778",);</script><script async="" src="js/b5d08cde3w4f259957pd2db89ecm09d01778m.js"></script>  <script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
+window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
+window.ShopifyAnalytics.meta.currency = 'USD';
+var meta = {"product":{"id":4528169320529,"gid":"gid:\/\/shopify\/Product\/4528169320529","vendor":"Hiya Kids","type":"","variants":[{"id":31972279418961,"price":3000,"name":"Kids Daily Multivitamin - 1 Kid - $15\/bottle (Reg: $30)","public_title":"1 Kid - $15\/bottle (Reg: $30)","sku":"sub1"},{"id":31972890280017,"price":5600,"name":"Kids Daily Multivitamin - 2 Kids - $14\/bottle (Reg: $28)","public_title":"2 Kids - $14\/bottle (Reg: $28)","sku":"sub2"},{"id":31972890771537,"price":7500,"name":"Kids Daily Multivitamin - 3 Kids - $12.50\/bottle (Reg: $25)","public_title":"3 Kids - $12.50\/bottle (Reg: $25)","sku":"sub3"},{"id":32022027173969,"price":9600,"name":"Kids Daily Multivitamin - 4 Kids - $12\/bottle (Reg: $24)","public_title":"4 Kids - $12\/bottle (Reg: $24)","sku":"sub4"},{"id":32022028714065,"price":11500,"name":"Kids Daily Multivitamin - 5 Kids - $11.50\/bottle (Reg: $23)","public_title":"5 Kids - $11.50\/bottle (Reg: $23)","sku":"sub5"}]},"page":{"pageType":"product","resourceType":"product","resourceId":4528169320529}};
+for (var attr in meta) {
+  window.ShopifyAnalytics.meta[attr] = meta[attr];
+}</script>
+<script>window.ShopifyAnalytics.merchantGoogleAnalytics = function() {
+  
+};
+</script>
+<script class="analytics">(function () {
+    var customDocumentWrite = function(content) {
+      var jquery = null;
+
+      if (window.jQuery) {
+        jquery = window.jQuery;
+      } else if (window.Checkout && window.Checkout.$) {
+        jquery = window.Checkout.$;
+      }
+
+      if (jquery) {
+        jquery('body').append(content);
+      }
+    };
+
+    var hasLoggedConversion = function(token) {
+      if (token) {
+        return document.cookie.indexOf('loggedConversion=' + token) !== -1;
+      }
+      return false;
+    }
+
+    var setCookieIfConversion = function(token) {
+      if (token) {
+        var twoMonthsFromNow = new Date(Date.now());
+        twoMonthsFromNow.setMonth(twoMonthsFromNow.getMonth() + 2);
+
+        document.cookie = 'loggedConversion=' + token + '; expires=' + twoMonthsFromNow;
+      }
+    }
+
+    var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
+    if (trekkie.integrations) {
+      return;
+    }
+    trekkie.methods = [
+      'identify',
+      'page',
+      'ready',
+      'track',
+      'trackForm',
+      'trackLink'
+    ];
+    trekkie.factory = function(method) {
+      return function() {
+        var args = Array.prototype.slice.call(arguments);
+        args.unshift(method);
+        trekkie.push(args);
+        return trekkie;
+      };
+    };
+    for (var i = 0; i < trekkie.methods.length; i++) {
+      var key = trekkie.methods[i];
+      trekkie[key] = trekkie.factory(key);
+    }
+    trekkie.load = function(config) {
+      trekkie.config = config || {};
+      trekkie.config.initialDocumentCookie = document.cookie;
+      var first = document.getElementsByTagName('script')[0];
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.onerror = function(e) {
+        var scriptFallback = document.createElement('script');
+        scriptFallback.type = 'text/javascript';
+        scriptFallback.onerror = function(error) {
+                var Monorail = {
+      produce: function produce(monorailDomain, schemaId, payload) {
+        var currentMs = new Date().getTime();
+        var event = {
+          schema_id: schemaId,
+          payload: payload,
+          metadata: {
+            event_created_at_ms: currentMs,
+            event_sent_at_ms: currentMs
+          }
+        };
+        return Monorail.sendRequest("https://" + monorailDomain + "/v1/produce", JSON.stringify(event));
+      },
+      sendRequest: function sendRequest(endpointUrl, payload) {
+        // Try the sendBeacon API
+        if (window && window.navigator && typeof window.navigator.sendBeacon === 'function' && typeof window.Blob === 'function' && !Monorail.isIos12()) {
+          var blobData = new window.Blob([payload], {
+            type: 'text/plain'
+          });
+
+          if (window.navigator.sendBeacon(endpointUrl, blobData)) {
+            return true;
+          } // sendBeacon was not successful
+
+        } // XHR beacon
+
+        var xhr = new XMLHttpRequest();
+
+        try {
+          xhr.open('POST', endpointUrl);
+          xhr.setRequestHeader('Content-Type', 'text/plain');
+          xhr.send(payload);
+        } catch (e) {
+          console.log(e);
+        }
+
+        return false;
+      },
+      isIos12: function isIos12() {
+        return window.navigator.userAgent.lastIndexOf('iPhone; CPU iPhone OS 12_') !== -1 || window.navigator.userAgent.lastIndexOf('iPad; CPU OS 12_') !== -1;
+      }
+    };
+    Monorail.produce('monorail-edge.shopifysvc.com',
+      'trekkie_storefront_load_errors/1.1',
+      {shop_id: 25532498001,
+      theme_id: 132381212753,
+      app_name: "storefront",
+      context_url: window.location.href,
+      source_url: "//hiyahealth.com/cdn/s/trekkie.storefront.f9102b76c4156d18a2f9ad80e236ecd6fdcc057c.min.js"});
+
+        };
+        scriptFallback.async = true;
+        scriptFallback.src = '//hiyahealth.com/cdn/s/trekkie.storefront.f9102b76c4156d18a2f9ad80e236ecd6fdcc057c.min.js';
+        first.parentNode.insertBefore(scriptFallback, first);
+      };
+      script.async = true;
+      script.src = '//hiyahealth.com/cdn/s/trekkie.storefront.f9102b76c4156d18a2f9ad80e236ecd6fdcc057c.min.js';
+      first.parentNode.insertBefore(script, first);
+    };
+    trekkie.load(
+      {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":25532498001,"isMerchantRequest":null,"themeId":132381212753,"themeCityHash":"1917473651310836668","contentLanguage":"en","currency":"USD"},"isServerSideCookieWritingEnabled":true,"monorailRegion":"shop_domain","enabledBetaFlags":["bbcf04e6"]},"TikTok Pixel":{"pixelId":"C8J5TD1OSU475C97LSFG"},"Session Attribution":{},"S2S":{"facebookCapiEnabled":true,"source":"trekkie-storefront-renderer","apiClientId":580111}}
+    );
+
+    var loaded = false;
+    trekkie.ready(function() {
+      if (loaded) return;
+      loaded = true;
+
+      window.ShopifyAnalytics.lib = window.trekkie;
+
+  
+      var originalDocumentWrite = document.write;
+      document.write = customDocumentWrite;
+      try { window.ShopifyAnalytics.merchantGoogleAnalytics.call(this); } catch(error) {};
+      document.write = originalDocumentWrite;
+
+      window.ShopifyAnalytics.lib.page(null,{"pageType":"product","resourceType":"product","resourceId":4528169320529});
+
+      var match = window.location.pathname.match(/checkouts\/(.+)\/(thank_you|post_purchase)/)
+      var token = match? match[1]: undefined;
+      if (!hasLoggedConversion(token)) {
+        setCookieIfConversion(token);
+        window.ShopifyAnalytics.lib.track("Viewed Product",{"currency":"USD","variantId":31972279418961,"productId":4528169320529,"productGid":"gid:\/\/shopify\/Product\/4528169320529","name":"Kids Daily Multivitamin - 1 Kid - $15\/bottle (Reg: $30)","price":"30.00","sku":"sub1","brand":"Hiya Kids","variant":"1 Kid - $15\/bottle (Reg: $30)","category":"","nonInteraction":true});
+      window.ShopifyAnalytics.lib.track("monorail:\/\/trekkie_storefront_viewed_product\/1.1",{"currency":"USD","variantId":31972279418961,"productId":4528169320529,"productGid":"gid:\/\/shopify\/Product\/4528169320529","name":"Kids Daily Multivitamin - 1 Kid - $15\/bottle (Reg: $30)","price":"30.00","sku":"sub1","brand":"Hiya Kids","variant":"1 Kid - $15\/bottle (Reg: $30)","category":"","nonInteraction":true,"referer":"https:\/\/hiyahealth.com\/products\/kids-daily-essential"});
+      }
+    });
+
+
+        var eventsListenerScript = document.createElement('script');
+        eventsListenerScript.async = true;
+        eventsListenerScript.src = "//hiyahealth.com/cdn/shopifycloud/shopify/assets/shop_events_listener-61fa9e0a912c675e178777d2b27f6cbd482f8912a6b0aa31fa3515985a8cd626.js";
+        document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
+
+})();</script><script async="" src="js/shop_events_listener-61fa9e0a912c675e178777d2b27f6cbd482f8912a6b0aa31fa3515985a8cd626.js"></script>
+<script class="boomerang">
+(function () {
+  if (window.BOOMR && (window.BOOMR.version || window.BOOMR.snippetExecuted)) {
+    return;
+  }
+  window.BOOMR = window.BOOMR || {};
+  window.BOOMR.snippetStart = new Date().getTime();
+  window.BOOMR.snippetExecuted = true;
+  window.BOOMR.snippetVersion = 12;
+  window.BOOMR.application = "storefront-renderer";
+  window.BOOMR.themeName = "Ride";
+  window.BOOMR.themeVersion = "9.0.0";
+  window.BOOMR.shopId = 25532498001;
+  window.BOOMR.themeId = 132381212753;
+  window.BOOMR.renderRegion = "gcp-europe-west1";
+  window.BOOMR.url =
+    "https://hiyahealth.com/cdn/shopifycloud/boomerang/shopify-boomerang-1.0.0.min.js";
+  var where = document.currentScript || document.getElementsByTagName("script")[0];
+  var parentNode = where.parentNode;
+  var promoted = false;
+  var LOADER_TIMEOUT = 3000;
+  function promote() {
+    if (promoted) {
+      return;
+    }
+    var script = document.createElement("script");
+    script.id = "boomr-scr-as";
+    script.src = window.BOOMR.url;
+    script.async = true;
+    parentNode.appendChild(script);
+    promoted = true;
+  }
+  function iframeLoader(wasFallback) {
+    promoted = true;
+    var dom, bootstrap, iframe, iframeStyle;
+    var doc = document;
+    var win = window;
+    window.BOOMR.snippetMethod = wasFallback ? "if" : "i";
+    bootstrap = function(parent, scriptId) {
+      var script = doc.createElement("script");
+      script.id = scriptId || "boomr-if-as";
+      script.src = window.BOOMR.url;
+      BOOMR_lstart = new Date().getTime();
+      parent = parent || doc.body;
+      parent.appendChild(script);
+    };
+    if (!window.addEventListener && window.attachEvent && navigator.userAgent.match(/MSIE [67]./)) {
+      window.BOOMR.snippetMethod = "s";
+      bootstrap(parentNode, "boomr-async");
+      return;
+    }
+    iframe = document.createElement("IFRAME");
+    iframe.src = "about:blank";
+    iframe.title = "";
+    iframe.role = "presentation";
+    iframe.loading = "eager";
+    iframeStyle = (iframe.frameElement || iframe).style;
+    iframeStyle.width = 0;
+    iframeStyle.height = 0;
+    iframeStyle.border = 0;
+    iframeStyle.display = "none";
+    parentNode.appendChild(iframe);
+    try {
+      win = iframe.contentWindow;
+      doc = win.document.open();
+    } catch (e) {
+      dom = document.domain;
+      iframe.src = "javascript:var d=document.open();d.domain='" + dom + "';void(0);";
+      win = iframe.contentWindow;
+      doc = win.document.open();
+    }
+    if (dom) {
+      doc._boomrl = function() {
+        this.domain = dom;
+        bootstrap();
+      };
+      doc.write("<body onload='document._boomrl();'>");
+    } else {
+      win._boomrl = function() {
+        bootstrap();
+      };
+      if (win.addEventListener) {
+        win.addEventListener("load", win._boomrl, false);
+      } else if (win.attachEvent) {
+        win.attachEvent("onload", win._boomrl);
+      }
+    }
+    doc.close();
+  }
+  var link = document.createElement("link");
+  if (link.relList &&
+    typeof link.relList.supports === "function" &&
+    link.relList.supports("preload") &&
+    ("as" in link)) {
+    window.BOOMR.snippetMethod = "p";
+    link.href = window.BOOMR.url;
+    link.rel = "preload";
+    link.as = "script";
+    link.addEventListener("load", promote);
+    link.addEventListener("error", function() {
+      iframeLoader(true);
+    });
+    setTimeout(function() {
+      if (!promoted) {
+        iframeLoader(true);
+      }
+    }, LOADER_TIMEOUT);
+    BOOMR_lstart = new Date().getTime();
+    parentNode.appendChild(link);
+  } else {
+    iframeLoader(false);
+  }
+  function boomerangSaveLoadTime(e) {
+    window.BOOMR_onload = (e && e.timeStamp) || new Date().getTime();
+  }
+  if (window.addEventListener) {
+    window.addEventListener("load", boomerangSaveLoadTime, false);
+  } else if (window.attachEvent) {
+    window.attachEvent("onload", boomerangSaveLoadTime);
+  }
+  if (document.addEventListener) {
+    document.addEventListener("onBoomerangLoaded", function(e) {
+      e.detail.BOOMR.init({
+        ResourceTiming: {
+          enabled: true,
+          trackedResourceTypes: ["script", "img", "css"]
+        },
+      });
+      e.detail.BOOMR.t_end = new Date().getTime();
+    });
+  } else if (document.attachEvent) {
+    document.attachEvent("onpropertychange", function(e) {
+      if (!e) e=event;
+      if (e.propertyName === "onBoomerangLoaded") {
+        e.detail.BOOMR.init({
+          ResourceTiming: {
+            enabled: true,
+            trackedResourceTypes: ["script", "img", "css"]
+          },
+        });
+        e.detail.BOOMR.t_end = new Date().getTime();
+      }
+    });
+  }
+})();</script><link href="https://hiyahealth.com/cdn/shopifycloud/boomerang/shopify-boomerang-1.0.0.min.js" rel="preload" as="script">
+<script defer="" src="js/shopify-perf-kit-unstable.min.js" data-application="storefront-renderer" data-shop-id="25532498001" data-render-region="gcp-europe-west1" data-page-type="product" data-theme-instance-id="132381212753" data-monorail-region="shop_domain" data-resource-timing-sampling-rate="10"></script>
+</head><body class=" product-multivitamin template-product template-kids-daily-essential gradient products-kids-daily-essential pageproduct">
+  <iframe src="about:blank" title="" role="presentation" loading="eager" style="width: 0px; height: 0px; border: 0px; display: none;"></iframe>
+  
+  
+  <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      
+
+<link href="css/product.css" rel="stylesheet" type="text/css" media="all">
+
+<section id="shopify-section-product-banner-sec" class="shopify-section product-banner-main"><link href="css/product-banner-sec.css" rel="stylesheet" type="text/css" media="all">
+
+<div class="product-banner-sec ">
+  <div class="container">
+    <div class="inner">
+      <div class="slider-wrapper">
+        <div id="product__slider">
+            <button class="product-image-zoom"><i></i></button>
+            <div class="product__slider-main"><div class="slide slick-slide slick-current slick-active">
+                  <img src="images/Hiya_Bottle-clear_desktop_v2.png" alt="Kids Daily Multivitamin - Hiya Health | Essential Super Nutrients for Kids" srcset="images/Hiya_Bottle-clear_desktop_v2_3.png 352w, images/Hiya_Bottle-clear_desktop_v2_2.png 832w, images/Hiya_Bottle-clear_desktop_v2.png 1164w" width="1164" height="1164" class="img-responsive" fetchpriority="high">
+                </div>
+              <div class="slide slick-slide">
+                  <img src="images/Bottle_f3818282-ef5c-4fb3-b614-0ea62d2f1984.jpg" alt="Kids Daily Multivitamin - Hiya Health | Essential Super Nutrients for Kids" srcset="images/Bottle_f3818282-ef5c-4fb3-b614-0ea62d2f1984_3.jpg 352w, images/Bottle_f3818282-ef5c-4fb3-b614-0ea62d2f1984_2.jpg 832w, images/Bottle_f3818282-ef5c-4fb3-b614-0ea62d2f1984.jpg 1164w" width="1164" height="1164" class="img-responsive" fetchpriority="low">
+                </div>
+              <div class="slide slick-slide">
+                  <img src="images/bottlestickers_d0bc50d3-43e8-4cec-9ea3-c8a92f887345.jpg" alt="Kids Daily Multivitamin - Hiya Health | Essential Super Nutrients for Kids" srcset="images/bottlestickers_d0bc50d3-43e8-4cec-9ea3-c8a92f887345_3.jpg 352w, images/bottlestickers_d0bc50d3-43e8-4cec-9ea3-c8a92f887345_2.jpg 832w, images/bottlestickers_d0bc50d3-43e8-4cec-9ea3-c8a92f887345.jpg 1164w" width="1164" height="1164" class="img-responsive" fetchpriority="low">
+                </div>
+              <div class="slide slick-slide">
+                  <img src="images/stickers_604ac226-1a68-41df-a692-8584026afab3.jpg" alt="Kids Daily Multivitamin - Hiya Health | Essential Super Nutrients for Kids" srcset="images/stickers_604ac226-1a68-41df-a692-8584026afab3_3.jpg 352w, images/stickers_604ac226-1a68-41df-a692-8584026afab3_2.jpg 832w, images/stickers_604ac226-1a68-41df-a692-8584026afab3.jpg 1164w" width="1164" height="1164" class="img-responsive" fetchpriority="low">
+                </div>
+              <div class="slide slick-slide">
+                  <img src="images/Y3KJVNRQ.jpg" alt="Kids Daily Multivitamin - Hiya Health | Essential Super Nutrients for Kids" srcset="images/Y3KJVNRQ_3.jpg 352w, images/Y3KJVNRQ_2.jpg 832w, images/Y3KJVNRQ.jpg 1164w" width="1164" height="1164" class="img-responsive" fetchpriority="low">
+                </div>
+              
+             </div>
+            <div class="product__slider-thmb"><div class="slide slick-slide slick-current slick-active">
+                  <img src="images/Hiya_Bottle-clear_desktop_v2_1.png" alt="Kids Daily Multivitamin - Hiya Health | Essential Super Nutrients for Kids" srcset="images/Hiya_Bottle-clear_desktop_v2_1.png 186w" width="186" height="186" class="img-responsive" sizes="93px">
+                </div>
+              <div class="slide slick-slide">
+                  <img src="images/Bottle_f3818282-ef5c-4fb3-b614-0ea62d2f1984_1.jpg" alt="Kids Daily Multivitamin - Hiya Health | Essential Super Nutrients for Kids" srcset="images/Bottle_f3818282-ef5c-4fb3-b614-0ea62d2f1984_1.jpg 186w" width="186" height="186" class="img-responsive" sizes="93px">
+                </div>
+              <div class="slide slick-slide">
+                  <img src="images/bottlestickers_d0bc50d3-43e8-4cec-9ea3-c8a92f887345_1.jpg" alt="Kids Daily Multivitamin - Hiya Health | Essential Super Nutrients for Kids" srcset="images/bottlestickers_d0bc50d3-43e8-4cec-9ea3-c8a92f887345_1.jpg 186w" width="186" height="186" class="img-responsive" sizes="93px">
+                </div>
+              <div class="slide slick-slide">
+                  <img src="images/stickers_604ac226-1a68-41df-a692-8584026afab3_1.jpg" alt="Kids Daily Multivitamin - Hiya Health | Essential Super Nutrients for Kids" srcset="images/stickers_604ac226-1a68-41df-a692-8584026afab3_1.jpg 186w" width="186" height="186" class="img-responsive" sizes="93px">
+                </div>
+              <div class="slide slick-slide">
+                  <img src="images/Y3KJVNRQ_1.jpg" alt="Kids Daily Multivitamin - Hiya Health | Essential Super Nutrients for Kids" srcset="images/Y3KJVNRQ_1.jpg 186w" width="186" height="186" class="img-responsive" sizes="93px">
+                </div>
+              
+            </div>
+            <div class="product__slider-controls"></div>
+        </div>
+      </div>
+      <div class="prod-body"><h2>Kids Daily Multivitamin</h2>
+        
+        
+        <div class="rating-star-count">
+         <div data-oke-reviews-product-listing-rating=""><!-- START dev-135 adding logic that if Giddy Up PDPs then add combine reviews in bedtime custom metafields --><div data-oke-reviews-version="2.16.13" class="okeReviews okeReviews--theme">
+<div class="okeReviews-reviewsSummary js-okeReviews-reviewsSummary" data-oke-ga-click-action="Star Rating Summary Click" data-oke-ga-click-label="Kids Daily Multivitamin">
+<div class="okeReviews-reviewsSummary-starRating">
+<span class="okeReviews-starRating okeReviews-starRating--small">
+<span class="okeReviews-a11yText">Rated 4.9 out of 5</span>
+<span class="okeReviews-starRating-indicator" role="presentation">
+<span class="okeReviews-starRating-indicator-layer"></span>
+<span class="okeReviews-starRating-indicator-layer okeReviews-starRating-indicator-layer--foreground" style="width: 97%"></span>
+</span>
+</span>
+</div>
+<div class="okeReviews-reviewsSummary-ratingCount">
+<span aria-hidden="true">4706 Reviews</span>
+<span class="okeReviews-a11yText">Based on 4706 reviews</span>
+</div>
+</div>
+</div>
+<!-- END adding logic that if Giddy Up PDPs then add combine reviews in probiotic custom metafields --></div>
+        </div>
+        <div class="price_area">
+             
+            
+            
+            
+            
+
+              
+              
+              <p><span class="r_price">$15</span></p><p><span class="o_price">$30</span></p><span class="per_txt">per kid</span><span>50% Off First Order</span>
+            
+          </div>
+        
+          <div class="description"><span><b>Chewable Multivitamin</b> with 15 essential vitamins &amp; minerals to support immunity, growth, &amp; development among kids.</span></div>
+        
+
+        <div class="chewables">
+          <div class="usp_bar">
+            
+              <img src="images/upsell_check_icon_e0eef335-2a85-4b2d-ac4c-1658a9a7cee9.png" alt="checkmark-icon">
+            
+            <span>30-Day Supply</span>
+              
+                <img src="images/upsell_check_icon_e0eef335-2a85-4b2d-ac4c-1658a9a7cee9.png" alt="checkmark-icon">
+              
+              <span>Refillable Glass Bottle</span>
+                
+                  <img src="images/upsell_check_icon_e0eef335-2a85-4b2d-ac4c-1658a9a7cee9.png" alt="checkmark-icon">
+                
+             <span>Sticker Pack to Decorate</span>
+           </div>
+          <hr>
+        </div>
+        
+        
+        
+        
+      <div role="button" class="supplements-modal hide-modal">
+        <p>Supplement Facts</p>
+        <div class="supplement-overlay">
+          <img src="images/hiya_multi-full-facts_2023.jpg">
+        </div>
+      </div>
+      
+
+        
+          
+          <div role="button" class="supplements-modal show-modal" style="display:none;">
+            <p>Supplement Facts</p>
+            <div class="supplement-overlay">
+              <!--img src="//hiyahealth.com/cdn/shopifycloud/shopify/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c.gif "-->
+              <img src="images/hiya_multi-full-facts_2023.jpg">
+            </div>
+          </div>
+          
+        
+      <div class="form-default">
+          <p class="k_text mobile-show">Select Number of Kids:</p>
+        <div class="optionList mvpdp-hide form-group">
+          <select class="form-control">
+          
+            
+            
+            
+          <option class="active" data-item="1" data_variantid="31972279418961" data-price="$15" value="31972279418961" data-regulerprice="$30">1 Kid - $15/bottle (Reg: $30)
+          </option>
+          
+            
+            
+            
+          <option class="" data-item="2" data_variantid="31972890280017" data-price="$14" value="31972890280017" data-regulerprice="$28">2 Kids - $14/bottle (Reg: $28)
+          </option>
+          
+            
+            
+            
+          <option class="" data-item="3" data_variantid="31972890771537" data-price="$12.50" value="31972890771537" data-regulerprice="$25">3 Kids - $12.50/bottle (Reg: $25)
+          </option>
+          
+            
+            
+            
+          <option class="" data-item="4" data_variantid="32022027173969" data-price="$12" value="32022027173969" data-regulerprice="$24">4 Kids - $12/bottle (Reg: $24)
+          </option>
+          
+            
+            
+            
+          <option class="" data-item="5" data_variantid="32022028714065" data-price="$11.50" value="32022028714065" data-regulerprice="$23">5 Kids - $11.50/bottle (Reg: $23)
+          </option>
+          
+          </select>
+        </div>
+      </div>
+        
+          <p class="k_text">Select Number of Kids:</p>
+         
+        <div class="optionList hide">
+             
+               
+               
+               
+                
+               <span class="active" data-item="1" data_variantid="31972279418961" data-price="$15" data-regulerprice="$30">1 Kid</span>
+              
+               
+               
+               
+                
+               <span class="" data-item="2" data_variantid="31972890280017" data-price="$14" data-regulerprice="$28">2 Kids</span>
+              
+               
+               
+               
+                
+               <span class="" data-item="3" data_variantid="31972890771537" data-price="$12.50" data-regulerprice="$25">3 Kids</span>
+              
+               
+               
+               
+                
+               <span class="" data-item="4" data_variantid="32022027173969" data-price="$12" data-regulerprice="$24">4 Kids</span>
+              
+               
+               
+               
+                
+               <span class="" data-item="5" data_variantid="32022028714065" data-price="$11.50" data-regulerprice="$23">5 Kids</span>
+              
+        </div>
+        <!-- change initial prices to be dynamic based on first available product variant price -->
+      <section class="bundle-selector-wrap">
+        <div class="bundle-selector-v1">
+            <!-- Product #1 -->
+            <label for="image-group" class="image-group multi-group">
+               <input class="hidden-js v1" data-var-id="31972279418961" type="text" style="display: none;">
+                <input class="multi-radio" type="radio" name="bundle" value="multi" checked="checked" onchange="handleChange(this);">
+                <img class="active-option" src="images/multi.png" alt="Option 1">
+                <div class="price-box">
+                    <h4 class="multi-title featured-product-title">
+                      Daily Multivitamin Only
+                    </h4>
+                    <span class="first-price">$15</span><span class="per-kid">/kid</span><span class="strike multi-strike">$30</span>
+                </div>
+            </label>
+          <!-- Product #2 -->
+          
+            <label for="image-group" class="image-group bundle-group">
+            
+              
+                <input class="hidden-js-bundle v1" type="hidden" name="selling_plan_bundle" data-selling-plan="448168017" data-var-id="31972279418961" style="display: none;">
+              
+            
+                  <select class="hidden-option-bundle-product" style="display: none;">
+                  
+                    
+                    
+                    
+                  <option class="active" data-item="1" data_variantid="39450680066129" data-price="$15" value="39450680066129" data-selling-plan="" data-regulerprice="$30">1 Kid - $15/bottle (Reg: $30)
+                  </option>
+                
+                    
+                    
+                    
+                  <option class="" data-item="2" data_variantid="39450680098897" data-price="$14" value="39450680098897" data-selling-plan="" data-regulerprice="$28">2 Kids - $14/bottle (Reg: $28)
+                  </option>
+                
+                    
+                    
+                    
+                  <option class="" data-item="3" data_variantid="39450680131665" data-price="$12.50" value="39450680131665" data-selling-plan="" data-regulerprice="$25">3 Kids - $12.50/bottle (Reg: $25)
+                  </option>
+                
+                    
+                    
+                    
+                  <option class="" data-item="4" data_variantid="39450680164433" data-price="$12" value="39450680164433" data-selling-plan="" data-regulerprice="$24">4 Kids - $12/bottle (Reg: $24)
+                  </option>
+                
+                    
+                    
+                    
+                  <option class="" data-item="5" data_variantid="39450680197201" data-price="$11.50" value="39450680197201" data-selling-plan="" data-regulerprice="$23">5 Kids - $11.50/bottle (Reg: $23)
+                  </option>
+                
+             </select>
+                <span class="better-together">Better Together</span>
+                <input class="bundle-radio" type="radio" name="bundle" value="bundle" onchange="handleChange(this);">
+                <img src="images/bundle.png" alt="Option 2">
+                <div class="price-box">
+                    <h4 class="bundle-title">
+                      Daily Multivitamin + Probiotic
+                    </h4>
+                    <span class="first-bundle-price">$30</span><span class="per-kid-bundle">/kid</span><span class="strike bundle-strike">$60</span>
+                </div>
+            </label>
+        </div>
+      </section>
+
+        <!-- Variant 1  -->
+        <section class="bundle-selector-wrap v2" style="display: none;">
+        <div class="bundle-selector-v1 v2">
+            <!-- Product #1 -->
+            <label for="image-group-v2" class="image-group multi-group v2">
+               <input class="hidden-js v1 v2" data-var-id="31972279418961" type="text" style="display: none;">
+                <input class="multi-radio v2" type="radio" name="bundle-2" value="multi" checked="checked" onchange="handleChange2(this);">
+                <img class="active-option v2" src="images/multi.png" alt="Option 1" width="" height="">
+                <div class="price-box v2">
+                    <h4 class="multi-title featured-product-title v2">
+                      Daily Multivitamin Only
+                    </h4>
+                    <span class="first-price v2">$15</span><span class="per-kid v2">/kid</span><span class="strike multi-strike v2">$30</span>
+                </div>
+            </label>
+          <!-- Product #2 -->
+          
+            <label for="image-group-v2" class="image-group bundle-group v2">
+            
+              
+                <input class="hidden-js-bundle v1 v2" type="hidden" name="selling_plan_bundle" data-selling-plan="731840593" data-var-id="31972279418961" style="display: none;">
+              
+            
+                  <select class="hidden-option-bundle-product v2" style="display: none;">
+                  
+                    
+                    
+                    
+                  <option class="active" data-item="1" data_variantid="40375443226705" data-price="$17.50" value="40375443226705" data-selling-plan="" data-regulerprice="$35">1 Kid - $17.50/bottle (Reg: $35)
+                  </option>
+                
+                    
+                    
+                    
+                  <option class="" data-item="2" data_variantid="40375443259473" data-price="$16" value="40375443259473" data-selling-plan="" data-regulerprice="$32">2 Kids - $16/bottle (Reg: $32)
+                  </option>
+                
+                    
+                    
+                    
+                  <option class="" data-item="3" data_variantid="40375443292241" data-price="$14" value="40375443292241" data-selling-plan="" data-regulerprice="$28">3 Kids - $14/bottle (Reg: $28)
+                  </option>
+                
+                    
+                    
+                    
+                  <option class="" data-item="4" data_variantid="40375443325009" data-price="$13" value="40375443325009" data-selling-plan="" data-regulerprice="$26">4 Kids - $13/bottle (Reg: $26)
+                  </option>
+                
+                    
+                    
+                    
+                  <option class="" data-item="5" data_variantid="40375443357777" data-price="$12.50" value="40375443357777" data-selling-plan="" data-regulerprice="$25">5 Kids - $12.50/bottle (Reg: $25)
+                  </option>
+                
+             </select>
+                <span class="better-together v2">Better Together</span>
+                <input class="bundle-radio v2" type="radio" name="bundle-2" value="bundle" onchange="handleChange2(this);">
+                <img src="images/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c.gif" alt="Option 2" width="" height="">
+                <div class="price-box v2">
+                    <h4 class="bundle-title v2">
+                      Multivitamin + Bedtime Essentials
+                    </h4>
+                    <span class="first-bundle-price v2">$30</span><span class="per-kid-bundle v2">/kid</span><span class="strike bundle-strike v2">$60</span>
+                </div>
+            </label>
+        </div>
+      </section>
+        <section class="bundle-selector-wrap v3" style="display: none;">
+        <div class="bundle-selector-v1 v3">
+            <!-- Product #1 -->
+            <label for="image-group-v2" class="image-group multi-group v3">
+               <input class="hidden-js v1 v3" data-var-id="31972279418961" type="text" style="display: none;">
+                <input class="multi-radio v3" type="radio" name="bundle-3" value="multi" checked="checked" onchange="handleChange3(this);">
+                <img class="active-option v3" src="images/multi.png" alt="Option 1" width="" height="">
+                <div class="price-box v3">
+                    <h4 class="multi-title featured-product-title v3">
+                      Daily Multivitamin Only
+                    </h4>
+                    <span class="first-price v3">$15</span><span class="per-kid v3">/kid</span><span class="strike multi-strike v3">$30</span>
+                </div>
+            </label>
+          <!-- Product #2 -->
+          
+            <label for="image-group-v3" class="image-group bundle-group v3">
+            
+              
+                <input class="hidden-js-bundle v1 v3" type="hidden" name="selling_plan_bundle" data-selling-plan="873529425" data-var-id="31972279418961" style="display: none;">
+              
+            
+                  <select class="hidden-option-bundle-product v3" style="display: none;">
+                  
+                    
+                    
+                    
+                  <option class="active" data-item="1" data_variantid="40729493012561" data-price="$15" value="40729493012561" data-selling-plan="" data-regulerprice="$30">1 Kid - $15/bottle (Reg: $30)
+                  </option>
+                
+                    
+                    
+                    
+                  <option class="" data-item="2" data_variantid="40729493045329" data-price="$14" value="40729493045329" data-selling-plan="" data-regulerprice="$28">2 Kids - $14/bottle (Reg: $28)
+                  </option>
+                
+                    
+                    
+                    
+                  <option class="" data-item="3" data_variantid="40729493078097" data-price="$12.50" value="40729493078097" data-selling-plan="" data-regulerprice="$25">3 Kids - $12.50/bottle (Reg: $25)
+                  </option>
+                
+                    
+                    
+                    
+                  <option class="" data-item="4" data_variantid="40729493110865" data-price="$12" value="40729493110865" data-selling-plan="" data-regulerprice="$24">4 Kids - $12/bottle (Reg: $24)
+                  </option>
+                
+                    
+                    
+                    
+                  <option class="" data-item="5" data_variantid="40729493143633" data-price="$11.50" value="40729493143633" data-selling-plan="" data-regulerprice="$23">5 Kids - $11.50/bottle (Reg: $23)
+                  </option>
+                
+             </select>
+                <span class="better-together v3">Better Together</span>
+                <input class="bundle-radio v3" type="radio" name="bundle-3" value="bundle" onchange="handleChange3(this);">
+                <img src="images/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c.gif" alt="Option 2" width="" height="">
+                <div class="price-box v3">
+                    <h4 class="bundle-title v3">
+                      Daily Multivitamin + Iron+
+                    </h4>
+                    <span class="first-bundle-price v3">$30</span><span class="per-kid-bundle v3">/kid</span><span class="strike bundle-strike v3">$60</span>
+                </div>
+            </label>
+        </div>
+      </section>
+
+  
+
+  
+<script src="js/bundle-selector-final.js" type="text/javascript"></script> 
+<script src="js/bundle-selector-hh68-v1.js" type="text/javascript"></script> 
+<script src="js/bundle-selector-hh68-v2.js" type="text/javascript"></script> 
+      
+
+  
+
+        
+         
+          
+        
+    
+         
+          
+        
+       
+          
+      </div>
+        
+        
+      </div>
+    </div>   
+  </div>
+</div>
+
+
+<svg class="bottom-curve" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 97.9" style="enable-background:new 0 0 1920 97.9; " xml:space="preserve">
+      <path id="Path_2" class="st59 " d="M1920,17.3c0,0-256,80.6-960,80.6S0,17.3,0,17.3V0h1920L1920,17.3z"></path>
+</svg>
+
+<svg style="bottom: 10px; position: relative; " version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 97.9" xml:space="preserve">
+  <path id="Path_2" class="st59 " d="M1920,17.3c0,0-256,80.6-960,80.6S0,17.3,0,17.3V0h1920L1920,17.3z"></path>
+</svg>
+
+
+<script>
+let mainProductSliderSettings = {
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  autoplay: false,
+  autoplaySpeed: 3000,
+  asNavFor: '.product__slider-thmb',
+  swipe: false,
+  swipeToSlide: false,
+  touchMove: false,
+  draggable: false,
+  responsive: [
+  {
+    breakpoint: 768,
+    settings: {
+      arrows: true,
+    },
+  }]
+};
+let tmbProductSliderSettings = {
+  arrows: false,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  adaptiveHeight: true,
+  asNavFor: '.product__slider-main',
+  dots: false,
+  centerMode: false,
+  focusOnSelect: true,
+  responsive: [
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 4,
+        arrows: true,
+        appendArrows: $('.product__slider-controls')
+      }
+    }
+  ]
+};
+let imageZoomBtn = document.querySelector('button.product-image-zoom');
+imageZoomBtn.addEventListener('click',function(e){
+  if(!document.querySelector('div.product-img-overlay')){
+    let productImgSrc = imageZoomBtn.parentElement.querySelector('div.slick-active > img').getAttribute('src');
+    let body = document.body, html = document.documentElement;
+    let height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+    let el = document.createElement('div');
+    el.classList.add('product-img-overlay');
+    el.setAttribute('style','height:'+height+'px;');
+    document.body.appendChild(el);
+    el = document.createElement('div');
+    el.classList.add('img');
+    el.innerHTML = '<div><button type="button" class="product-img-close">×</button><div class="product-zoom-slick"></div></div>';
+    document.querySelector('div.product-img-overlay').appendChild(el);
+    el = document.createElement('div');
+    el.classList.add('cover');
+    document.querySelector('div.product-img-overlay').appendChild(el);
+    document.querySelector('button.product-img-close').addEventListener('click',function(){
+      document.querySelector('div.product-img-overlay').remove();
+    });
+    $('.product__slider-main').slick('unslick');
+    let carouselOverlay = document.querySelector('div.product__slider-main').cloneNode(true);
+    document.querySelector('div.product-zoom-slick').appendChild(carouselOverlay);
+    $('#product__slider .product__slider-main').slick(mainProductSliderSettings);
+    $('.product-img-overlay .product__slider-main').slick();
+  }
+});
+if ($('.product__slider-main').length) {
+  var $slider = $('.product__slider-main').slick(mainProductSliderSettings);
+  var $slider2 = $('.product__slider-thmb').slick(tmbProductSliderSettings);
+
+  $('.product__slider-thmb .slick-slide').removeClass('slick-active');
+  $('.product__slider-thmb .slick-slide').eq(0).addClass('slick-active');
+
+  $('.product__slider-main').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    var mySlideNumber = nextSlide;
+    $('.product__slider-thmb .slick-slide').removeClass('slick-active');
+    $('.product__slider-thmb .slick-slide').eq(mySlideNumber).addClass('slick-active');
+  });
+}
+
+$( document ).ready(function() {
+  $('.optionList span[data-item="1"]').addClass('active');
+  $('.optionList > select > option[data-item="1"]').addClass('active');
+  var First_price = $('.optionList span.active').attr('data-price');
+  $('.r_price').text(First_price);
+  var ComprePrice = $('.optionList span.active').attr('data-regulerprice');
+  $('.o_price').text(ComprePrice);
+
+  $(document).on("click",".optionList span",function() {console.log('click');
+     var First_price = $(this).attr('data-price');
+     $('.r_price').text(First_price);
+     var ComprePrice = $(this).attr('data-regulerprice');
+     $('.o_price').text(ComprePrice);
+     var GetVariantID = $(this).attr('data_variantid');
+     $('form input[type="hidden"][name="id"]').val(GetVariantID);
+    $('.price_area p:nth-child(2)').css('text-decoration','none !important');
+  });
+
+  let activeOption, r_price, o_price;
+
+  $(document).on("change",".optionList select",function() {
+    var variant_id = this.value;
+    var data_price = this.selectedIndex;
+    var allOptions = this.options;
+    r_price = document.querySelector('.r_price');
+    o_price = document.querySelector('.o_price');
+
+    for (let index = 0; index < allOptions.length; index++) {
+      const element = allOptions[index];
+  
+      if (index === this.selectedIndex) {
+        element.classList.add('active');
+        activeOption = document.querySelector('.form-control > option.active');
+        activeOptionDataPrice = activeOption.dataset.price;
+        regularPrice = activeOption.dataset.regulerprice;
+        r_price.textContent = activeOptionDataPrice; 
+        o_price.innerText = regularPrice;
+      } else {
+        element.classList.remove('active');
+      }
+    }
+    var GetVariantID = variant_id;
+    $('form input[type="hidden"][name="id"]').val(GetVariantID);
+    $('.price_area p:nth-child(2)').css('text-decoration','none !important');
+  });
+});
+</script>
+
+
+
+<!-- Temporary JS to move supplements modal on mobile until we have the time to do better 
+Gabe.T Acadia 6-26-2023 
+-->
+
+<script>
+
+function waitFor(selector) {
+    return new Promise(function (res, rej) {
+        waitForElementToDisplay(selector, 200);
+        function waitForElementToDisplay(selector, time) {
+            if (document.querySelector(selector) != null) {
+                res(document.querySelector(selector));
+                swapLocation();
+            }
+            else {
+                setTimeout(function () {
+                    waitForElementToDisplay(selector, time);
+                }, time);
+            }
+        }
+    });
+}
+
+waitFor('.supplements-modal');
+
+function swapLocation () {
+  let supplements = document.querySelector('.supplements-modal');
+  let parContainer = document.querySelector('.chewables');
+  
+  if (supplements && parContainer && window.innerWidth < 768) {
+    parContainer.insertAdjacentElement('beforeend', supplements);
+  }
+}
+
+  
+</script>
+
+
+
+
+
+</section>
+
+
+<section id="shopify-section-pairs-great-bedtime" class="shopify-section pairs-great-with-main">
+
+
+
+<div style="display: none;" class="pairs-great-with-sec">
+  <div class="container">
+    <h2>Pairs Great With:</h2>
+    <div class="pair-box HH57">
+      <div class="inner">
+        
+        <div class="image">
+          <img src="images/hiya-nightly-hero-Jar_grande.jpg" alt="Kids Bedtime Essentials">
+        </div>
+        <div class="reviews-info">
+          <div class="rev-stars-info">
+            <div data-oke-reviews-product-listing-rating=""><div data-oke-reviews-version="2.16.13" class="okeReviews okeReviews--theme">
+<div class="okeReviews-reviewsSummary js-okeReviews-reviewsSummary" data-oke-ga-click-action="Star Rating Summary Click" data-oke-ga-click-label="Kids Bedtime Essentials">
+<div class="okeReviews-reviewsSummary-starRating">
+<span class="okeReviews-starRating okeReviews-starRating--small">
+<span class="okeReviews-a11yText">Rated 4.7 out of 5</span>
+<span class="okeReviews-starRating-indicator" role="presentation">
+<span class="okeReviews-starRating-indicator-layer"></span>
+<span class="okeReviews-starRating-indicator-layer okeReviews-starRating-indicator-layer--foreground" style="width: 95%"></span>
+</span>
+</span>
+</div>
+<div class="okeReviews-reviewsSummary-ratingCount">
+<span aria-hidden="true">285 Reviews</span>
+<span class="okeReviews-a11yText">Based on 285 reviews</span>
+</div>
+</div>
+</div>
+</div>
+          </div>
+          <h2 class="HH57-heading">Kids Bedtime Essentials</h2>
+          <p class="price recharge-inner-most-price">
+            <span class="dollar-HH57">$17.50</span> 
+            <s class="strike-through-HH57">$35</s>
+            <span>per kid</span>
+          </p>
+        </div>
+
+        <div class="add-cart-part"><form method="post" action="/cart/add" id="buy_now_new_form" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data" data-productid="7096391630929"><input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓"><input type="hidden" class="input_variant-HH57" name="id" data-productid="7096391630929" value="40375443226705">
+          <div class="form-group select_box">
+            <label>Select No. Kids</label>
+            <select id="select-variant-HH57" class="selection">
+              
+              
+              <option data-qty="-86470" value="40375443226705">1 Kid - $17.50/bottle (Reg: $35)</option>
+             
+             
+              
+              <option data-qty="-18721" value="40375443259473">2 Kids - $16/bottle (Reg: $32)</option>
+             
+             
+              
+              <option data-qty="-3599" value="40375443292241">3 Kids - $14/bottle (Reg: $28)</option>
+             
+             
+              
+              <option data-qty="-1273" value="40375443325009">4 Kids - $13/bottle (Reg: $26)</option>
+             
+             
+              
+              <option data-qty="-1380" value="40375443357777">5 Kids - $12.50/bottle (Reg: $25)</option>
+             
+               
+            </select>
+          </div>
+           <input type="submit" value="Add to Cart" class="pairs_great_button-HH57" id="buy_now_new_button" data-var-id="40375443226705">
+          <a style="background-color: rgba(255, 230, 75) !important; color: #2376B4 !important;" href="javascript:void(0)" class="pairs_great_button" id="buy_now_new_button" data-var-id="40375443226705">Add To Cart�&nbsp;|�&nbsp;<span class="dollars-HH57">$17.50</span></a>
+          <p class="note_msg">Easy Cancellation | Delivers Fresh Monthly</p><input type="hidden" name="product-id" value="7096391630929"><input type="hidden" name="section-id" value="pairs-great-bedtime"></form></div>
+        
+      </div>
+    </div>
+   
+  </div>
+</div>
+<svg style="display: none;" class="bottom-curve bedtime" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 97.9" xml:space="preserve">
+  <path id="Path_2" class="st59" d="M1920,17.3c0,0-256,80.6-960,80.6S0,17.3,0,17.3V0h1920L1920,17.3z"></path>
+</svg>
+
+
+<script>
+  $(document).ready(function(){
+    
+    $("#select-variant-HH57").change(function() {
+      var SelectID = $(this).find('option:selected').val();
+      $('input.pairs_great_button-HH57').attr('data-var-id', SelectID);
+      $(this).parent().parent().find('input.input_variant-HH57').val(SelectID);
+    });
+
+    document.querySelector('input.pairs_great_button-HH57').addEventListener('click',function(){
+      var VID = document.querySelector('input.pairs_great_button-HH57').getAttribute('data-var-id');
+       document.querySelector("#buy_now_new_form > input.input_variant-HH57").value = VID;
+      var isResolved = false;
+      var formData = {
+       'items': [{
+        'id': VID,
+         'selling_plan': 731840593,
+        'quantity': 1
+        }]
+      };
+      fetch(window.Shopify.routes.root + 'cart/add.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(response => {
+        if (response) {
+          window.location.replace("/checkout");
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        window.location.replace("/checkout");
+      });
+    });
+
+  });
+</script>
+
+<script> 
+  var select_id = document.getElementById("select-variant-HH57");
+  async function doStuff2() {
+    await wait2(1000);
+    waitForElement2();
+  }  
+  const wait2 = (amount = 0) => new Promise(resolve => setTimeout(resolve, amount));
+  function waitForElement2() {
+    var select_id = document.getElementById("select-variant-HH57");
+    if (select_id) {
+      select_id.addEventListener('change', (event) => {
+        const result = document.querySelector('.dollar-HH57');
+        const dollars = document.querySelector('.dollars-HH57');
+        const strikeThrough = document.querySelector('.strike-through-HH57');
+        result.textContent = "$" + select_id.options[select_id.selectedIndex].innerText.split('$')[1].slice(0,2);
+        dollars.textContent =  "$" + Number(select_id.options[select_id.selectedIndex].innerText.slice(0,2)) * parseFloat((select_id.options[select_id.selectedIndex].innerText.split('$')[1].slice(0,2))).toFixed(2);
+        strikeThrough.textContent = "$" + select_id.options[select_id.selectedIndex].innerText.split('$')[2].replace(')',''); 
+
+         if (select_id.selectedIndex === 0) {
+          result.textContent = "$17.50";
+           dollars.textContent = "$" + Number(select_id.options[select_id.selectedIndex].innerText.slice(0,2)) * parseFloat((17.50)).toFixed(2) + '0';       
+        }
+        if (select_id.selectedIndex === 2) {
+          result.textContent = "$14.00";
+           dollars.textContent = "$" + Number(select_id.options[select_id.selectedIndex].innerText.slice(0,2)) * parseFloat((14.00)).toFixed(2);       
+        }
+        if (select_id.selectedIndex === 4) {        
+          result.textContent = "$12.50";
+          dollars.textContent = "$" + Number(select_id.options[select_id.selectedIndex].innerText.slice(0,2)) * parseFloat((12.50)).toFixed(2) + '0';
+        }
+      });      
+    }  
+  }
+  doStuff2();
+</script>
+
+<link href="css/pairs-great-with-sec.css" rel="stylesheet" type="text/css" media="all">
+
+
+
+
+
+
+</section>
+
+<div id="shopify-section-product-ingredients" class="shopify-section">
+
+
+<div class="new_vitamins_minerals ">
+
+<h2>15+ Essential Vitamins &amp; Minerals</h2>
+
+<p style="text-align: center;">See what we've included and why:</p>
+
+<div class="new_vitamins_minerals_slider"><div class="minerals_box">
+<div class="minerals_img_box">
+  <!-- @type ingredient_image = image_picker -->
+   <img src="images/Vitamin_A.png" alt="Vitamin A">
+  <!-- @type ingredient_name = text -->
+<h3>Vitamin A</h3>
+</div>
+
+<div class="minerals_listing">
+<!-- @type ingredient_content = rich_text -->
+  <ul><li><strong>Found in</strong>Kale, carrots, squash</li><li><strong>Form</strong>Beta-Carotene &amp; Retinol Palmitate</li><li><strong>Amount</strong>360 mcg</li><li><strong>Benefits</strong>Vitamin A has been shown to support healthy eyes, cells, and immune system.*</li></ul><p></p>
+</div>
+</div>
+
+<div class="minerals_box">
+<div class="minerals_img_box">
+  <!-- @type ingredient_image = image_picker -->
+   <img src="images/Vitamin_C.png" alt="Vitamin C">
+  <!-- @type ingredient_name = text -->
+<h3>Vitamin C</h3>
+</div>
+
+<div class="minerals_listing">
+<!-- @type ingredient_content = rich_text -->
+  <ul><li><strong>Found in</strong>Oranges, peppers, strawberries</li><li><strong>Form</strong>Calcium ascorbate &amp; acerola fruit</li><li><strong>Amount</strong>40 mg</li><li><strong>Benefits</strong>Vitamin C has been shown to support the immune system.*</li></ul>
+</div>
+</div>
+
+<div class="minerals_box">
+<div class="minerals_img_box">
+  <!-- @type ingredient_image = image_picker -->
+   <img src="images/Vitamin_D.png" alt="Vitamin D">
+  <!-- @type ingredient_name = text -->
+<h3>Vitamin D</h3>
+</div>
+
+<div class="minerals_listing">
+<!-- @type ingredient_content = rich_text -->
+  <ul><li><strong>Found in</strong>Mushrooms, egg yolks, fish</li><li><strong>Form</strong>Vegan Cholecalciferol</li><li><strong>Amount</strong>25 mcg</li><li><strong>Benefits</strong>Vitamin D has been shown to support the immune system and bone development.*</li></ul><p></p>
+</div>
+</div>
+
+<div class="minerals_box">
+<div class="minerals_img_box">
+  <!-- @type ingredient_image = image_picker -->
+   <img src="images/Vitamin_E.png" alt="Vitamin E">
+  <!-- @type ingredient_name = text -->
+<h3>Vitamin E</h3>
+</div>
+
+<div class="minerals_listing">
+<!-- @type ingredient_content = rich_text -->
+  <ul><li><strong>Found in</strong>Avocado, spinach, almonds</li><li><strong>Form</strong>D-Alpha Tocopherol</li><li><strong>Amount</strong>3.5 mcg</li><li><strong>Benefits</strong>Vitamin E has been shown to support eyesight, the heart, and the immune system.*</li></ul>
+</div>
+</div>
+
+<div class="minerals_box">
+<div class="minerals_img_box">
+  <!-- @type ingredient_image = image_picker -->
+   <img src="images/Thiamin_B1.png" alt="Thiamin (B1)">
+  <!-- @type ingredient_name = text -->
+<h3>Thiamin (B1)</h3>
+</div>
+
+<div class="minerals_listing">
+<!-- @type ingredient_content = rich_text -->
+  <ul><li><strong>Found in</strong>Seaweed, grains, legumes</li><li><strong>Form</strong>Thiamin mononitrate &amp; organic quinoa sprouts</li><li><strong>Amount</strong>0.5 mg</li><li><strong>Benefits</strong>Vitamin B1 has been shown to support concentration, sleep, and general mood.*</li></ul>
+</div>
+</div>
+
+<div class="minerals_box">
+<div class="minerals_img_box">
+  <!-- @type ingredient_image = image_picker -->
+   <img src="images/Riboflavin.png" alt="Riboflavin">
+  <!-- @type ingredient_name = text -->
+<h3>Riboflavin</h3>
+</div>
+
+<div class="minerals_listing">
+<!-- @type ingredient_content = rich_text -->
+  <ul><li><strong>Found in</strong>Spinach, banana, asparagus</li><li><strong>Form</strong>Natural &amp; organic quinoa sprouts</li><li><strong>Amount</strong>0.6 mcg</li><li><strong>Benefits</strong>Riboflavin has been shown to support eyesight, energy, and cell growth.*</li></ul>
+</div>
+</div>
+
+<div class="minerals_box">
+<div class="minerals_img_box">
+  <!-- @type ingredient_image = image_picker -->
+   <img src="images/Folate_B9.png" alt="Folate (B9)">
+  <!-- @type ingredient_name = text -->
+<h3>Folate (B9)</h3>
+</div>
+
+<div class="minerals_listing">
+<!-- @type ingredient_content = rich_text -->
+  <ul><li><strong>Found in</strong>Broccoli, brussel sprouts, avocado</li><li><strong>Form</strong>5-methyltetrahydrofolic (5-MTHF) &amp; organic quinoa sprouts</li><li><strong>Amount</strong>200 mcg</li><li><strong>Benefits</strong>Vitamin B9 has been shown to support energy and cellular growth.*</li></ul>
+</div>
+</div>
+
+<div class="minerals_box">
+<div class="minerals_img_box">
+  <!-- @type ingredient_image = image_picker -->
+   <img src="images/Vitamin_B12.png" alt="Vitamin B12">
+  <!-- @type ingredient_name = text -->
+<h3>Vitamin B12</h3>
+</div>
+
+<div class="minerals_listing">
+<!-- @type ingredient_content = rich_text -->
+  <ul><li><strong>Found in</strong>Eggs, milk (note: we’re vegan and dairy free)</li><li><strong>Form</strong>Methylcobalamin &amp; organic quinoa sprouts</li><li><strong>Amount</strong>2 mcg</li><li><strong>Benefits</strong>Vitamin B12 has been shown to support sleep.*</li></ul>
+</div>
+</div>
+
+<div class="minerals_box">
+<div class="minerals_img_box">
+  <!-- @type ingredient_image = image_picker -->
+   <img src="images/Biotin-Cauliflower.webp" alt="Biotin (B7)">
+  <!-- @type ingredient_name = text -->
+<h3>Biotin (B7)</h3>
+</div>
+
+<div class="minerals_listing">
+<!-- @type ingredient_content = rich_text -->
+  <ul><li><strong>Found in</strong>Cauliflower, mushrooms, avocado</li><li><strong>Form</strong>Natural &amp; organic quinoa sprouts</li><li><strong>Amount </strong>5 mcg</li><li><strong>Benefits</strong>Vitamin B7 has been shown to supports cellular growth and healthy skin.*</li></ul><p></p>
+</div>
+</div>
+
+<div class="minerals_box">
+<div class="minerals_img_box">
+  <!-- @type ingredient_image = image_picker -->
+   <img src="images/Pantothenic_Acid_B5.png" alt="Pantothenic Acid (B5)">
+  <!-- @type ingredient_name = text -->
+<h3>Pantothenic Acid (B5)</h3>
+</div>
+
+<div class="minerals_listing">
+<!-- @type ingredient_content = rich_text -->
+  <ul><li><strong>Found in</strong>Plants</li><li><strong>Form</strong>Natural &amp; organic quinoa sprouts</li><li><strong>Amount</strong>2.5 mg</li><li><strong>Benefits</strong>Vitamin B5 has been shown to support energy, sleep, and focus.*</li></ul>
+</div>
+</div>
+
+<div class="minerals_box">
+<div class="minerals_img_box">
+  <!-- @type ingredient_image = image_picker -->
+   <img src="images/Calcium.png" alt="Calcium">
+  <!-- @type ingredient_name = text -->
+<h3>Calcium</h3>
+</div>
+
+<div class="minerals_listing">
+<!-- @type ingredient_content = rich_text -->
+  <ul><li><strong>Found in</strong>Broccoli, collard greens, kale</li><li><strong>Form</strong>Calcium carbonate</li><li><strong>Amount</strong>20 mcg (just a touch)</li><li><strong>Benefits</strong>Calcium has been shown to support bones and development.*</li></ul>
+</div>
+</div>
+
+<div class="minerals_box">
+<div class="minerals_img_box">
+  <!-- @type ingredient_image = image_picker -->
+   <img src="images/Iodine.png" alt="Iodine">
+  <!-- @type ingredient_name = text -->
+<h3>Iodine</h3>
+</div>
+
+<div class="minerals_listing">
+<!-- @type ingredient_content = rich_text -->
+  <ul><li><strong>Found in</strong>Kelp, eggs</li><li><strong>Form</strong>Potassium Iodide</li><li><strong>Amount</strong>50 mcg</li><li><strong>Benefits</strong>Iodine has been shown to support thyroid function.*</li></ul>
+</div>
+</div>
+
+<div class="minerals_box">
+<div class="minerals_img_box">
+  <!-- @type ingredient_image = image_picker -->
+   <img src="images/Zinc.png" alt="Zinc">
+  <!-- @type ingredient_name = text -->
+<h3>Zinc</h3>
+</div>
+
+<div class="minerals_listing">
+<!-- @type ingredient_content = rich_text -->
+  <ul><li><strong>Found in</strong>Beans, meat, poultry</li><li><strong>Form</strong>Zincas Citrate</li><li><strong>Amount</strong>3 mg</li><li><strong>Benefits</strong>Zinc has been shown to support the immune system and help with infections, nicks, and cuts.*</li></ul>
+</div>
+</div>
+
+<div class="minerals_box">
+<div class="minerals_img_box">
+  <!-- @type ingredient_image = image_picker -->
+   <img src="images/Selenium-Salmon.webp" alt="Selenium">
+  <!-- @type ingredient_name = text -->
+<h3>Selenium</h3>
+</div>
+
+<div class="minerals_listing">
+<!-- @type ingredient_content = rich_text -->
+  <ul><li><strong>Found in</strong>Tuna, mushrooms</li><li><strong>Form</strong>Selenomethionine</li><li><strong>Amount</strong>15 mcg</li><li><strong>Benefits</strong>Selenium has been shown to support sleep, mood, and inflammation.*</li></ul>
+</div>
+</div>
+
+<div class="minerals_box">
+<div class="minerals_img_box">
+  <!-- @type ingredient_image = image_picker -->
+   <img src="images/Manganese.png" alt="Manganese">
+  <!-- @type ingredient_name = text -->
+<h3>Manganese</h3>
+</div>
+
+<div class="minerals_listing">
+<!-- @type ingredient_content = rich_text -->
+  <ul><li><strong>Found in</strong>Tofu, potatoes, chickpeas</li><li><strong>Form</strong>Manganese citrate</li><li><strong>Amount</strong>1.5 mcg</li><li><strong>Benefits</strong>Manganese has been shown to provide support for inflammation and metabolism.*</li></ul>
+</div>
+</div>
+
+<div class="minerals_box">
+<div class="minerals_img_box">
+  <!-- @type ingredient_image = image_picker -->
+   <img src="images/Vitamin_K.png" alt="Vitamin K">
+  <!-- @type ingredient_name = text -->
+<h3>Vitamin K</h3>
+</div>
+
+<div class="minerals_listing">
+<!-- @type ingredient_content = rich_text -->
+  <ul><li><strong>Found in</strong>Broccoli, kale, cabbage</li><li><strong>Form</strong>Menaquinone-7</li><li><strong>Amount</strong>8 mcg</li><li><strong>Benefits</strong>Vitamin K is known to support blood clotting and bone health.*</li></ul>
+</div>
+</div>
+
+
+</div>
+</div>
+<svg class="bottom-curve" id="Layer_1" style="enable-background:new 0 0 1920 97.9;" version="1.1" viewBox="0 0 1920 97.9" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <path class="st59" d="M1920,17.3c0,0-256,80.6-960,80.6S0,17.3,0,17.3V0h1920L1920,17.3z" id="Path_2"></path> </svg>
+
+<script>
+
+
+
+(function () {
+  let domCheck;
+  const doDomCheck = function(){
+    
+    el1 = document.querySelector('.new_vitamins_minerals');
+    if(el1){
+      clearInterval (domCheck); 
+      $('.new_vitamins_minerals_slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        centerMode: true,
+        variableWidth: false,
+        arrows: true,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1              
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1              
+            }
+          }
+        ]
+      });
+    }
+  };
+  domCheck = setInterval(doDomCheck,200);
+})();
+
+
+</script>
+
+<style>
+
+#shopify-section-product-ingredients {
+  margin-bottom: 4rem;
+}
+
+.new_vitamins_minerals + svg path#Path_2 {
+    fill: #E6F5FF;
+}
+body:has(.new_vitamins_minerals) svg#Layer_1 {
+    background-color: #e6f5ff;
+    bottom: 0 !important;
+      display: table;
+}
+body:has(.new_vitamins_minerals) svg#Layer_1 {
+    display: none;
+}
+
+body:has(.new_vitamins_minerals) svg#Layer_1 + svg#Layer_1 {
+    display: table !important;
+}
+.new_vitamins_minerals {
+    padding: 60px 0 60px;
+    background: #E6F5FF;
+}
+.minerals_box {
+    border-radius: 15px;
+    background: #FFF;
+    height: auto !important;
+    margin-inline: 25px;
+    padding: 30px 45px;
+}
+
+.minerals_box .minerals_img_box {
+    display: flex;
+    align-items: center;
+}
+
+.new_vitamins_minerals_slider  .slick-track {
+    display: flex !important;
+}
+
+.new_vitamins_minerals_slider .slick-track {
+    background-color: #e6f5ff !important;
+}
+
+.minerals_box .minerals_img_box img {
+    max-width: 80px;
+}
+
+.minerals_box .minerals_img_box h3 {
+    padding-bottom: 0 !important;
+    color: #3B79B8;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-family: FilsonProBold;
+    margin-left: 15px;
+}
+
+.minerals_box .minerals_listing ul {
+    list-style: none;
+}
+
+.minerals_box .minerals_listing ul li {
+    margin-bottom: 15px;
+    display: flex;
+    color: #3B79B8;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 139.8%;
+}
+
+.minerals_box .minerals_listing ul li strong {
+    min-width: 125px;
+    flex: 0 0 125px;
+    color: #3B79B8;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-family: FilsonProBold;
+    position: relative;
+    padding-right: 30px;
+}
+
+.minerals_box .minerals_listing {
+    margin-top: 25px;
+}
+
+.minerals_box .minerals_listing ul li strong:after {
+    content: ":";
+    position: relative;
+    left: 0px;
+    top: 0;
+}
+.new_vitamins_minerals_slider  ul.slick-dots {
+    max-width: 1030px;
+    width: calc(100% - 30px);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -90px;
+    display: flex;
+    border-radius:10px
+}
+.new_vitamins_minerals_slider ul.slick-dots li {
+    padding: 0 !important;
+    height: 5px !important;
+    width: 100% !important;
+    border-radius: 0;
+    background: #3B79B8;
+    margin: 0;
+}
+.new_vitamins_minerals_slider ul.slick-dots li button:before {
+    content: none !important;
+}
+.new_vitamins_minerals_slider ul.slick-dots li.slick-active ~ li {
+    background: rgba(59, 121, 184, 0.25);
+}
+.our-vitamin-sec {
+    padding-top: 0;
+}
+.pairs-great-with-sec  + svg {
+    display: none;
+}
+.new_vitamins_minerals + svg {
+    margin-bottom: 60px;
+}
+.our-vitamin-sec {
+    padding-top: 0 !important;
+}
+
+.pairs-great-with-sec  + svg {
+    display: none;
+}
+
+.new_vitamins_minerals + svg {
+    margin-bottom: 60px;
+}
+
+.new_vitamins_minerals_slider .slick-arrow:before {
+    content: none;
+}
+
+.new_vitamins_minerals_slider .slick-next.slick-arrow {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40' fill='none'%3e%3ccircle cx='20' cy='20' r='20' fill='%233B79B8'/%3e%3cpath d='M18 26L24 20L18 14' fill='%233B79B8'/%3e%3cpath d='M18 26L24 20L18 14' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+    height: 40px;
+    width: 40px;
+    right: 0;
+    left: 505px;
+    margin: 0 auto;
+    z-index: 9;
+}
+.new_vitamins_minerals_slider .slick-arrow.slick-prev {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40' fill='none'%3e%3ccircle cx='20' cy='20' r='20' fill='%233B79B8'/%3e%3cpath d='M22 26L16 20L22 14' fill='%233B79B8'/%3e%3cpath d='M22 26L16 20L22 14' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+    height: 40px;
+    width: 40px;
+    right: 0;
+    left: -505px;
+    margin: 0 auto;
+    z-index: 9;
+}
+
+.product-multivitamin .our-vitamin-sec .new_vitamins_minerals h2 {
+    color: #3B79B8 !important;
+}
+
+
+@media (min-width:768px) and (max-width:1400px){
+.minerals_box {
+    margin: 0 10px;
+}
+
+.new_vitamins_minerals_slider ul.slick-dots {
+    bottom: -50px;
+}
+}
+@media (max-width:767px){
+.minerals_box {
+    margin: 0;
+    padding: 25px 35px;
+}
+
+.minerals_box .minerals_img_box img {
+    height: auto !important;
+}
+
+.minerals_box .minerals_img_box h3 {
+    font-size: 23px;
+    line-height: 30px;
+    margin-left: 10px;
+}
+
+.minerals_box .minerals_listing ul li {
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.minerals_box .minerals_listing ul li strong {
+    font-size: 16px;
+    line-height: 22px;
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.minerals_box .minerals_listing ul li strong:after {
+    position: relative;
+    right: -10px;
+}
+
+.minerals_box .minerals_listing ul li:last-child {
+    margin-bottom: 0;
+}
+.new_vitamins_minerals_slider  .slick-list {
+    padding: 0 !important;
+}
+.new_vitamins_minerals {
+    padding-inline: 30px;
+}
+
+.product-multivitamin .our-vitamin-sec .new_vitamins_minerals h2 {
+    font-size: 32px !important;
+}
+.new_vitamins_minerals_slider ul.slick-dots {
+    bottom: -50px;
+  
+} 
+.new_vitamins_minerals_slider .slick-next.slick-arrow {
+    left: auto;
+    right: -15px;
+}
+
+.new_vitamins_minerals_slider .slick-arrow.slick-prev {
+    left: -15px;
+    right: auto;
+} 
+  .new_vitamins_minerals_slider ul.slick-dots li button {
+    height: 100% !important;
+    width: 100% !important;
+}
+}
+
+
+.product-multivitamin .product-banner-sec {
+    padding-bottom: 60px !important;
+}
+.product-multivitamin  .slick-slider .slick-list{
+  padding:0 !important
+}
+@media (max-width:767px){
+ .minerals_box .minerals_img_box img {
+    margin: 0;
+ }
+  .minerals_box .minerals_img_box img {
+    max-height: 66px;
+}
+}
+
+@media (min-width:1025px){
+  .new_vitamins_minerals_slider .slick-next.slick-arrow{
+      right: calc(33.33% + 5px);
+      left:auto;
+  }
+  .new_vitamins_minerals_slider .slick-arrow.slick-prev{
+      left: calc(33.33% + 10px);
+      right:auto;
+  }
+  .new_vitamins_minerals {
+    padding-top: 80px;
+    padding-bottom: 8rem;
+}
+}
+@media (min-width: 768px) and (max-width: 1400px){
+  .new_vitamins_minerals_slider .slick-next.slick-arrow {
+    right: calc(32.33% + 5px);
+    left: auto;
+  }
+  .new_vitamins_minerals_slider .slick-arrow.slick-prev {
+    left: calc(32.33% + 5px);
+    right: auto;
+  }	
+}
+@media (min-width: 768px) and (max-width: 1024px){
+  .new_vitamins_minerals_slider .slick-next.slick-arrow {
+    left: auto !important;
+    right: 15px !important;
+  }
+
+  .new_vitamins_minerals_slider .slick-arrow.slick-prev {
+    left: 15px !important;
+    right: auto !important;
+  } 
+  .product-multivitamin .our-vitamin-sec h2{
+  padding-bottom:0 !important;
+  }
+}
+
+  
+</style>
+
+
+
+
+</div>
+
+
+
+
+
+
+<style>
+@media (max-width: 767px) {
+    .product-multivitamin .guarantee_text {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
+</style>
+
+<script src="js/unicode-converter.js" type="text/javascript"></script>
+    </main>
+
+<!-- END sections: footer-group -->
+    <div id="shopify-section-cart-upsells" class="shopify-section"><script src="js/cart-upsells.js" type="text/javascript"></script></div>
+
+    <ul hidden="">
+      <li id="a11y-refresh-page-message">Choosing a selection results in a full page refresh.</li>
+      <li id="a11y-new-window-message">Opens in a new window.</li>
+    </ul>
+
+    
+
+    <script>
+      window.shopUrl = 'https://hiyahealth.com';
+      window.routes = {
+        cart_add_url: '/cart/add',
+        cart_change_url: '/cart/change',
+        cart_update_url: '/cart/update',
+        cart_url: '/cart',
+        predictive_search_url: '/search/suggest'
+      };
+
+      window.cartStrings = {
+        error: `There was an error while updating your cart. Please try again.`,
+        quantityError: `You can only add [quantity] of this item to your cart.`
+      }
+
+      window.variantStrings = {
+        addToCart: `Add to cart`,
+        soldOut: `Sold out`,
+        unavailable: `Unavailable`,
+        unavailable_with_option: `[value] - Unavailable`,
+      }
+
+      window.accessibilityStrings = {
+        imageAvailable: `Image [index] is now available in gallery view`,
+        shareSuccess: `Link copied to clipboard`,
+        pauseSlideshow: `Pause slideshow`,
+        playSlideshow: `Play slideshow`,
+      }
+
+
+      // toggle buttons
+      $(document).ready(function(){
+        $('.product-banner-sec .inner .prod-body .optionList span').click(function(){
+           $('.product-banner-sec .inner .prod-body .optionList span').removeClass('active');
+           $(this).addClass('active');
+        });
+
+        $('.product-banner-sec .prod-body .accordion-wrapper .accordion-header').click(function() {
+           $(this).toggleClass('active');
+        });
+
+        $('.makes_hiya_diff_section .diff_tabs_list ul li').click(function(){
+            $('.makes_hiya_diff_section .diff_tabs_list ul li').removeClass('active');
+            $(".makes_hiya_diff_section .diff_tabs_box").removeClass('active');
+            $(this).addClass('active');
+            $(".makes_hiya_diff_section .diff_tabs_box[data-id='"+$(this).attr('id')+"']").addClass("active");	
+        });
+
+
+        if (screen && screen.width < 768) {
+          $('.box-wrapper .content').each(function() {
+                $(this).find('p').after($(this).siblings('.image'));
+            });
+
+          $('.what-expert-slider').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true  
+          });
+        }
+
+        $(".review-boxes-sec.barbie-review-boxes-sec .inner").slick({
+          slidesToShow: 3,
+          infinite: false,
+          slidesToScroll: 1,
+          autoplay: false,
+          dots: true, 
+          arrows: false, 
+          responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 2,
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 1,
+            }
+          }
+        ]
+        });
+
+
+    
+    // change id
+    $(".influencer-image-text").attr("id","influencerteam");
+
+    // add popup
+    $('.fifteen-essentials .fifteen-essentials-faq .primary-btn').click(function(){
+        $('.fifteen-essentials .popup-img').addClass("active"); 
+    });
+    $('span.close-popup').click(function(){
+        $('.fifteen-essentials .popup-img').removeClass("active");
+    });
+
+    // .supplements-modal popup
+        $('.supplements-modal').click(function(){
+          $(this).toggleClass('active');
+        });
+        
+});
+      
+//hide/show announcement banner on scroll
+const watch = document.querySelector('.section-header');
+function obCallback(payload) {
+  if(payload[0].isIntersecting === false) document.querySelector('.announcement-bar').classList.add('fixed');
+  else document.querySelector('.announcement-bar').classList.remove('fixed');
+}
+const ob = new IntersectionObserver(obCallback);
+ob.observe(watch);
+
+window.addEventListener("DOMContentLoaded", (event) => {
+  console.log("DOM fully loaded and parsed");
+  let countBubble = document.querySelector('.cart-count-bubble');
+  countBubble=true;
+  if(!countBubble){
+    $.ajax({
+        type: 'GET',
+        url: '/cart.js',
+        cache: false,
+        dataType: 'json',
+        success: function(cart) {
+          if(cart.item_count > 0){
+            let bubble = document.createElement('div');
+            bubble.classList.add('cart-count-bubble');
+            bubble.innerHTML = '<span aria-hidden="true">'+cart.item_count+'</span><span class="visually-hidden">'+(cart.item_count + ((cart.item_count > 1) ? 'items' : 'item'))+'</span>';
+            document.querySelector('.header__icon--cart > span.visually-hidden').after(bubble);
+          }
+        }
+    });
+  }
+});
+
+let variant_id;
+const onCartUpdateCustom = function(variant_id){
+  document.querySelector('.vid_'+variant_id).remove();
+  document.querySelector('.drawer__cart-items-wrapper .total-price p:nth-child(2)').innerText = '';
+  
+  let el = document.createElement('div');
+  let mHead = document.createElement('div');
+  mHead.classList.add('mobile-header');
+  
+  let el2 = document.createElement('h6');
+  el2.classList.add('title');
+  el2.innerText = 'SHOPPING CART';
+  mHead.appendChild(el2);
+  el2 = document.createElement('div');
+  el2.classList.add('close-button');
+  el2.innerHTML = '<svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"><g stroke="#FFF" fill="none" fill-rule="evenodd" stroke-linecap="square"><path d="m1 1 10 10M11 1 1 11"></path></g></svg>';
+  mHead.appendChild(el2);
+  el.appendChild(mHead);
+
+  let ael = document.createElement('a');
+  ael.href = '/cart';
+  ael.classList.add('cart-empty');
+  ael.setAttribute('title','VIEW CART');
+  ael.innerHTML = `<div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 7h-4v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-4l-2 17h20l-2-17zm-11-3c0-1.654 1.346-3 3-3s3 1.346 3 3v3h-6v-3zm-4.751 18l1.529-13h2.222v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h2.222l1.529 13h-15.502z"></path></svg>
+        </div>
+        <p>No Products in the Cart</p>`;
+  el.appendChild(ael);
+  
+  $.ajax({
+      type: 'GET',
+      url: '/cart.js',
+      cache: false,
+      dataType: 'json',
+      success: function(cart) {
+        let subtotal = cart.items_subtotal_price.toString();
+        let last2 = subtotal.slice(-2);
+        subtotal = (last2 === 00) ? subtotal.substring(0, subtotal.length - 2) : subtotal.substring(0, subtotal.length - 2) + '.' + last2;
+        if(cart.item_count === 0) document.querySelector("div.shopping-cart > div.cart_inner > div.drawer__header").after(el);
+        $(".shopping-cart .close-button").on("click", function() {
+          $(".shopping-cart").slideUp( "fast");
+          $("body").removeClass('overflow_hidden');
+        });
+        if(cart.item_count === 0) document.querySelector("div.shopping-cart > div.cart_inner > cart-drawer-items").remove();
+        else document.querySelector('.drawer__cart-items-wrapper .total-price p:nth-child(2)').innerText = '$'+subtotal;
+        if(cart.item_count != 0){
+          document.querySelector('div.cart-count-bubble span:nth-child(1)').innerText = cart.item_count;
+          document.querySelector('div.cart-count-bubble span:nth-child(2)').innerText = cart.item_count + ((cart.item_count > 1) ? 'items' : 'item');
+        } else {
+          document.querySelector('div.cart-count-bubble').remove();
+        }
+      }
+  });
+  
+};
+const removeItem = function(id) {
+  $.ajax({
+    type: "POST",
+    url: "/cart/change.js",
+    dataType: "json",
+    data: {
+      id: parseFloat(id),
+      quantity: 0,
+    },
+  }).then((data) => {
+    onCartUpdateCustom(id);
+  });
+};
+let btns = document.querySelectorAll('cart-remove-button');
+for(let btn=0;btns[btn];btn++){
+  btns[btn].addEventListener('click',function(){console.log('delete')
+    variant_id = this.getAttribute('data-variant');
+    removeItem(variant_id);
+  });
+}
+function getIdFromUrl(url) {
+  return url.split('/products/')[1];
+}
+
+</script>
+<!-- START REMOVE REBUY FOR GIDDY UP TEMPLATES DEV-134 -->
+
+    <script>
+
+(function () {
+  
+  document.addEventListener('rebuy:cart.change', (event) => {
+    let itemCount = event.detail.cart.itemCount();
+    if (itemCount > 0) {
+      document.querySelector(".cart-count-bubble").removeAttribute('id');
+      document.querySelector("#cart-icon-bubble > div > span:nth-child(1)").textContent = itemCount;
+    } else {
+      document.querySelector(".cart-count-bubble").setAttribute('id', 'hide-me');
+    }
+  });
+
+  function removePopupListeners() {
+    const bubble = document.querySelector('#cart-icon-bubble');
+    const overLay = document.querySelector('.shopping-cart .overlay');
+    const closeButton = document.querySelector('.shopping-cart .close-button');
+    bubble.removeEventListener('click', fastToggle);
+    overLay.removeEventListener('click', fastSlide);
+    closeButton.removeEventListener('click', fastSlideFinal);
+  }
+  
+
+  function openCart() {
+    window.Rebuy.SmartCart.show();
+  }
+  document.addEventListener('rebuy:smartcart.init', (event) => {
+    let SmartCart = window.Rebuy.SmartCart;
+    SmartCart.settings.product_form_redirect = 'none';
+    document.querySelector('#cart-icon-bubble').addEventListener('click', openCart);
+    removePopupListeners();
+
+  });
+})();
+
+</script>
+
+    <style>
+.rebuy-cart__flyout-recommendations {
+  padding:20px 5px !important;
+  border-top: 1px solid rgba(59, 121, 184, 0.25) !important;
+  border-bottom: 1px solid rgba(59, 121, 184, 0.25) !important;
+  background: #F2F8FF !important;
+}
+.rebuy-widget-content h4.primary-title {
+  color: #3B79B8;
+  text-align: center;
+  font-size: 20px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-bottom:20px !important;
+font-family: 'FilsonProBold';
+}
+.rebuy-product-block {
+  padding:20px !important;
+  background:#ffffff;
+  border:none !important;
+  border-radius:15px;
+  margin-bottom:20px !important;
+}
+.rebuy-product-block .rebuy-product-media { order:1; }
+.rebuy-product-block .rebuy-product-info {
+  order:2;
+  padding-right: 0 !important;
+}
+.rebuy-product-block .rebuy-product-info a {
+  color: #3B79B8;
+  font-size: 18px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: normal;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+font-family: 'FilsonProBold';
+}
+.rebuy-product-block .rebuy-product-options {
+  order:3 !important;
+  max-width:75%;
+  margin-right:5px !important;
+  display:none;
+}
+.rebuy-product-block .rebuy-product-actions {
+  order:4 !important;
+  margin-top:10px !important;
+}
+.rebuy-product-block .rebuy-product-actions > button {
+  background: #3B79B8 !important;
+padding: 10px 5px !important;
+border:none;
+}
+.rebuy-product-price .rebuy-money > span:not(.strikethru),
+.rebuy-product-price .rebuy-money.sale > span:not(.strikethru) {
+  color: #3B79B8;
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: normal;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  font-family: 'FilsonProBold';
+}
+div.rebuy-product-info > div > div > span.rebuy-money.compare-at > span:nth-child(2){
+  color: #9a9a9a;
+  font-family: 'Filson Pro';
+}
+.rebuy-product-price .rebuy-money > span.strikethru {
+  color: rgba(51, 51, 51, 0.40);
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: normal;
+  text-decoration: line-through;
+  text-transform: capitalize;
+  margin-left:5px
+}
+.rebuy-product-options > select {
+  border-radius: 10px !important;
+  border: 1px solid #3B79B8 !important;
+  background: #F2F8FF !important;
+  color: #3B79B8 !important;
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: normal;
+  text-transform: capitalize;
+  background: url(images/upsellDownArrow.png) no-repeat right 8px center #F2F8FF !important;
+}
+
+.rebuy-cart__flyout-item-quantity-widget {
+  display:none;
+}
+
+.rebuy-cart__flyout-item-info a.rebuy-cart__flyout-item-product-title,
+.rebuy-cart__flyout-item-info .rebuy-cart__flyout-item-discount-message,
+.rebuy-cart__flyout-item-info .rebuy-cart__flyout-item-price .rebuy-money > span,
+.rebuy-cart__flyout-subtotal-amount .rebuy-cart__flyout-subtotal-final-amount {
+  color:#3B79B8;
+}
+.rebuy-cart__flyout-item-info .rebuy-cart__flyout-item-variant-title,
+.rebuy-cart__flyout-item-info .rebuy-cart__flyout-item-price .rebuy-money.compare-at > span {
+  color:rgba(51, 51, 51, 0.40);
+}
+.rebuy-cart__flyout-actions .rebuy-cart__checkout-button {
+  background-color: #ffe64b;
+  color: #3b7abb;
+  border:none;
+}
+@media (min-width:768px){
+  .rebuy-cart__flyout-recommendations {
+    padding:20px !important;
+  }
+  .rebuy-product-block .rebuy-product-options {
+    max-width:78%;
+  }
+}
+.rebuy-product-actions .rebuy-button:not(.customRebuyBtn) {
+    display: block !important;
+}
+.rebuy-product-grid > .rebuy-product-block > .rebuy-product-actions > .subscription-frequency {
+  display: none !important;
+}
+  
+</style>
+
+<!-- END REMOVE REBUY FOR GIDDY UP TEMPLATES DEV-134 -->
+<script src="js/bundle.theme.js" type="text/javascript"></script>
+
+
+  
+  <script src="//hiyahealth.com/cdn/shop/t/328/assets/bundle.product.kids-daily-essential.js?42840" type="text/javascript"></script>
+<script src="js/predictive-search.js" defer="defer"></script><div data-rebuy-id="104564"></div>
+<!-- START DEV-139 -->
+<script>
+  window.ALBSS = {
+    event_key: '7fc540d5-0bc9-4f43-aa98-aa8e00b52031'
+  };
+</script>
+<script src="js/loader.iife.js"></script>
+<!-- END DEV-139 -->
+<div id="shopify-block-17151115064775110295" class="shopify-block shopify-app-block"><style data-recharge-theme="{" has_theme_customization":="" true,="" "design_mode":="" false="" }"="">
+  .recharge-theme {
+    /* App */
+    --recharge-app-background: #FEF8E8;
+    --recharge-app-container: 1200px;
+    --recharge-app-vertical-padding: 32px;
+
+    /* Brand colors */
+    
+--recharge-color-brand: #3F7AB9;
+
+    /* Tints */
+    --recharge-color-brand-120: #336497;
+    --recharge-color-brand-20: #6595c7;
+    --recharge-color-brand-40: #8cafd5;
+    --recharge-color-brand-60: #b2cae3;
+    --recharge-color-brand-75: #cfdeee;  
+    --recharge-color-brand-85: #e2ebf5;
+
+    /* Neutral */
+    --recharge-color-neutral: hsl(211, 35%, 7%);
+    --recharge-color-neutral-80: hsl(211, 7%, 25%);
+    --recharge-color-neutral-70: hsl(211, 5%, 35%);
+    --recharge-color-neutral-40: hsl(211, 3%, 63%);
+    --recharge-color-neutral-10: hsl(211, 2%, 91%);
+    
+
+    /* Links */
+    --recharge-button-secondary: #3F7AB9;
+    --recharge-button-secondary-120: #336497;
+    --recharge-button-secondary-60: #8cafd5;
+
+    /* Images */
+    --recharge-images-ratio: 1;
+
+    /* Cards */
+    
+    --recharge-cards-background: #FFFFFF;
+    
+
+    
+    --recharge-cards-border-color: #FFFFFF;
+    
+
+    /* Fonts */
+    --recharge-typography-scale: 16px;
+    --recharge-typography-size-1: calc(3 * var(--recharge-typography-scale));
+    --recharge-typography-size-2: calc(2.25 * var(--recharge-typography-scale));
+    --recharge-typography-size-3: calc(1.625 * var(--recharge-typography-scale));
+    --recharge-typography-size-4: calc(1.25 * var(--recharge-typography-scale));
+    --recharge-typography-size-5: calc(1 * var(--recharge-typography-scale));
+    --recharge-typography-size-6: calc(.875 * var(--recharge-typography-scale));
+
+    /** Text **/
+    --recharge-typography-light: #FFFFFF;
+    --recharge-typography-primary: var(--recharge-color-neutral);
+    --recharge-typography-secondary: var(--recharge-color-neutral-70);
+
+    /* Corners */
+    --recharge-corners-radius: 8px;
+
+    --recharge-button-border-radius: 8px;
+    
+
+    /* Views */
+    
+    --recharge-views-background: #FEF8E8;
+    
+
+    /* Buttons */
+    --recharge-button-font-family: inherit;
+    --recharge-button-brand: var(--recharge-color-brand);
+    --recharge-button-color: #FFFFFF;
+  }
+</style>
+
+</div>
+
+</body></html>

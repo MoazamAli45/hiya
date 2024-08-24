@@ -1,0 +1,1086 @@
+/** Shopify CDN: Minification failed
+
+Line 756:25 The "-" operator only works if there is whitespace on both sides
+
+**/
+
+/* what makes hiya diff sec css start */
+.makes_hiya_diff_section {
+    padding-bottom: 100px;
+    padding-top: 60px;
+}
+
+.makes_hiya_diff_section .diff_tabs_list ul li.active {
+    background: #3F7AB9;
+    color: #FFE64B;
+    font-size: 20px;
+    border-radius: 15px;
+    line-height: 28px;
+}
+
+.makes_hiya_diff_section .diff_tabs_list ul li {
+    font-size: 20px;
+    border-radius: 15px;
+    line-height: 22px;
+    align-items: center;
+    letter-spacing: 0.01em;
+    padding: 10px 0;
+    margin-left: -3px;
+}
+
+.makes_hiya_diff_section .diff_tabs_content {
+    padding-bottom: 150px;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box {
+    display: none;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active {
+    display: block;
+    position: relative;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    min-height: 400px;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul p {
+    font-weight: 600;
+    font-size: 18px !important;
+    line-height: 22px !important;
+    margin: 0 !important;
+    color: #3F7AB9;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul h2 {
+    color: #3F7AB9;
+    font-weight: bold !important;
+    font-size: 25px !important;
+    line-height: 50px !important;
+    padding: 0 !important;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .main_img {
+    min-height: 487px !important;
+    text-align: center;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active img {
+    max-width: 487px;
+    width: 100%;
+}
+
+.makes_hiya_diff_section .diff_tabs_list ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    border-radius: 15px;
+    border: 1px solid #3F7AB9;
+    width: 460px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.makes_hiya_diff_section .diff_tabs_list ul li {
+    min-width: 232px;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li {
+    display: inline-block;
+    width: 40%;
+    position: relative;
+    padding-inline: 140px;
+    margin: 30px 0px;
+}
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(2) {
+    margin: 30px 0px;
+}
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(3) {
+    margin: 30px 0px;
+}
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(4) {
+    margin: 30px 0px;
+}
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(5) {
+    margin: 30px 0px;
+}
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(6) {
+    margin: 30px 0px;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li::before {
+    content: "";
+    position: absolute;
+    background: url("../images/cavities.svg") no-repeat center;
+    background-size: contain;
+    width: 119px;
+    height: 90px;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:first-child::before {
+    top: -40px;
+    right: 15px;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(2)::before {
+    background-image: url(../images/Vector_11.svg);
+    top: -35px;
+    left: 45px;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(3)::before {
+    right: 40px;
+    top: -30px;
+    transform: rotate(-20deg);
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(4)::before {
+    transform: rotate(155deg);
+    left: 50px;
+    top: -5px;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(5)::before {
+    background-image: url(../images/Vector_11.svg);
+    transform: rotate(180deg);
+    right: 25px;
+    top: -10px;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(6)::before {
+    transform: rotate(180deg);
+    left: 45px;
+    top: 20px;
+}
+
+.makes_hiya_diff_section p {
+    text-align: center;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(4) {
+    left: 00px;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(3) {
+    right: 40px;
+}
+
+.makes_hiya_diff_section .hiya-diff-testi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 860px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content {
+    max-width: 980px;
+}
+
+.makes_hiya_diff_section .hiya-diff-testi .image {
+    width: 100%;
+    height: 133px;
+    max-width: 133px;
+    flex: 1 1 33%;
+}
+
+.makes_hiya_diff_section .hiya-diff-testi .image img {
+    object-fit: contain;
+    object-position: center;
+}
+
+.makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content h3 {
+    color: #3b79b8;
+    font-size: 32px !important;
+    text-align: left !important;
+    font-weight: 800 !important;
+    font-family: 'Filson Pro', sans-serif !important;
+    line-height: 40px !important;
+    padding-bottom: 20px !important;
+}
+
+.makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content .content-info h4 {
+    padding-bottom: 0px;
+    font-size: 18px !important;
+    line-height: 26px !important;
+    color: #3f7ab9 !important;
+    font-weight: 700 !important;
+}
+
+.makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content .content-info p {
+    font-size: 14px;
+    text-align: left;
+    line-height: 26px !important;
+    color: #3f7ab9;
+    font-weight: 300;
+    font-family: 'Filson Pro', sans-serif !important;
+    margin: 0 !important;
+}
+
+.makes_hiya_diff_section {
+    padding-bottom: 70px;
+    padding-top: 48px;
+}
+body:not(.products-kids-daily-multivitamin-3) .affiliate .makes_hiya_diff_section {
+    padding-bottom: 0px;
+}
+
+.makes_hiya_diff_section .container>h2+p {
+    margin: 20px 0 40px !important;
+    letter-spacing: 0;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul {
+    row-gap: 25px;
+    margin-top: 50px;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li {
+    width: 41%;
+    padding-inline: 110px 70px;
+  margin:20px 0 40px;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(2) {
+    right: 0;
+  margin:30px 0;
+  padding-inline: 110px 70px;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(3) {
+    right: 0;
+  margin:30px 0;
+  padding-inline: 60px 70px;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(4) {
+    right: 0;
+  margin:30px 0;
+  padding-inline: 140px 70px;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(5) {
+    right: 0;
+  margin:30px 0;
+  padding-inline: 140px 70px;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(6) {
+    right: 0;
+  margin:30px 0;
+  padding-inline: 10px 70px;
+}
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(1)::before {
+  top: -10px;
+  right: 25px;
+}
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(2)::before {
+    top: 0px;
+  left:55px;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(3)::before {
+    right: 60px;
+    top: -25px;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(4)::before {
+    left: 90px;
+    top: 25px;
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(5)::before {
+    transform: rotate(190deg);
+}
+
+.makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(6)::before {
+    top: -10px;
+  left:15px;
+}
+
+.makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content {
+    max-width: 955px;
+}
+
+.product-multivitamin .makes_hiya_diff_section h2 {
+    font-size: 42px !important;
+}
+
+.product-multivitamin .makes_hiya_diff_section h2+p {
+    margin-top: 0 !important;
+}
+
+.product-multivitamin .makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content .content-info h4,
+.product-multivitamin .makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content .content-info p {
+    letter-spacing: 0;
+}
+
+.product-multivitamin .makes_hiya_diff_section h2,
+.product-probiotic .makes_hiya_diff_section h2 {
+    font-size: 42px;
+    padding-bottom: 0 !important;
+}
+
+.product-multivitamin .makes_hiya_diff_section .hiya-diff-testi .image,
+.product-probiotic .makes_hiya_diff_section .hiya-diff-testi .image {
+    height: 181px;
+    max-width: 181px;
+    flex: 1 1 33%;
+    display: flex;
+}
+.product-multivitamin .makes_hiya_diff_section .hiya-diff-testi .image img,
+.product-probiotic .makes_hiya_diff_section .hiya-diff-testi .image img {
+    width: 100%;
+    max-width: 150px;
+}
+
+.product-multivitamin .makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content,
+.product-probiotic .makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content {
+    max-width: 935px;
+    flex: 1 1 67%;
+}
+
+@media (min-width: 1024px) and (max-width: 1365px) {
+  
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li {
+        padding-inline: 50px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul {
+        max-width: 970px;
+        width: 100%;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li {
+        width: 34%;
+        padding-inline: 55px 15px;
+        margin: 35px 0px;
+    }
+  
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(2) {
+        padding-inline: 55px 15px;
+        margin: 35px 0px;
+    }
+  
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(3) {
+        padding-inline: 15px 40px;
+        margin: 15px 0px 35px;
+    }
+  
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(4) {
+        padding-inline: 45px 15px;
+        margin: -15px 0px 35px;
+    }
+  
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(5) {
+        padding-inline: 15px 15px;
+        margin: 35px 0px;
+    }
+  
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(6) {
+        padding-inline: 15px 15px;
+        margin: 35px 0px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:first-child::before {
+        right: -50px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(2)::before {
+        left: -30px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(3)::before {
+        right: -5px;
+        top: -25px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(4)::before {
+        left: -10px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(5)::before {
+        right: -40px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(6)::before {
+        left: -35px;
+        top: -20px;
+    }
+
+    .makes_hiya_diff_section .hiya-diff-testi {
+        max-width: 750px;
+        margin-inline: auto;
+    }
+
+    .makes_hiya_diff_section .hiya-diff-testi {
+        gap: 80px;
+    }
+
+    .makes_hiya_diff_section .hiya-diff-testi .image {
+        height: 94px;
+        max-width: 115px;
+    }
+
+    .product-probiotic .makes_hiya_diff_section {
+        padding-top: 58px;
+    }
+
+    .product-probiotic .makes_hiya_diff_section .container>h2+p {
+        margin: 21px 0 36px !important;
+    }
+  
+    .product-multivitamin .makes_hiya_diff_section .hiya-diff-testi,
+    .product-probiotic .makes_hiya_diff_section .hiya-diff-testi {
+        align-items: flex-start;
+        gap: 60px;
+        max-width:655px;
+    }
+  
+    .product-multivitamin .makes_hiya_diff_section .hiya-diff-testi .image,
+    .product-probiotic .makes_hiya_diff_section .hiya-diff-testi .image {
+        height: 181px;
+        max-width: 181px;
+        flex: 1 1 5%;
+    }
+  
+    .product-multivitamin .makes_hiya_diff_section .hiya-diff-testi .image img,
+    .product-probiotic .makes_hiya_diff_section .hiya-diff-testi .image img {
+        width: 100%;
+        max-width: 94px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .makes_hiya_diff_section .container {
+        max-width: 100%;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_list ul {
+        width: 302px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_list ul li {
+        min-width: 50%;
+    }
+
+    .makes_hiya_diff_section .container>h2+p {
+        margin: 20px auto 20px !important;
+        letter-spacing: 0;
+        font-size: 16px;
+        max-width: calc(100% - 45px);
+        line-height: 22px !important;
+    }
+
+    .makes_hiya_diff_section h2 {
+        font-size: 26px;
+        padding-bottom: 0 !important;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_list ul li {
+        font-size: 16px !important;
+        padding: 7px 0px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul p {
+        font-size: 12px !important;
+        line-height: 14px !important;
+    }
+  
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul h2 {
+        font-size: 15px !important;
+        line-height: 16px !important;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .main_img {
+        min-height: 160px !important;
+        margin-top: 100px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active img {
+        max-width: 160px;
+        width: 100%;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul {
+        row-gap: 5px;
+        margin-top: 60px;
+        max-width: 767px !important;
+        width: 100% !important;
+        margin-inline: auto;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li {
+        width: 43%;
+        padding-inline: 15px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li::before {
+        width: 36px;
+        height: 28px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:first-child::before {
+        top: 5px;
+        right: 50px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(2)::before {
+        top: 10px;
+        left: 60px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(3)::before {
+        width: 33px;
+        height: 23px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(4)::before {
+        width: 33px;
+        height: 23px;
+        left: 60px;
+        top: 15px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(5)::before {
+        transform: rotate(190deg);
+        right: 20px;
+        top: 0px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(6)::before {
+        top: 5px;
+        right: 0;
+        left: 20px;
+    }
+
+    .makes_hiya_diff_section .hiya-diff-testi .image {
+        height: 106px;
+        max-width: 106px;
+    }
+
+    .makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content h3 {
+        font-size: 26px !important;
+        text-align: center !important;
+        font-weight: 500 !important;
+        font-family: 'Filson Pro', sans-serif !important;
+        padding-bottom: 10px !important;
+        width: calc(100% - 60px);
+        margin-inline: auto;
+        line-height: 36px !important;
+    }
+
+    .makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content h4,
+    .makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content p {
+        text-align: center !important;
+        letter-spacing: 0;
+    }
+
+    .product-probiotic .makes_hiya_diff_section {
+        padding-top: 50px;
+    }
+
+    .product-probiotic .makes_hiya_diff_section .container>h2+p {
+        margin: 15px auto 23px !important;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul {
+        max-width: 540px !important;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li {
+        width: 48%;
+        padding-inline: 77px;
+        margin: 25px 0px;
+    }
+  
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(2) {
+        padding-inline: 77px;
+        margin: 25px 0px;
+    }
+  
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(3) {
+        padding-inline: 77px;
+        margin: 25px 0px;
+    }
+  
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(4) {
+        padding-inline: 77px;
+        margin: 25px 0px;
+    }
+  
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(5) {
+        padding-inline: 77px;
+        margin: 25px 0px;
+    }
+  
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(6) {
+        padding-inline: 77px;
+        margin: 25px 0px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:first-child::before {
+        top: 25px;
+        right: 45px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(2)::before {
+        top: 15px;
+        left: 40px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(3)::before {
+        right: 70px;
+        top: -10px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(4)::before {
+        left: 40px;
+        top: 30px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(5)::before {
+        right: 40px;
+        top: -10px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(6)::before {
+        top: -8px;
+        right: auto;
+        left: 42px;
+    }
+
+    .product-probiotic .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul h2 {
+        font-size: 15px !important;
+        line-height: 1 !important;
+    }
+
+    .product-probiotic .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(4) {
+        left: 20px;
+    }
+
+    .product-probiotic .makes_hiya_diff_section .hiya-diff-testi .image {
+        height: 170px;
+        max-width: 170px;
+    }
+
+    .product-probiotic .makes_hiya_diff_section .hiya-diff-testi {
+        max-width: 688px;
+        margin-inline: auto;
+    }
+  
+    .product-multivitamin .makes_hiya_diff_section h2,
+    .product-probiotic .makes_hiya_diff_section h2 {
+        font-size: 26px !important;
+        margin-bottom: 20px;
+    }
+
+    .product-multivitamin .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul h2,
+    .product-probiotic .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul h2 {
+        margin-bottom: 0px !important;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul {
+        row-gap: 0px;
+        max-width: 560px !important;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li {
+      width: 45% !important;
+      padding-inline: 65px 55px;
+      margin: 30px 0px;
+    }
+  
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(2) {
+      margin: 30px 0px;
+      padding-inline: 60px 60px;
+    }
+  
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(3) {
+      margin: 15px 0px 25px;
+      padding-inline: 60px 60px;
+    }
+  
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(4) {
+      margin: -10px 0 25px;
+      padding-inline: 60px 60px;
+    }
+  
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(5) {
+      margin: 10px 0 0;
+      padding-inline: 55px 65px;
+    }
+  
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(6) {
+      margin: 10px 0 40px;
+      padding-inline: 40px 40px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:first-child::before {
+        top: 20px;
+        right: 40px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(2)::before {
+        top: 13px;
+        left: 27px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(3)::before {
+        right: 55px;
+        top: -8px;
+    }
+
+    .product-multivitamin .makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content h3 {
+        width: calc(100% -290px);
+    }
+
+    .product-multivitamin .makes_hiya_diff_section .hiya-diff-testi {
+        align-items: flex-start;
+    }
+
+    .product-multivitamin .makes_hiya_diff_section .hiya-diff-testi .image {
+        padding: 0 0 25px;
+        justify-content: center;
+    }
+  
+    .product-multivitamin .makes_hiya_diff_section .hiya-diff-testi .image img,
+    .product-probiotic .makes_hiya_diff_section .hiya-diff-testi .image img {
+        width: 100%;
+        max-width: 94px;
+    }
+
+    .product-multivitamin .makes_hiya_diff_section .container {
+        padding-inline: 20px;
+    }
+
+    
+    .makes_hiya_diff_section .hiya-diff-testi .image, .makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content {
+        flex: 1 1 100% !important;
+    }
+    .product-multivitamin .makes_hiya_diff_section .hiya-diff-testi .image img, .product-probiotic .makes_hiya_diff_section .hiya-diff-testi .image img {
+        width: 100%;
+        max-width: 150px;
+    }
+    .makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content h3 {
+        font-size: 24px !important;
+        line-height: 32px !important;
+        padding-inline: 30px;
+        text-align: center !important;
+    }
+    .makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content .content-info h4, .makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content .content-info p {
+        text-align: center !important;
+        letter-spacing: 0;
+        line-height: 1 !important;
+        margin-bottom: 5px;
+    }  
+    .makes_hiya_diff_section .hiya-diff-testi {
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 0px;
+    }
+    .makes_hiya_diff_section .diff_tabs_content {
+        padding-bottom: 100px;
+    }
+}
+@media (max-width: 767px) {
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li {
+        padding-inline: 20px 20px;
+      margin:0px 0 0px;
+    }
+    
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(1) {
+      padding-inline: 20px 35px;
+      padding-bottom: 10px;
+    }
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(2) {
+        right: 0;
+      margin:0px 0;
+      padding-inline: 30px 0px;
+    }
+    
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(3) {
+        right: 0;
+      margin:0px 0;
+      padding-inline: 20px 50px;
+      padding-top:17px;
+      padding-bottom:25px;
+    }
+    
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(4) {
+        right: 0;
+      margin:0px 0;
+      padding-inline: 50px 20px;
+    }
+    
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(5) {
+        right: 0;
+      margin:0px 0;
+      padding-inline: 0px 30px;
+    }
+    
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(6) {
+        right: 0;
+      margin:0px 0;
+      padding-inline: 40px 0px;
+    }
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(1)::before {
+      top: -10px;
+      right: 25px;
+    }
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(2)::before {
+        top: 0px;
+      left:55px;
+    }
+    
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(3)::before {
+        right: 60px;
+        top: -25px;
+    }
+    
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(4)::before {
+        left: 90px;
+        top: 25px;
+    }
+    
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(5)::before {
+        transform: rotate(190deg);
+    }
+    
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(6)::before {
+        top: -10px;
+      left:15px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_list ul li,
+    .makes_hiya_diff_section .diff_tabs_list ul li.active {
+      line-height:22px;
+    }
+  
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li {
+        width: 40%;
+    }
+
+    .makes_hiya_diff_section {
+        padding-top: 0;
+    }
+
+    .makes_hiya_diff_section h2 {
+        font-size: 26px !important;
+    }
+
+    .makes_hiya_diff_section .container>h2+p {
+        margin: 8px 0 35px !important;
+        letter-spacing: 0;
+        font-size: 16px !important;
+        max-width: calc(100% - 80px);
+        margin-inline: auto !important;
+        line-height: 22px !important;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active img {
+        max-width: 160px;
+        width: 100%;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul {
+        row-gap: 5px;
+        margin-top: 0;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul p {
+        font-size: 10px !important;
+        line-height: 12px !important;
+      letter-spacing:0;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul h2 {
+        /*font-size: 15px !important;
+        line-height: 22px !important;*/
+        font-size: 12px !important;
+        line-height: 14px !important;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li::before {
+        width: 36px;
+        height: 28px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .main_img {
+        top: 100px;
+        position: relative;
+        min-height: 220px !important;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list {
+        min-height: min-content;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul {
+        margin-top: 150px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:first-child::before {
+        top: 15px;
+        right: 11px;
+        margin: 0px 0px;
+        padding-inline: 20px 10px;
+    }
+  
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(2)::before {
+        top: 5px;
+        left: 0px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(3)::before {
+        right: 20px;
+        top: 0;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(4)::before {
+        left: 20px;
+        top: 0;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(5)::before {
+        right: 5px;
+        top: 0px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list ul li:nth-child(6)::before {
+        top: -5px;
+        left: 10px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .hiya_diff_list {
+        pointer-events: none;
+    }
+  
+    .makes_hiya_diff_section .hiya-diff-testi-content h3 {
+      margin-top:20px;
+    }
+  
+    .affiliate .makes_hiya_diff_section .hiya-diff-testi-content h3 {
+      margin-top:10px;
+    }
+  
+    .makes_hiya_diff_section .hiya-diff-testi {
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 0px;
+    }
+
+    .makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content h3 {
+        font-size: 24px !important;
+        line-height: 32px !important;
+        padding-inline: 30px;
+    }
+  
+    .affiliate:not(.products-kids-daily-probiotic-2) .makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content h3 {
+        font-size: 18px !important;
+        line-height: 30px !important;
+      font-weight:400 !important;
+    }
+  
+    .affiliate .makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content h3 {
+      font-weight:400 !important;
+    }
+  
+    .affiliate.products-kids-daily-probiotic-2 .makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content h3 {
+      padding-inline: 60px;
+    }
+
+    .makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content .content-info h4,
+    .makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content .content-info p {
+        text-align: center !important;
+        letter-spacing: 0;
+        line-height: 1 !important;
+      margin-bottom:5px;
+      
+    }
+
+    .makes_hiya_diff_section {
+        padding-bottom: 94px;
+    }
+  
+    .products-kids-daily-multivitamin-2 .makes_hiya_diff_section {
+        padding-bottom: 0px;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_list ul {
+      max-width:360px;
+      width:100%;
+    }
+
+    .makes_hiya_diff_section .diff_tabs_list ul li {
+        min-width: 154px;
+        font-size: 16px !important;
+      width:51%;
+    }
+
+    .makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content h3 {
+        text-align: center !important;
+    }
+
+    .product-probiotic .makes_hiya_diff_section {
+        margin-top: 48px;
+    }
+
+    .product-probiotic .makes_hiya_diff_section .diff_tabs_list ul {
+        margin-bottom: 0px;
+    }
+
+    .product-probiotic .makes_hiya_diff_section .diff_tabs_list ul li {
+        padding: 7px 0px;
+    }
+  
+    .makes_hiya_diff_section .hiya-diff-testi .image,
+    .makes_hiya_diff_section .hiya-diff-testi .hiya-diff-testi-content {
+      flex: 1 1 100% !important;
+    }
+    .makes_hiya_diff_section .hiya-diff-testi .image img {
+      margin:0 auto;
+    }
+    .product-multivitamin .makes_hiya_diff_section > div > h2 {
+        font-size: 26px !important;
+        margin-bottom:15px;
+    }
+  
+    .affiliate .makes_hiya_diff_section .diff_tabs_content {
+        padding-bottom: 150px;
+    }
+  
+    .product-multivitamin .makes_hiya_diff_section .diff_tabs_content {
+        padding-bottom: 180px;
+    }
+  
+    .product-multivitamin .makes_hiya_diff_section .diff_tabs_content .diff_tabs_box.active .main_img {
+        top: 70px;
+        min-height: 170px !important;
+    }
+
+    .product-probiotic .makes_hiya_diff_section h2 {
+        font-size: 26px !important;
+    }
+}
